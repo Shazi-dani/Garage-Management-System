@@ -1,10 +1,84 @@
 ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
-Welcome USER_NAME,
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+## Project Epics and User Stories
 
-You can safely delete this README.md file or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **June 18, 2024**
+Here are the parent epics, user stories, and associated tasks:
+
+Epic 1: Authentication and Authorization
+
+- User Story 1: As a user, I want to be able to register for an account so that I can access the system. (#1)
+    - Task 1.1: Design registration form
+    - Task 1.2: Implement registration logic
+    - Task 1.3: Test registration functionality
+- User Story 2: As a user, I want to be able to log in to my account so that I can access the system. (#2)
+    - Task 2.1: Design login form
+    - Task 2.2: Implement login logic
+    - Task 2.3: Test login functionality
+
+Epic 2: Dashboard
+
+- User Story 4: As a user, I want to see a dashboard with relevant information so that I can quickly access key features. (#4)
+    - Task 4.1: Design dashboard layout
+    - Task 4.2: Implement dashboard functionality
+    - Task 4.3: Test dashboard functionality
+- User Story 5: As a user, I want the dashboard to be customizable so that I can prioritize the information I need. (#5)
+    - Task 5.1: Design customization options
+    - Task 5.2: Implement customization logic
+    - Task 5.3: Test customization functionality
+
+Epic 3: Settings
+
+- User Story 6: As an admin, I want to be able to set up an admin panel so that I can manage the system. (#6)
+    - Task 6.1: Design admin panel layout
+    - Task 6.2: Implement admin panel functionality
+    - Task 6.3: Test admin panel functionality
+- User Story 7: As a user, I want to be able to update my user profile settings so that I can customize my experience. (#7)
+    - Task 7.1: Design profile settings page
+    - Task 7.2: Implement profile settings logic
+    - Task 7.3: Test profile settings functionality
+
+Epic 4: Supplier Management
+
+- User Story 8: As a user, I want to be able to create a new supplier so that I can add new suppliers to the system. (#8)
+    - Task 8.1: Design supplier creation form
+    - Task 8.2: Implement supplier creation logic
+    - Task 8.3: Test supplier creation functionality
+- User Story 9: As a user, I want to be able to read supplier details so that I can view supplier information. (#9)
+    - Task 9.1: Design supplier details page
+    - Task 9.2: Implement supplier details logic
+    - Task 9.3: Test supplier details functionality
+- User Story 10: As a user, I want to be able to update supplier information so that I can edit existing suppliers. (#10)
+    - Task 10.1: Design supplier update form
+    - Task 10.2: Implement supplier update logic
+    - Task 10.3: Test supplier update functionality
+- User Story 11: As a user, I want to be able to delete suppliers so that I can remove unwanted suppliers. (#11)
+    - Task 11.1: Design supplier deletion functionality
+    - Task 11.2: Implement supplier deletion logic
+    - Task 11.3: Test supplier deletion functionality
+
+Epic 5: Vehicle/Product Management
+
+- User Story 12: As a user, I want to be able to create a new vehicle/product so that I can add new vehicles/products to the system. (#12)
+    - Task 12.1: Design vehicle/product creation form
+    - Task 12.2: Implement vehicle/product creation logic
+    - Task 12.3: Test vehicle/product creation functionality
+- User Story 13: As a user, I want to be able to read vehicle/product details so that I can view vehicle/product information. (#13)
+    - Task 13.1: Design vehicle/product details page
+    - Task 13.2: Implement vehicle/product details logic
+    - Task 13.3: Test vehicle/product details functionality
+- User Story 14: As a user, I want to be able to update vehicle/product information so that I can edit existing vehicles/products. (#14)
+    - Task 14.1: Design vehicle/product update form
+    - Task 14.2: Implement vehicle/product update logic
+    - Task 14.3: Test vehicle/product update functionality
+- User Story 15: As a user, I want to be able to delete vehicles/products so that I can remove unwanted vehicles/products. (#15)
+    - Task 15.1: Design vehicle/product deletion functionality
+    - Task 15.2: Implement vehicle/product deletion logic
+    - Task 15.3: Test vehicle/product deletion functionality
+
+These epics, user stories, and tasks can be used to organize and track the development of the project on a GitHub board or similar project management tool.
+
+------ 
 
 ## Gitpod Reminders
 
@@ -33,99 +107,3 @@ To log into the Heroku toolbelt CLI:
 5. Paste in your API key when asked
 
 You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you, so do not share it. If you accidentally make it public, you can create a new one with _Regenerate API Key_.
-
-### Connecting your Mongo database
-
-- **Connect to Mongo CLI on a IDE**
-- navigate to your MongoDB Clusters Sandbox
-- click **"Connect"** button
-- select **"Connect with the MongoDB shell"**
-- select **"I have the mongo shell installed"**
-- choose **mongosh (2.0 or later)** for : **"Select your mongo shell version"**
-- choose option: **"Run your connection string in your command line"**
-- in the terminal, paste the copied code `mongo "mongodb+srv://<CLUSTER-NAME>.mongodb.net/<DBname>" --apiVersion 1 --username <USERNAME>`
-  - replace all `<angle-bracket>` keys with your own data
-- enter password _(will not echo **\*\*\*\*** on screen)_
-
-------
-
-## Release History
-
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
-
-**June 18, 2024,** Add Mongo back into template
-
-**June 14, 2024,** Temporarily remove Mongo until the key issue is resolved
-
-**May 28 2024:** Fix Mongo and Links installs
-
-**April 26 2024:** Update node version to 16
-
-**September 20 2023:** Update Python version to 3.9.17.
-
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
-
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
-
-**July 2 2021:** Remove extensions that are not available in Open VSX.
-
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
-
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
-
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
-
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
-
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
-
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
-
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
-
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
-------
-
-## FAQ about the uptime script
-
-**Why have you added this script?**
-
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
-
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
----
-
-Happy coding!
