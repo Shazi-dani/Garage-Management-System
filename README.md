@@ -1,5 +1,34 @@
 ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
+## Project Run Guide
+The project consists of Python/Django backend with HTML/JS front end 
+and uses MySQL as database. 
+To run the application locally for testing, you need to perform following steps:
+
+#### 1. Install MySQL Server
+Ensure that MySQL server is installed and running on your system. You can download and install MySQL from the official MySQL website.
+To run the program locally, make sure both ``Python`` and ``pip`` are already installed 
+
+#### 2. Install MySQL Client and Connector
+You need the MySQL client and the MySQL connector for Python. Install them using the following commands:
+```
+sudo apt-get install mysql-client
+```
+
+#### 3. Install package requirements
+Install the package requirements using the following command
+```
+pip install -r requirements.txt
+```
+#### 4. Apply the migrations 
+```
+python manage.py migrate
+```
+#### 5. Run the Application and Access in browser
+Run the project using the following command and access on address http://127.0.0.1:8000/
+```
+python manage.py runserver
+```
 
 ## Project Epics and User Stories
 
