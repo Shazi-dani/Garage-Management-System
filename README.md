@@ -105,9 +105,7 @@ The design of the Garage Management System aims to create a user-friendly platfo
 The color scheme for the Garage Management System is based on a blue and white contrast, designed to create a clean, professional, and visually appealing user interface. The use of blue conveys trust, reliability, and calmness, which are crucial qualities for a service-oriented platform where users need to feel confident in their interactions. White, on the other hand, adds to the system’s clarity and simplicity, providing a sense of openness and space that enhances readability and reduces visual clutter. This combination ensures that users can navigate through the system effortlessly, with blue highlighting key elements and actions while white offers a pristine background that makes content stand out. The benefits of this color scheme include improved user focus, reduced eye strain during prolonged use, and an overall professional aesthetic that aligns with the system’s purpose of efficient and reliable service management.
 
 ## Typography
-The typography for the Garage Management System employs a modern sans-serif font such as Helvetica, Arial, or Open Sans to ensure clarity and ease of reading across different devices. The design features hierarchical font sizes, with larger, bold headings for clear navigation, and comfortable body text sizes (14px to 16px) for readability. Different font weights, including bold for headings and regular for body text, emphasize important information and maintain visual hierarchy. The line height (1.5 to 1.6) improves readability, while the color scheme uses dark gray or navy blue for primary text and lighter shades for secondary text, aligning with the blue and white contrast of the interface. This typography enhances readability, provides a professional aesthetic, improves user experience, and ensures consistency, making the system user-friendly and visually appealing.
 
-Go Top
 
 ## Project Features 
 
