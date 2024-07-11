@@ -1,12 +1,14 @@
 from django.shortcuts import render
 from rest_framework import generics, status
-from rest_framework.permissions import AllowAny
+from rest_framework.permissions import AllowAny, IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework_simplejwt.tokens import RefreshToken
 from django.contrib.auth import authenticate, get_user_model
 
 from .serializers import UserRegistrationSerializer, UserLoginSerializer
+from .models import BlacklistedToken
+
 
 User = get_user_model()
 
@@ -37,3 +39,20 @@ class UserLoginView(APIView):
                 'access': str(refresh.access_token),
             }, status=status.HTTP_200_OK)
         return Response({'error': 'Invalid Credentials'}, status=status.HTTP_400_BAD_REQUEST)
+
+class UserLogoutView(APIView):
+    permission_classes = [IsAuthenticated]
+
+    def post(self, request):
+        token = request.META.get('HTTP_AUTHORIZATION').split(' ')[1]
+        BlacklistedToken.objects.create(token=token)  # Storing the token in a blacklist model
+        return Response({"detail": "Logged out successfully"}, status=status.HTTP_200_OK)
+
+
+class UserDashboardView(generics.CreateAPIView):
+    queryset = User.objects.all()
+    permission_classes = (AllowAny,)
+
+    def get(self, request, *args, **kwargs):
+        # Serve the login form template
+        return render(request, 'dashboard.html')
