@@ -3,13 +3,15 @@
 ## Project Scope
 The Garage Management System will encompass a comprehensive user module with robust authentication and authorization mechanisms, ensuring secure access for various user roles including Admin, Customer, and Garage Technician. The system will feature a customer management interface for registration, profile management, and a self-service portal to view service records and invoices. Employee management will include role assignments and detailed profiles, facilitating efficient operational workflows. A secure JWT-based authentication process will be implemented, along with role-based access control to regulate permissions for different functionalities, thereby ensuring a secure and streamlined user experience.
 
-This project aims to streamline garage operations by providing an efficient platform for booking and managing automobile services. When you first start it, register and login, you will be on the home page which displays a dashboard with upcoming appointments and service details. The core functionality of this system is to enable customers to easily book their vehicles for servicing and other related tasks, allowing the garage to manage and schedule its operations effectively.
+This project aims to streamline garage operations by providing an efficient platform for booking and managing automobile services. When you first start it, register and login, you will be on the home page which displays a dashboard with upcoming appointments and service details. The core functionality of this system is to enable customers to easily book their vehicles for servicing and other related tasks, allowing the garage to manage and schedule its operations effectively. In vehicle management, admins can add vehicle details including pictures and prices for vehicles that are for sale, and customers can view these vehicles and their details. This feature enhances the service offering by allowing customers to explore and purchase vehicles directly through the system.
 
 Note: The system will track various services and generate statistics on a daily, weekly, and monthly basis. For instance, it can show how many oil changes were performed in a week, the total revenue generated from specific services, and the overall performance of different technicians.
 
 Note: For this system to work effectively, you need to create service categories (e.g., oil change, tire replacement) and when a booking is made, you can choose a service and time slot for that service on a particular date. The description for the service will narrow down the specifics of what needs to be done within the allocated time slot. When you want to see a breakdown of services provided for a particular category, you can navigate to statistics and choose a date range and service category. This will display a tabulated result for each task within the dates chosen, showing hours, minutes, date, and task details in a table, along with totals to show overall time and revenue for the service category within the chosen dates.
 
 Services could include various maintenance and repair tasks, where you can manage multiple services/projects on a daily basis within specific time slots. The description would be crucial here to break down exactly what needs to be done within the time window on a particular date.
+
+The Garage Management System will provide a comprehensive solution for managing garage operations, enhancing customer service, and improving administrative efficiency. This system will help garages to streamline their booking processes, track service performance, and gain valuable insights into their operations, ultimately leading to better time management and increased productivity.
 
 ## Project Epics and User Stories
 
@@ -90,6 +92,8 @@ These epics, user stories, and tasks can be used to organize and track the devel
 
 Go Top
 
+## Agile Planning
+
 ## Design
 The design of the Garage Management System aims to create a user-friendly platform that streamlines the booking and management of automobile services while generating insightful statistics effortlessly. By focusing on ease of use, the system provides an intuitive interface for customers to register, login, and book services, as well as for administrators to manage these bookings efficiently. The dashboard offers a clear overview of daily tasks, allowing garages to plan and schedule operations effectively. Additionally, the system supports creating detailed service categories and descriptions, enabling precise tracking of time and resources. Comprehensive statistical tools allow users to analyze service performance on a daily, weekly, and monthly basis, providing valuable insights into technician efficiency and service profitability, thus enhancing overall operational efficiency.
 
@@ -110,7 +114,6 @@ Go Top
 * Vehicle/Product Management
 * Inventory Management
 
-## Agile Planning
 
 ## 
 
