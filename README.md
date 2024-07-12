@@ -93,7 +93,6 @@ These epics, user stories, and tasks can be used to organize and track the devel
 Go Top
 
 ## Agile Planning
-Link
 
 <img width="1268" alt="Screenshot 2024-07-11 at 7 53 11 AM" src="https://github.com/Shazi-dani/Garage-Management-System/assets/126623880/cd9d5b99-fb13-429e-88ed-12678241aaf7">
 
@@ -104,7 +103,8 @@ The design of the Garage Management System aims to create a user-friendly platfo
 ## Colour Scheme
 The color scheme for the Garage Management System is based on a blue and white contrast, designed to create a clean, professional, and visually appealing user interface. The use of blue conveys trust, reliability, and calmness, which are crucial qualities for a service-oriented platform where users need to feel confident in their interactions. White, on the other hand, adds to the system’s clarity and simplicity, providing a sense of openness and space that enhances readability and reduces visual clutter. This combination ensures that users can navigate through the system effortlessly, with blue highlighting key elements and actions while white offers a pristine background that makes content stand out. The benefits of this color scheme include improved user focus, reduced eye strain during prolonged use, and an overall professional aesthetic that aligns with the system’s purpose of efficient and reliable service management.
 
-## Typography
+## Entity Relationship Diagrams ERD's
+![ERD](https://github.com/user-attachments/assets/9846a463-74bd-4a48-85f4-be8f4e57f883)
 
 
 ## Project Features 
