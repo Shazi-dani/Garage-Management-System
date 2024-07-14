@@ -27,11 +27,15 @@ SECRET_KEY = 'django-insecure-wmc&vu-=p_m=2)drdj7f7vfwlro07_v)x*$be7eib_c-0!7ry%
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+# Setting CustomUser model as default
+AUTH_USER_MODEL = 'users.CustomUser'
+
 ALLOWED_HOSTS = []
 
 # Application definition
 
 INSTALLED_APPS = [
+    'users',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -40,7 +44,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'rest_framework_simplejwt',
-    'users',
 ]
 
 MIDDLEWARE = [
@@ -149,3 +152,4 @@ SIMPLE_JWT = {
     'BLACKLIST_AFTER_ROTATION': True,
     'AUTH_HEADER_TYPES': ('Bearer',),
 }
+
