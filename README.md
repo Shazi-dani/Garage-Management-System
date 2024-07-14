@@ -90,13 +90,14 @@ Here are the parent epics, user stories, and associated tasks:
 
 These epics, user stories, and tasks can be used to organize and track the development of the project on a GitHub board or similar project management tool.
 
-Go Top
+[Go Top](https://github.com/Shazi-dani/Garage-Management-System/edit/main/README.md)
 
 ## Agile Planning
+[Agile Board](https://github.com/users/Shazi-dani/projects/3)
 
 <img width="1268" alt="Screenshot 2024-07-11 at 7 53 11 AM" src="https://github.com/Shazi-dani/Garage-Management-System/assets/126623880/cd9d5b99-fb13-429e-88ed-12678241aaf7">
 
-
+[Go Top](https://github.com/Shazi-dani/Garage-Management-System/edit/main/README.md)
 ## Design
 The design of the Garage Management System aims to create a user-friendly platform that streamlines the booking and management of automobile services while generating insightful statistics effortlessly. By focusing on ease of use, the system provides an intuitive interface for customers to register, login, and book services, as well as for administrators to manage these bookings efficiently. The dashboard offers a clear overview of daily tasks, allowing garages to plan and schedule operations effectively. Additionally, the system supports creating detailed service categories and descriptions, enabling precise tracking of time and resources. Comprehensive statistical tools allow users to analyze service performance on a daily, weekly, and monthly basis, providing valuable insights into technician efficiency and service profitability, thus enhancing overall operational efficiency.
 
@@ -106,6 +107,7 @@ The color scheme for the Garage Management System is based on a blue and white c
 ## Entity Relationship Diagrams ERD's
 ![ERD](https://github.com/user-attachments/assets/9846a463-74bd-4a48-85f4-be8f4e57f883)
 
+[Go Top](https://github.com/Shazi-dani/Garage-Management-System/edit/main/README.md)
 
 ## Project Features 
 
@@ -115,9 +117,201 @@ The color scheme for the Garage Management System is based on a blue and white c
 * Supplier Management
 * Vehicle/Product Management
 * Inventory Management
+  
+## 1. User Module with Authentication & Authorization
+   
+#### Customer Management:
+
+○ Capture customer details: first name, last name, display name, company details,
+date of birth, email, mobile number, address, and profile image.
+
+○ Self-service portal for customers to view service reminders, invoices, and
+records.
+
+○ Secure login and password management for customers.
 
 
-## 
+#### Employee Management:
+
+○ Capture employee details: email, phone number, date of birth, joining date,
+designation, and address.
+
+○ Role assignment and secure system access for employees.
+
+#### Authentication:
+
+○ Secure login with email and password for all users.
+
+○ Password reset and recovery options.
+
+#### Authorization:
+
+○ Role-based access control with customizable permissions for viewing, adding,
+updating, deleting, and owning data.
+
+○ User roles: Super Admin, Customer, Garage Technician, Accountant, Support
+Staff, Branch Admin.
+
+[Go Top](https://github.com/Shazi-dani/Garage-Management-System/edit/main/README.md)
+
+## Steps to Complete:
+
+#### Customer Management:
+- Create customer registration forms capturing all required details.
+- Develop self-service portal interfaces for customer access.
+- Implement secure authentication methods and password management.
+#### Employee Management:
+- Create employee registration and profile forms.
+- Develop role assignment functionality with detailed permissions.
+- Implement secure authentication and password management.
+#### Authentication:
+- Develop secure login pages with email and password inputs.
+- Implement password reset and recovery workflows.
+#### Authorization:
+- Define role-based access control mechanisms.
+- Implement permission management for various user roles.
+
+[Go Top](https://github.com/Shazi-dani/Garage-Management-System/edit/main/README.md)
+
+
+#### User Login
+
+![Login page](https://github.com/user-attachments/assets/ee83bb49-2db5-49cf-babb-5b632ba3bd65)
+
+#### Register User 
+![Register](https://github.com/user-attachments/assets/45922c57-1f8a-4ea7-96d0-004b03a45e7d)
+
+
+[Go Top](https://github.com/Shazi-dani/Garage-Management-System/edit/main/README.md)
+
+## 2. Dashboard
+
+#### Management Reports:
+
+○ Summarize free and paid services.
+
+- Data Visualization:
+
+○ Real-time updates based on inputted service data.
+
+## Steps to Complete:
+
+#### 1. Management Reports:
+○ Design report templates for free and paid services.
+○ Implement data aggregation and summary views.
+#### 2. Data Visualization:
+○ Develop real-time data dashboards using charts and graphs.
+○ Implement data updating mechanisms to keep information current.
+
+[Go Top](https://github.com/Shazi-dani/Garage-Management-System/edit/main/README.md)
+
+## 3. Settings (Admin panel, User profile settings)
+
+#### Admin Panel:
+
+○ System name, email address, phone number, and logo upload.
+
+○ Configure business hours, holidays, and special working days.
+
+○ Manage system-wide settings including currency and localization options.
+
+#### User Profile Settings:
+
+○ Update personal information such as email, phone number, and address.
+
+○ Change and manage passwords.
+#### Admin Login
+ ![Admin Login](https://github.com/user-attachments/assets/c94188bb-555a-439b-99c0-bb901b7ab5cd)
+
+#### Admin View
+![Admin Dashboard](https://github.com/user-attachments/assets/28d034b9-4548-45eb-869d-875bd9d99057)
+
+[Go Top](https://github.com/Shazi-dani/Garage-Management-System/edit/main/README.md)
+
+## Steps to Complete:
+
+#### 1. Admin Panel:
+- Develop forms for capturing system names, contact details, and logo uploads.
+- Create interfaces for setting business hours, holidays, and working days.
+- Implement currency and localization settings.
+
+#### 2. User Profile Settings:
+- Develop user profile forms to update personal information.
+- Implement password change and management functionality
+
+[Go Top](https://github.com/Shazi-dani/Garage-Management-System/edit/main/README.md)
+
+## 4. Supplier Management
+
+#### Create:
+
+○ Add new supplier information: first name, last name, company details, email,
+mobile number, and address.
+
+#### Read:
+
+○ View detailed supplier profiles and communication history.
+
+#### Update:
+
+○ Edit and update supplier details as necessary.
+
+#### Delete:
+
+○ Remove suppliers from the system when no longer needed.
+
+#### Inventory Association:
+
+○ Track parts and inventory received from suppliers for billing and service
+purposes.
+
+## Steps to Complete:
+
+- 1. Create:Develop forms for capturing supplier information.
+- 2. Read:Create interfaces to view supplier profiles and communication history.
+- 3. Update:Implement forms and workflows for updating supplier details.
+- 4. Delete:Develop mechanisms for securely removing supplier data.
+- 5. Inventory Association:Link suppliers to inventory items and track received parts.
+  
+[Go Top](https://github.com/Shazi-dani/Garage-Management-System/edit/main/README.md)
+
+## 5. Vehicle/Product Management
+
+#### Create:
+
+○ Add and categorize vehicles by type (e.g., car, bike, hatchback), brand (e.g.,
+BMW, Audi), and model.
+
+○ Capture product details: unique identifiers, manufacturer details, pricing, and
+warranty information.
+
+#### Read:
+
+○ View detailed profiles of vehicles and products.
+
+#### Update:
+
+○ Edit and update vehicle and product details as necessary.
+
+#### Delete:
+
+○ Remove vehicles and products from the system when no longer needed.
+
+## Steps to Complete:
+
+- 1. Create:Develop forms for adding vehicle and product details.
+- 2. Read:Create interfaces for viewing detailed vehicle and product profiles.
+- 3. Update:Implement forms and workflows for updating vehicle and product details.
+- 4. Delete:Develop mechanisms for securely removing vehicle and product data.
+  
+[Go Top](https://github.com/Shazi-dani/Garage-Management-System/edit/main/README.md)
+
+
+
+
+
+
+[Go Top](https://github.com/Shazi-dani/Garage-Management-System/edit/main/README.md)
 
 ## Project Run Guide
 The project consists of Python/Django backend with HTML/JS front end 
