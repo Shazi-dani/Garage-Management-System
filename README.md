@@ -103,9 +103,41 @@ The design of the Garage Management System aims to create a user-friendly platfo
 
 ## Colour Scheme
 The color scheme for the Garage Management System is based on a blue and white contrast, designed to create a clean, professional, and visually appealing user interface. The use of blue conveys trust, reliability, and calmness, which are crucial qualities for a service-oriented platform where users need to feel confident in their interactions. White, on the other hand, adds to the system’s clarity and simplicity, providing a sense of openness and space that enhances readability and reduces visual clutter. This combination ensures that users can navigate through the system effortlessly, with blue highlighting key elements and actions while white offers a pristine background that makes content stand out. The benefits of this color scheme include improved user focus, reduced eye strain during prolonged use, and an overall professional aesthetic that aligns with the system’s purpose of efficient and reliable service management.
+## Typography 
+The fonts i used for this project were plain, simple & easy to read and look pleasant to the eye.
+
+[Go Top](https://github.com/Shazi-dani/Garage-Management-System/edit/main/README.md)
 
 ## Entity Relationship Diagrams ERD's
 ![ERD](https://github.com/user-attachments/assets/9846a463-74bd-4a48-85f4-be8f4e57f883)
+
+[Go Top](https://github.com/Shazi-dani/Garage-Management-System/edit/main/README.md)
+
+## Wireframes
+
+#### Home 
+
+<img width="511" alt="Home" src="https://github.com/user-attachments/assets/e064ce59-a3b7-4119-bd33-99581ae0e47c">
+
+#### Login Page
+
+<img width="578" alt="Login Screen" src="https://github.com/user-attachments/assets/f324df6e-06bb-4ac1-8bce-2de0a301c12e">
+
+
+[Go Top](https://github.com/Shazi-dani/Garage-Management-System/edit/main/README.md)
+
+#### Register User
+<img width="399" alt="Register Screen" src="https://github.com/user-attachments/assets/9cf590f1-d480-4dac-8f2b-8c1f8ab958e8">
+
+
+#### Admin Login
+<img width="585" alt="Admin Login Screen" src="https://github.com/user-attachments/assets/1118ca24-c03c-4574-90d9-f39c2bf7edc3">
+
+[Go Top](https://github.com/Shazi-dani/Garage-Management-System/edit/main/README.md)
+
+#### Admin View
+<img width="673" alt="Admin View" src="https://github.com/user-attachments/assets/ea25a66a-63b2-412f-aa19-094de7be096d">
+
 
 [Go Top](https://github.com/Shazi-dani/Garage-Management-System/edit/main/README.md)
 
@@ -308,6 +340,10 @@ warranty information.
 
 
 
+## Bugs found during Project
+
+[Go Top](https://github.com/Shazi-dani/Garage-Management-System/edit/main/README.md)
+
 
 
 
@@ -336,9 +372,9 @@ Run the project using the following command and access on address http://127.0.0
 ```
 python manage.py runserver
 ```
-
-
 ------ 
+
+[Go Top](https://github.com/Shazi-dani/Garage-Management-System/edit/main/README.md)
 
 ## Gitpod Reminders
 
@@ -367,3 +403,15 @@ To log into the Heroku toolbelt CLI:
 5. Paste in your API key when asked
 
 You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you, so do not share it. If you accidentally make it public, you can create a new one with _Regenerate API Key_.
+
+[Go Top](https://github.com/Shazi-dani/Garage-Management-System/edit/main/README.md)
+
+## Technologies Used
+[Go Top](https://github.com/Shazi-dani/Garage-Management-System/edit/main/README.md)
+
+## Deployment
+[Go Top](https://github.com/Shazi-dani/Garage-Management-System/edit/main/README.md)
+
+## Credits
+
+[Go Top](https://github.com/Shazi-dani/Garage-Management-System/edit/main/README.md)
