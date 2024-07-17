@@ -32,7 +32,6 @@ class DashboardView(TemplateView, APIView):
             user_type = 'guest'
             username = 'Guest'
 
-        print("Found User: ", self.request.user.username)
         # Get current month appointments
         current_month = now().month
         current_year = now().year
@@ -108,18 +107,18 @@ class AppointmentCreateView(CreateView):
     model = Appointment
     form_class = AppointmentForm
     template_name = 'create_appointment.html'
-    success_url = reverse_lazy('success_url')  # Replace with your success URL
+    success_url = reverse_lazy('dashboard')  # Replace with your success URL
 
 class AppointmentUpdateView(UpdateView):
     model = Appointment
     form_class = AppointmentForm
     template_name = 'edit_appointment.html'
-    success_url = reverse_lazy('success_url')  # Replace with your success URL
+    success_url = reverse_lazy('dashboard')  # Replace with your success URL
 
 class AppointmentDeleteView(DeleteView):
     model = Appointment
     template_name = 'confirm_delete_appointment.html'
-    success_url = reverse_lazy('success_url')  # Replace with your success URL
+    success_url = reverse_lazy('dashboard')  # Replace with your success URL
 
 class AppointmentDetailView(DetailView):
     model = Appointment

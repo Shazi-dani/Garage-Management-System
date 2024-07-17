@@ -35,6 +35,30 @@
 </div>
 
 <script>
+    $(document).ready(function() {
+        const accessToken = localStorage.getItem('access_token');
+
+        $.ajaxSetup({
+            headers: {
+                'Authorization': 'Bearer ' + accessToken
+            }
+        });
+
+        $.ajax({
+            url: '',
+            method: 'GET',
+            success: function(response) {
+                console.log('Dashboard data:', response);
+                // Process the dashboard data and update the chart
+            },
+            error: function() {
+                console.log('Error fetching dashboard data.');
+            }
+        });
+    });
+</script>
+
+<script>
     const chartData = JSON.parse(document.getElementById('chart-data').textContent);
     const labels = chartData.map(data => data.datetime);
     const data = chartData.map(data => data.name);
