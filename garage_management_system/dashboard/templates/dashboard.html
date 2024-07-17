@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jwt-decode/build/jwt-decode.min.js"></script>
@@ -28,12 +27,66 @@
         </ul>
     </div>
 </nav>
-<div class="container mt-5">
-    <div class="row">
-        <h1 class="text-center text-black p-3">Welcome to the Garage Management System</h1>
-    </div>
-    <!-- Additional dashboard elements can be added here -->
+<body>
+
+<div>
+    <h3>Appointments for {{ username }}</h3>
+    <canvas id="appointmentsChart" width="400" height="200"></canvas>
 </div>
+
+<script>
+    const chartData = JSON.parse(document.getElementById('chart-data').textContent);
+    const labels = chartData.map(data => data.datetime);
+    const data = chartData.map(data => data.name);
+
+    const ctx = document.getElementById('appointmentsChart').getContext('2d');
+    const chart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: labels,
+            datasets: [{
+                label: 'Appointments',
+                data: data,
+                backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                borderColor: 'rgba(75, 192, 192, 1)',
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+</script>
+
+<h3>Appointments</h3>
+<ul>
+    {% for appointment in user_appointments %}
+    <li>
+        {{ appointment.appointment_date }} - {{ appointment.user.username }} - {{ appointment.status }}
+        {% if request.user.user_type == 'customer' %}
+        <a href="{% url 'edit_appointment' appointment.id %}">Edit</a>
+        <form method="post" action="{% url 'delete_appointment' appointment.id %}" style="display:inline;">
+            {% csrf_token %}
+            <button type="submit">Delete</button>
+        </form>
+        {% elif user_type == 'technician' or user_type == 'admin' and appointment.status == 'pending' %}
+        <form method="post" style="display:inline;">
+            {% csrf_token %}
+            <input type="hidden" name="appointment_id" value="{{ appointment.id }}">
+            <button type="submit" name="mark_done">Mark as Done</button>
+        </form>
+        {% endif %}
+    </li>
+    {% endfor %}
+</ul>
+
+{% if user_type == 'customer' %}
+<a href="{% url 'create_appointment' %}">Create New Appointment</a>
+{% endif %}
 <script>
 $(document).ready(function() {
     // Function to check if the token is valid
