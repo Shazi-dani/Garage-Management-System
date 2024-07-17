@@ -47,12 +47,3 @@ class UserLogoutView(APIView):
         token = request.META.get('HTTP_AUTHORIZATION').split(' ')[1]
         BlacklistedToken.objects.create(token=token)  # Storing the token in a blacklist model
         return Response({"detail": "Logged out successfully"}, status=status.HTTP_200_OK)
-
-
-class UserDashboardView(generics.CreateAPIView):
-    queryset = User.objects.all()
-    permission_classes = (AllowAny,)
-
-    def get(self, request, *args, **kwargs):
-        # Serve the login form template
-        return render(request, 'dashboard.html')

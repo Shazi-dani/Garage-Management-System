@@ -40,7 +40,7 @@ $(document).ready(function() {
         const data = $(this).serialize(); // This will include the CSRF token
 
         $.ajax({
-            url: '/login/',
+            url: '',
             method: 'POST',
             data: data,
             success: function(response) {
