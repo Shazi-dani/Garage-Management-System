@@ -35,6 +35,7 @@ AUTH_USER_MODEL = 'users.CustomUser'
 ALLOWED_HOSTS = [
     '8000-shazidani-garagemanagem-8fs40q1a842.ws-us115.gitpod.io',
     '.herokuapp.com',
+    'localhost',
 ]
 
 # Application definition
