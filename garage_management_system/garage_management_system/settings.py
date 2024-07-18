@@ -27,16 +27,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-wmc&vu-=p_m=2)drdj7f7vfwlro07_v)x*$be7eib_c-0!7ry%'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 # Setting CustomUser model as default
 AUTH_USER_MODEL = 'users.CustomUser'
 
-ALLOWED_HOSTS = [
-    '8000-shazidani-garagemanagem-8fs40q1a842.ws-us115.gitpod.io',
-    '.herokuapp.com',
-    'localhost',
-]
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
