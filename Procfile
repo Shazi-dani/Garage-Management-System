@@ -1,1 +1,1 @@
-web: gunicorn garage_management_system.wsgi
+web: gunicorn garage_management_system.garage_management_system.wsgi
