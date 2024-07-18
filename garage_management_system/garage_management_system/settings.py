@@ -32,8 +32,19 @@ DEBUG = True
 # Setting CustomUser model as default
 AUTH_USER_MODEL = 'users.CustomUser'
 
-ALLOWED_HOSTS = ['garage-management-system-6d09cdd418ba.herokuapp.com']
+ALLOWED_HOSTS = [
+    'garage-management-system-6d09cdd418ba.herokuapp.com',
+    '8000-shazidani-garagemanagem-zixyev14yor.ws-us115.gitpod.io',
+    'localhost'
+]
 
+# CORS_ALLOW_ALL_ORIGINS = True  # For development only, not for production
+CORS_ALLOWED_ORIGINS = [
+    'garage-management-system-6d09cdd418ba.herokuapp.com',
+    'https://8000-shazidani-garagemanagem-zixyev14yor.ws-us115.gitpod.io',
+    'localhost'
+    # Add any other origins you want to allow
+]
 # Application definition
 
 INSTALLED_APPS = [
@@ -50,6 +61,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
