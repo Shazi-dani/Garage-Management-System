@@ -32,7 +32,7 @@ DEBUG = True
 # Setting CustomUser model as default
 AUTH_USER_MODEL = 'users.CustomUser'
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['.herokuapp.com']
 
 # Application definition
 
