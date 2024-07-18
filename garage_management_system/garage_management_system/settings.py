@@ -32,7 +32,9 @@ DEBUG = True
 # Setting CustomUser model as default
 AUTH_USER_MODEL = 'users.CustomUser'
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    '8000-shazidani-garagemanagem-8fs40q1a842.ws-us115.gitpod.io',
+]
 
 # Application definition
 
