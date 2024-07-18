@@ -6,6 +6,42 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jwt-decode/build/jwt-decode.min.js"></script>
+    <style>
+        #appointmentsList {
+            display: flex;
+            overflow-x: auto;
+            padding: 20px;
+        }
+        .card {
+            flex: 0 0 auto; /* Do not grow, do not shrink, base width on content */
+            width: 300px; /* Fixed width for each card */
+            margin-right: 15px; /* Space between cards */
+        }
+        .card-header {
+            background-color: #3bac9f; /* Matching blue header */
+            color: rgb(15, 15, 15); /* White text color */
+            display: block;
+        }
+        .card-body {
+            background-color: #f3f6fa; /* Light background for the content */
+        }
+        .info-block {
+            background-color: #8f8176aa; /* Light grey background for each block */
+            border-left: 3px solid #2c8ab0; /* Blue left border for a touch of color */
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+        .info-block label {
+            font-weight: bold;
+            color: #442727;
+            display: block;
+        }
+        .info-block span {
+            display: block;
+            padding-left: 10px;
+        }
+    </style>
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #007bff;">
@@ -30,87 +66,12 @@
 <body>
 
 <div>
-    <h3>Appointments for {{ username }}</h3>
-    <canvas id="appointmentsChart" width="400" height="200"></canvas>
+    <div id="appointmentsList"></div>
+</div>
+<div class="my-3">
+    <a href="{% url 'dashboard:create_appointment' %}" class="btn btn-primary ml-3" id="createAppointmentButton">Register A New Appointment</a>
 </div>
 
-<script>
-    $(document).ready(function() {
-        const accessToken = localStorage.getItem('access_token');
-
-        $.ajaxSetup({
-            headers: {
-                'Authorization': 'Bearer ' + accessToken
-            }
-        });
-
-        $.ajax({
-            url: '',
-            method: 'GET',
-            success: function(response) {
-                console.log('Dashboard data:', response);
-                // Process the dashboard data and update the chart
-            },
-            error: function() {
-                console.log('Error fetching dashboard data.');
-            }
-        });
-    });
-</script>
-
-<script>
-    const chartData = JSON.parse(document.getElementById('chart-data').textContent);
-    const labels = chartData.map(data => data.datetime);
-    const data = chartData.map(data => data.name);
-
-    const ctx = document.getElementById('appointmentsChart').getContext('2d');
-    const chart = new Chart(ctx, {
-        type: 'bar',
-        data: {
-            labels: labels,
-            datasets: [{
-                label: 'Appointments',
-                data: data,
-                backgroundColor: 'rgba(75, 192, 192, 0.2)',
-                borderColor: 'rgba(75, 192, 192, 1)',
-                borderWidth: 1
-            }]
-        },
-        options: {
-            scales: {
-                y: {
-                    beginAtZero: true
-                }
-            }
-        }
-    });
-</script>
-
-<h3>Appointments</h3>
-<ul>
-    {% for appointment in user_appointments %}
-    <li>
-        {{ appointment.appointment_date }} - {{ appointment.user.username }} - {{ appointment.status }}
-        {% if request.user.user_type == 'customer' %}
-        <a href="{% url 'edit_appointment' appointment.id %}">Edit</a>
-        <form method="post" action="{% url 'delete_appointment' appointment.id %}" style="display:inline;">
-            {% csrf_token %}
-            <button type="submit">Delete</button>
-        </form>
-        {% elif user_type == 'technician' or user_type == 'admin' and appointment.status == 'pending' %}
-        <form method="post" style="display:inline;">
-            {% csrf_token %}
-            <input type="hidden" name="appointment_id" value="{{ appointment.id }}">
-            <button type="submit" name="mark_done">Mark as Done</button>
-        </form>
-        {% endif %}
-    </li>
-    {% endfor %}
-</ul>
-
-{% if user_type == 'customer' %}
-<a href="{% url 'create_appointment' %}">Create New Appointment</a>
-{% endif %}
 <script>
 $(document).ready(function() {
     // Function to check if the token is valid
@@ -146,13 +107,95 @@ $(document).ready(function() {
 
     // Toggle visibility of login/register and logout buttons based on authentication status
     if (isAuthenticated) {
+        console.log("User is Authenticated.")
         $('#loginButton').hide();
         $('#registerButton').hide();
         $('#logoutButton').show();
+        $('#createAppointmentButton').show();
+
+        console.log("Populating Appointments Data")
+        // Fetch appointments data
+        $.ajax({
+            url: '/api/appointments/', // Make sure this URL points to your API for fetching appointments
+            method: 'GET',
+            headers: { 'Authorization': 'Bearer ' + accessToken },
+            success: function(appointments) {
+                const appointmentsList = appointments.map(appointment => `
+                    <div class="card">
+                        <div class="card-header">
+                        ${appointment.user.first_name} ${appointment.user.last_name}
+                        </div>
+                        <div class="card-body">
+                            <div class="info-block">
+                                <label>Vehicle Model/Make</label>
+                                <span>${appointment.vehicle.model} ${appointment.vehicle.make}</span>
+
+                                <label>Cost</label>
+                                <span>${appointment.service.cost}</span>
+
+                                <label>Booking DateTime</label>
+                                <span>${appointment.appointment_date}</span>
+
+                                <label>Status</label>
+                                <span>${appointment.status}</span>
+
+                                <label>Service Type</label>
+                                <span>${appointment.service.description}</span>
+                            </div>
+                            
+                        </div>
+                    </div>
+                `);
+                $('#appointmentsList').html(appointmentsList.join(''));
+            },
+            error: function() {
+                console.log('Error fetching appointments.');
+                alert('Failed to fetch appointments. Please try again.');
+            }
+        });
     } else {
         $('#loginButton').show();
         $('#registerButton').show();
         $('#logoutButton').hide();
+        $('#createAppointmentButton').hide();
+        // Fetch appointments data
+        $.ajax({
+        url: '/api/appointments_all/', // Make sure this URL points to your API for fetching appointments
+        method: 'GET',
+        success: function(appointments) {
+            const appointmentsList = appointments.map(appointment => `
+                <div class="card">
+                    <div class="card-header">
+                    ${appointment.user.first_name} ${appointment.user.last_name}
+                    </div>
+                    <div class="card-body">
+                        <div class="info-block">
+                            <label>Vehicle Model/Make</label>
+                            <span>${appointment.vehicle.model} ${appointment.vehicle.make}</span>
+
+                            <label>Cost</label>
+                            <span>${appointment.service.cost}</span>
+
+                            <label>Booking DateTime</label>
+                            <span>${appointment.appointment_date}</span>
+
+                            <label>Status</label>
+                            <span>${appointment.status}</span>
+
+                            <label>Service Type</label>
+                            <span>${appointment.service.description}</span>
+                        </div>
+                    </div>
+                </div>
+            `);
+            $('#appointmentsList').html(appointmentsList.join(''));
+        },
+        error: function() {
+            console.log('Error fetching appointments.');
+            alert('Failed to fetch appointments. Please try again.');
+        }
+    });
+
     }
 
     // Logout function
@@ -163,6 +206,7 @@ $(document).ready(function() {
         alert('Logout successful!');
         window.location.href = '/';
     });
+
 });
 </script>
 </body>
