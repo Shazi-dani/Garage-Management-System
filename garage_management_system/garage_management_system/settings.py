@@ -32,7 +32,7 @@ DEBUG = True
 # Setting CustomUser model as default
 AUTH_USER_MODEL = 'users.CustomUser'
 
-ALLOWED_HOSTS = ['.herokuapp.com']
+ALLOWED_HOSTS = ['garage-management-system-6d09cdd418ba.herokuapp.com']
 
 # Application definition
 
