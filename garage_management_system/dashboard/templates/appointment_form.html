@@ -1,51 +1,21 @@
 {% extends "base.html" %}
 
-{% block content %}
-<div class="container mt-4">
-    <h2>{% if object %}Edit Appointment{% else %}Create Appointment{% endif %}</h2>
-    <form method="post" novalidate>
-        {% csrf_token %}
-        <div class="form-group">
-            {% for field in form %}
-                <div class="mb-3">
-                    {{ field.label_tag }}
-                    {{ field }}
-                    {% if field.help_text %}
-                        <small class="form-text text-muted">{{ field.help_text }}</small>
-                    {% endif %}
-                    {% for error in field.errors %}
-                        <div class="alert alert-danger" role="alert">
-                            {{ error }}
-                        </div>
-                    {% endfor %}
-                </div>
-            {% endfor %}
-        </div>
-        <button type="submit" class="btn btn-primary">{% if object %}Update{% else %}Submit{% endif %} Appointment</button>
-        <a href="{% url 'dashboard:dashboard' %}" class="btn btn-secondary">Cancel</a>
-    </form>
-</div>
-{% endblock %}
+{% block title %}Appointment Form - Garage Management System{% endblock %}
 
 {% block extra_css %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.min.css">
 <style>
-    form {
-        margin: auto;
-        width: 50%;
-        padding: 10px;
-    }
     .form-group {
         margin-bottom: 1rem;
     }
     label {
-        float: left;
-        margin-right: 10px;
+        display: block;
+        margin-top: 20px;
     }
     input, select, textarea {
         width: 100%;
         padding: 8px;
         margin-top: 6px;
-        margin-bottom: 16px;
         display: inline-block;
         border: 1px solid #ccc;
         box-sizing: border-box;
@@ -60,4 +30,61 @@
         opacity: 0.8;
     }
 </style>
+{% endblock %}
+
+{% block extra_js %}
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.full.min.js"></script>
+<script>
+$(document).ready(function() {
+    $('#id_appointment_date').datetimepicker({
+        format: 'Y-m-d H:i',
+        step: 15,
+        timepicker: true,
+        closeOnDateSelect: false,
+        validateOnBlur: true,
+        onShow: function(ct, $i) {
+            var scrollPos = $(window).scrollTop();
+            var windowHeight = $(window).height();
+            var pickerHeight = $(this).datetimepicker('widget').outerHeight();
+            var inputOffset = $i.offset().top;
+            var inputHeight = $i.outerHeight();
+            var position = {};
+
+            if ((inputOffset + inputHeight + pickerHeight) > (scrollPos + windowHeight)) {
+                position = {top: (inputOffset - pickerHeight)};
+            } else {
+                position = {top: (inputOffset + inputHeight)};
+            }
+
+            $(this).datetimepicker('widget').css(position);
+        }
+    });
+});
+</script>
+{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2>{% if object %}Edit Appointment{% else %}Create Appointment{% endif %}</h2>
+    <form method="post" novalidate>
+        {% csrf_token %}
+        {% for field in form %}
+            <div class="form-group">
+                {{ field.label_tag }}
+                {{ field }}
+                {% if field.help_text %}
+                    <small class="form-text text-muted">{{ field.help_text }}</small>
+                {% endif %}
+                {% for error in field.errors %}
+                    <div class="alert alert-danger" role="alert">
+                        {{ error }}
+                    </div>
+                {% endfor %}
+            </div>
+        {% endfor %}
+        <button type="submit" class="btn btn-primary">{% if object %}Update{% else %}Submit{% endif %} Appointment</button>
+        <a href="{% url 'dashboard:dashboard' %}" class="btn btn-secondary">Cancel</a>
+    </form>
+</div>
 {% endblock %}

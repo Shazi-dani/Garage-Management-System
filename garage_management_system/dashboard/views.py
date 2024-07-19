@@ -65,15 +65,14 @@ class AppointmentAllView(generics.ListAPIView):
 
 class AppointmentCreateView(CreateView):
     model = Appointment
-    fields = ['vehicle', 'service', 'appointment_date', 'status']
+    fields = ['user', 'vehicle', 'service', 'appointment_date']
     template_name = 'appointment_form.html'
 
     def form_valid(self, form):
-        form.instance.user = self.request.user
         return super().form_valid(form)
 
     def get_success_url(self):
-        return reverse_lazy('dashboard')  # Redirect to the dashboard after creating
+        return reverse_lazy('dashboard:dashboard')  # Redirect to the dashboard after creating
 
 class AppointmentUpdateView(UpdateView):
     model = Appointment
@@ -81,9 +80,9 @@ class AppointmentUpdateView(UpdateView):
     template_name = 'appointment_form.html'
 
     def get_success_url(self):
-        return reverse_lazy('dashboard')  # Redirect to the dashboard after updating
+        return reverse_lazy('dashboard:dashboard')  # Redirect to the dashboard after updating
 
 class AppointmentDeleteView(DeleteView):
     model = Appointment
     template_name = 'appointment_confirm_delete.html'
-    success_url = reverse_lazy('dashboard')  # Redirect to the dashboard after deletion
+    success_url = reverse_lazy('dashboard:dashboard')  # Redirect to the dashboard after deletion

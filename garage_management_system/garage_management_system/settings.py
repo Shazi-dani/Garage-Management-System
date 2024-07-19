@@ -38,8 +38,14 @@ ALLOWED_HOSTS = [
     '127.0.0.1'
 ]
 
-# CORS_ALLOW_ALL_ORIGINS = True  # For development only, not for production
+CORS_ALLOW_ALL_ORIGINS = True  # For development only, not for production
 CORS_ALLOWED_ORIGINS = [
+    'https://garage-management-system-6d09cdd418ba.herokuapp.com',
+    'https://8000-shazidani-garagemanagem-zixyev14yor.ws-us115.gitpod.io',
+    'http://127.0.0.1'
+    # Add any other origins you want to allow
+]
+CSRF_TRUSTED_ORIGINS = [
     'https://garage-management-system-6d09cdd418ba.herokuapp.com',
     'https://8000-shazidani-garagemanagem-zixyev14yor.ws-us115.gitpod.io',
     'http://127.0.0.1'
