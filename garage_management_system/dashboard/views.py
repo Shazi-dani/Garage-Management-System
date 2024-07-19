@@ -76,7 +76,7 @@ class AppointmentCreateView(CreateView):
 
 class AppointmentUpdateView(UpdateView):
     model = Appointment
-    fields = ['vehicle', 'service', 'appointment_date', 'status']
+    fields = ['vehicle', 'service', 'appointment_date']
     template_name = 'appointment_form.html'
 
     def get_success_url(self):

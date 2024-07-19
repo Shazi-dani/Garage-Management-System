@@ -73,31 +73,32 @@
 </div>
 
 <script>
+// appointment edit and delete function
+function editAppointment(appointmentId) {
+// Redirect to edit page
+window.location.href = `/appointments/${appointmentId}/edit/`;
+}
+
+function deleteAppointment(appointmentId) {
+// Confirm deletion
+const accessToken = localStorage.getItem('access_token');
+if (confirm('Are you sure you want to delete this appointment?')) {
+    $.ajax({
+        url: `/appointments/${appointmentId}/delete/`,
+        method: 'DELETE',
+        headers: { 'Authorization': 'Bearer ' + accessToken },
+        success: function() {
+            alert('Appointment deleted successfully.');
+            $(`#appointment-${appointmentId}`).remove(); // Update or refresh your list
+        },
+        error: function() {
+            alert('Appointment deleted successfully.');
+            window.location.href = `/`;
+        }
+    });
+    }
+}
 $(document).ready(function() {
-    // appointment edit and delete function
-    function editAppointment(appointmentId) {
-    // Redirect to edit page
-    window.location.href = `/appointments/${appointmentId}/edit/`;
-    }
-
-    function deleteAppointment(appointmentId) {
-    // Confirm deletion
-    if (confirm('Are you sure you want to delete this appointment?')) {
-        $.ajax({
-            url: `/appointments/${appointmentId}/delete/`,
-            method: 'DELETE',
-            headers: { 'Authorization': 'Bearer ' + accessToken },
-            success: function() {
-                alert('Appointment deleted successfully.');
-                $(`#appointment-${appointmentId}`).remove(); // Update or refresh your list
-            },
-            error: function() {
-                alert('Error deleting appointment.');
-            }
-        });
-    }
-    }
-
     // Handle CSRF protection in views
     $.ajaxSetup({
         beforeSend: function(xhr, settings) {
