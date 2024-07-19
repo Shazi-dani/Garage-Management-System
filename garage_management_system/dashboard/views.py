@@ -65,34 +65,25 @@ class AppointmentAllView(generics.ListAPIView):
 
 class AppointmentCreateView(CreateView):
     model = Appointment
-    form_class = AppointmentForm
-    template_name = 'create_appointment.html'
-    success_url = reverse_lazy('dashboard')  # Replace with your success URL
+    fields = ['vehicle', 'service', 'appointment_date', 'status']
+    template_name = 'appointment_form.html'
+
+    def form_valid(self, form):
+        form.instance.user = self.request.user
+        return super().form_valid(form)
+
+    def get_success_url(self):
+        return reverse_lazy('dashboard')  # Redirect to the dashboard after creating
 
 class AppointmentUpdateView(UpdateView):
     model = Appointment
-    form_class = AppointmentForm
-    template_name = 'edit_appointment.html'
-    success_url = reverse_lazy('dashboard')  # Replace with your success URL
+    fields = ['vehicle', 'service', 'appointment_date', 'status']
+    template_name = 'appointment_form.html'
+
+    def get_success_url(self):
+        return reverse_lazy('dashboard')  # Redirect to the dashboard after updating
 
 class AppointmentDeleteView(DeleteView):
     model = Appointment
-    template_name = 'confirm_delete_appointment.html'
-    success_url = reverse_lazy('dashboard')  # Replace with your success URL
-
-class AppointmentDetailView(DetailView):
-    serializer_class = AppointmentSerializer
-    template_name = 'appointment_detail.html'
-
-# DRF API views
-class AppointmentCreateAPIView(generics.CreateAPIView):
-    queryset = Appointment.objects.all()
-    serializer_class = AppointmentSerializer
-
-class AppointmentUpdateAPIView(generics.UpdateAPIView):
-    queryset = Appointment.objects.all()
-    serializer_class = AppointmentSerializer
-
-class AppointmentDeleteAPIView(generics.DestroyAPIView):
-    queryset = Appointment.objects.all()
-    serializer_class = AppointmentSerializer
+    template_name = 'appointment_confirm_delete.html'
+    success_url = reverse_lazy('dashboard')  # Redirect to the dashboard after deletion
