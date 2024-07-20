@@ -65,7 +65,7 @@ class AppointmentAllView(generics.ListAPIView):
 
 class AppointmentCreateView(CreateView):
     model = Appointment
-    fields = ['user', 'vehicle', 'service', 'appointment_date']
+    fields = ['user', 'vehicle', 'service', 'appointment_date', 'description']
     template_name = 'appointment_form.html'
 
     def form_valid(self, form):
@@ -76,7 +76,7 @@ class AppointmentCreateView(CreateView):
 
 class AppointmentUpdateView(UpdateView):
     model = Appointment
-    fields = ['vehicle', 'service', 'appointment_date']
+    fields = ['vehicle', 'service', 'appointment_date', 'description']
     template_name = 'appointment_form.html'
 
     def get_success_url(self):
