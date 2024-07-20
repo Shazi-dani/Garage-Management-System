@@ -124,8 +124,6 @@ The fonts i used for this project were plain, simple & easy to read and look ple
 <img width="578" alt="Login Screen" src="https://github.com/user-attachments/assets/f324df6e-06bb-4ac1-8bce-2de0a301c12e">
 
 
-[Go Top](https://github.com/Shazi-dani/Garage-Management-System/edit/main/README.md)
-
 #### Register User
 <img width="399" alt="Register Screen" src="https://github.com/user-attachments/assets/9cf590f1-d480-4dac-8f2b-8c1f8ab958e8">
 
@@ -133,7 +131,6 @@ The fonts i used for this project were plain, simple & easy to read and look ple
 #### Admin Login
 <img width="585" alt="Admin Login Screen" src="https://github.com/user-attachments/assets/1118ca24-c03c-4574-90d9-f39c2bf7edc3">
 
-[Go Top](https://github.com/Shazi-dani/Garage-Management-System/edit/main/README.md)
 
 #### Admin View
 <img width="673" alt="Admin View" src="https://github.com/user-attachments/assets/ea25a66a-63b2-412f-aa19-094de7be096d">
@@ -217,7 +214,11 @@ Staff, Branch Admin.
 [Go Top](https://github.com/Shazi-dani/Garage-Management-System/edit/main/README.md)
 
 ## 2. Dashboard
+ ![Dashboard view for client](https://github.com/user-attachments/assets/d3c80db5-168d-4a9c-a4f1-5f12cf1a8851)
+Dashboard View for logged in Client (Showing only the user's appointments)
 
+![Dashboard view for unauthentication users ](https://github.com/user-attachments/assets/4241f3d1-7e60-45aa-ace9-69b81691c854)
+Dashboard View for Un Authenticated users (Guest Users) [Showing appointments of all the users on the dashboard] with no appointment registration option
 #### Management Reports:
 
 ○ Summarize free and paid services.
