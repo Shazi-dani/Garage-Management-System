@@ -12,3 +12,4 @@ PyJWT==2.8.0
 PyMySQL==1.1.1
 sqlparse==0.5.0
 whitenoise==6.7.0
+pillow==10.4.0

@@ -6,7 +6,7 @@ from users.serializers import CustomUserSerializer
 class VehicleSerializer(serializers.ModelSerializer):
     class Meta:
         model = Vehicle
-        fields = ['id', 'model', 'make', 'color', 'license_plate_no', 'vehicle_number', 'vehicle_type', 'description']  # Customize these fields
+        fields = ['id', 'model', 'make', 'color', 'license_plate_no', 'vehicle_number', 'vehicle_type', 'description', 'image']  # Customize these fields
 
 # Serializer for Service model
 class ServiceSerializer(serializers.ModelSerializer):
