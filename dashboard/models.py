@@ -20,7 +20,7 @@ class Vehicle(models.Model):
     vehicle_type = models.CharField(max_length=20, choices=VEHICLE_TYPES)
     owner = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     description = models.TextField(blank=True, null=True)
-    image = models.ImageField(upload_to='vehicle_images/', blank=True, null=True)
+    image = models.BinaryField(blank=True, null=True)
 
     def __str__(self):
         return f"{self.make} {self.model} ({self.license_plate_no})"

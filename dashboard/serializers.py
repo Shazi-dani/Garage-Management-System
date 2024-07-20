@@ -8,6 +8,24 @@ class VehicleSerializer(serializers.ModelSerializer):
         model = Vehicle
         fields = ['id', 'model', 'make', 'color', 'license_plate_no', 'vehicle_number', 'vehicle_type', 'description', 'image']  # Customize these fields
 
+    def to_representation(self, instance):
+        representation = super().to_representation(instance)
+        if instance.image:
+            representation['image'] = instance.image.tobytes()
+        return representation
+
+    def create(self, validated_data):
+        image = validated_data.pop('image', None)
+        if image:
+            validated_data['image'] = image.read()
+        return super().create(validated_data)
+
+    def update(self, instance, validated_data):
+        image = validated_data.pop('image', None)
+        if image:
+            validated_data['image'] = image.read()
+        return super().update(instance, validated_data)
+
 # Serializer for Service model
 class ServiceSerializer(serializers.ModelSerializer):
     class Meta:
