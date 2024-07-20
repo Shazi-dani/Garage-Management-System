@@ -4,14 +4,16 @@ from users.serializers import CustomUserSerializer
 
 # Serializer for Vehicle model
 class VehicleSerializer(serializers.ModelSerializer):
+    image = serializers.ImageField(write_only=True, required=False)
+
     class Meta:
         model = Vehicle
-        fields = ['id', 'model', 'make', 'color', 'license_plate_no', 'vehicle_number', 'vehicle_type', 'description', 'image']  # Customize these fields
+        fields = ['id', 'model', 'make', 'color', 'license_plate_no', 'vehicle_number', 'vehicle_type', 'description', 'image']
 
     def to_representation(self, instance):
         representation = super().to_representation(instance)
         if instance.image:
-            representation['image'] = instance.image.tobytes()
+            representation['image'] = instance.image.tobytes()  # Convert binary data to bytes
         return representation
 
     def create(self, validated_data):
