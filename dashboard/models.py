@@ -42,6 +42,7 @@ class Appointment(models.Model):
     service = models.ForeignKey(Service, on_delete=models.CASCADE)
     appointment_date = models.DateTimeField()
     status = models.CharField(max_length=10, choices=STATUS_CHOICES, default='pending')
+    description = models.TextField(blank=True, null=True)
 
 
     def __str__(self):
