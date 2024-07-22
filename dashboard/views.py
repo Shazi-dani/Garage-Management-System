@@ -3,6 +3,9 @@ from django.urls import reverse_lazy
 from django.contrib.auth import get_user_model
 from django.views.generic import CreateView, UpdateView, DeleteView, DetailView, TemplateView
 from django.utils.timezone import now
+from django.core.mail import EmailMessage
+from django.template.loader import render_to_string
+from django.utils.html import strip_tags
 
 from rest_framework import generics, status
 from rest_framework.permissions import AllowAny, IsAuthenticated
