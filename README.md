@@ -103,8 +103,9 @@ The design of the Garage Management System aims to create a user-friendly platfo
 
 ## Colour Scheme
 The color scheme for the Garage Management System is based on a blue and white contrast, designed to create a clean, professional, and visually appealing user interface. The use of blue conveys trust, reliability, and calmness, which are crucial qualities for a service-oriented platform where users need to feel confident in their interactions. White, on the other hand, adds to the system’s clarity and simplicity, providing a sense of openness and space that enhances readability and reduces visual clutter. This combination ensures that users can navigate through the system effortlessly, with blue highlighting key elements and actions while white offers a pristine background that makes content stand out. The benefits of this color scheme include improved user focus, reduced eye strain during prolonged use, and an overall professional aesthetic that aligns with the system’s purpose of efficient and reliable service management.
+
 ## Typography 
-The fonts i used for this project were plain, simple & easy to read and look pleasant to the eye.
+The fonts i used for this project were plain, simple & easy to read and look pleasant to the eye. I have used the default [bootstrap css](https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css) as the default typography and styling reference. 
 
 [Go Top](https://github.com/Shazi-dani/Garage-Management-System/edit/main/README.md)
 
@@ -340,13 +341,25 @@ warranty information.
 [Go Top](https://github.com/Shazi-dani/Garage-Management-System/edit/main/README.md)
 
 
-
 ## Bugs found during Project
 
-[Go Top](https://github.com/Shazi-dani/Garage-Management-System/edit/main/README.md)
+1. When deploying to Heroku, the project was crashing with project settings path issue after deployment.
+   Upon investigating and consulting with the mentor, the issue was identified to be the wrong project files structure.
+   Fixing the project files structure fixed the issue and the project got live on Heroku.
 
+2. User Authentication was being successful on log In page but was giving CSRF token error. The solution was to 
+   add ``{{ csrf_token }}`` within the templates and add domain in the ``CSRF_TRUSTED_ORIGINS``. 
 
+3. Appointment creation page showed list of all users as a dropdown menu for the user field selection. 
+   This was not the intended behavior and allowed a user to add appointment for any other user as well. 
+   To fix this issue, appointment model will need to be updated and the user value will be extracted from the request 
+   instead of getting it from user input.
 
+4. User can register for an appointment for any time slot within 24 hours but it should be allowed to only add appointment
+   within the garage working hours. 
+
+5. When trying to run the server on gitpod instance, the host was giving error and it was identified that we needed to explicitly
+   add host name in the project settings ``ALLOWED_HOSTS``. 
 
 [Go Top](https://github.com/Shazi-dani/Garage-Management-System/edit/main/README.md)
 
@@ -408,9 +421,18 @@ You can now use the `heroku` CLI program - try running `heroku apps` to confirm 
 [Go Top](https://github.com/Shazi-dani/Garage-Management-System/edit/main/README.md)
 
 ## Technologies Used
+For the backend development, ``Python``/``Django`` has been used along with ``DjangoREST framework`` to implement some of the REST Api end points.
+``Postgres`` database was used to build and deploy external database and university provided external database was configured 
+with ``Django``. 
+For the frontend development, ``HTML``/``CSS`` has been used along with default bootstrap css for templating and styling. 
+For building and debugging the project, the provided ``gitpod`` instance was used.
+
 [Go Top](https://github.com/Shazi-dani/Garage-Management-System/edit/main/README.md)
 
 ## Deployment
+``Heroku`` was used to deploy the project live for users. The university provided credentials were used to host the project 
+and serve to users.
+
 [Go Top](https://github.com/Shazi-dani/Garage-Management-System/edit/main/README.md)
 
 ## Credits
