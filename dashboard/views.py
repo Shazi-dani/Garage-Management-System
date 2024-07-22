@@ -83,7 +83,7 @@ class AppointmentCreateView(CreateView):
             'appointment_date': self.object.appointment_date,
             'description': self.object.description
         }
-        html_content = render_to_string('email/appointment_create_email.html', context)
+        html_content = render_to_string('emails/appointment_create_email.html', context)
         text_content = strip_tags(html_content)  # This is to create a plain-text version of the HTML email
         
         # Send an email notification
@@ -118,7 +118,7 @@ class AppointmentUpdateView(UpdateView):
             'appointment_date': self.object.appointment_date,
             'description': self.object.description
         }
-        html_content = render_to_string('email/appointment_update_email.html', context)
+        html_content = render_to_string('emails/appointment_update_email.html', context)
         text_content = strip_tags(html_content)  # Plain-text version
         
         # Send an email notification
@@ -151,7 +151,7 @@ class AppointmentDeleteView(DeleteView):
             'appointment_date': self.object.appointment_date,
             'description': self.object.description
         }
-        html_content = render_to_string('email/appointment_delete_email.html', context)
+        html_content = render_to_string('emails/appointment_delete_email.html', context)
         text_content = strip_tags(html_content)  # Plain-text version
         
         # Send an email notification
