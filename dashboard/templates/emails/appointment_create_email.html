@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h2 class="mb-4">Appointment Confirmation</h2>
+        <p>Hello {{ user.username }},</p>
+        <p>Your appointment has been successfully scheduled as follows:</p>
+        <table class="table">
+            <tbody>
+                <tr>
+                    <th scope="row">Vehicle:</th>
+                    <td>{{ appointment.vehicle.license_plate_no }}</td>
+                </tr>
+                <tr>
+                    <th scope="row">Service:</th>
+                    <td>{{ appointment.service.description }}</td>
+                </tr>
+                <tr>
+                    <th scope="row">Date and Time:</th>
+                    <td>{{ appointment.appointment_date|date:"F d, Y H:i" }}</td>
+                </tr>
+                <tr>
+                    <th scope="row">Status:</th>
+                    <td>{{ appointment.get_status_display }}</td>
+                </tr>
+                <tr>
+                    <th scope="row">Description:</th>
+                    <td>{{ appointment.description }}</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Thank you for choosing our services!</p>
+    </div>
+</body>
+</html>

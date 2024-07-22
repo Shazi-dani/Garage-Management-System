@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h2 class="mb-4">Appointment Cancellation Notification</h2>
+        <p>Hello {{ user.username }},</p>
+        <p>We regret to inform you that your appointment scheduled for <strong>{{ appointment.appointment_date|date:"F d, Y H:i" }}</strong> has been cancelled.</p>
+        <p>If this was a mistake or you wish to reschedule, please contact our support team as soon as possible.</p>
+        <p>We apologize for any inconvenience and thank you for your understanding.</p>
+    </div>
+</body>
+</html>
