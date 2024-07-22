@@ -5,18 +5,17 @@
 </head>
 <body>
     <div class="container">
-        <h2 class="mb-4">Appointment Update Notification</h2>
         <p>Hello {{ user.username }},</p>
         <p>Your appointment details have been updated as follows:</p>
         <table class="table">
             <tbody>
                 <tr>
                     <th scope="row">Vehicle:</th>
-                    <td>{{ appointment.vehicle.license_plate_no }}</td>
+                    <td>{{ vehicle.license_plate_no }}</td>
                 </tr>
                 <tr>
                     <th scope="row">Service:</th>
-                    <td>{{ appointment.service.description }}</td>
+                    <td>{{ service.description }}</td>
                 </tr>
                 <tr>
                     <th scope="row">New Date and Time:</th>
@@ -24,7 +23,7 @@
                 </tr>
                 <tr>
                     <th scope="row">Status:</th>
-                    <td>{{ appointment.get_status_display }}</td>
+                    <td>{{ appointment.status }}</td>
                 </tr>
                 <tr>
                     <th scope="row">Description:</th>

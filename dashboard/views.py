@@ -116,7 +116,7 @@ class AppointmentUpdateView(UpdateView):
         context = {
             'user': self.object.user,
             'vehicle': self.object.vehicle,
-            'service': self.object.service,
+            'service': self.object.service.description,
             'appointment_date': self.object.appointment_date,
             'description': self.object.description
         }
