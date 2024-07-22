@@ -8,6 +8,7 @@ from django.contrib.auth import authenticate, get_user_model
 
 from .serializers import UserRegistrationSerializer, UserLoginSerializer
 from .models import BlacklistedToken
+from .email_utils import send_signup_email
 
 
 User = get_user_model()
@@ -20,6 +21,10 @@ class UserRegistrationView(generics.CreateAPIView):
     def get(self, request, *args, **kwargs):
         # Serve the login form template
         return render(request, 'register.html')
+    
+    def perform_create(self, serializer):
+        user = serializer.save()
+        send_signup_email(user)
 
 class UserLoginView(APIView):
     permission_classes = (AllowAny,)
