@@ -1,3 +1,5 @@
+import os
+
 from django.shortcuts import redirect
 from django.urls import reverse_lazy
 from django.contrib.auth import get_user_model
@@ -90,7 +92,7 @@ class AppointmentCreateView(CreateView):
         email = EmailMessage(
             'GSM - Appointment Confirmation',
             html_content,
-            settings.EMAIL_HOST_USER,
+            os.environ.get('DEFAULT_FROM_EMAIL'),
             [self.object.user.email]
         )
         email.content_subtype = "html"  # Main content is now text/html
@@ -125,7 +127,7 @@ class AppointmentUpdateView(UpdateView):
         email = EmailMessage(
             'GSM - Appointment Update Confirmation',
             html_content,
-            settings.EMAIL_HOST_USER,
+            os.environ.get('DEFAULT_FROM_EMAIL'),
             [self.object.user.email]
         )
         email.content_subtype = "html"
@@ -158,7 +160,7 @@ class AppointmentDeleteView(DeleteView):
         email = EmailMessage(
             'GSM - Appointment Cancellation Confirmation',
             html_content,
-            settings.EMAIL_HOST_USER,
+            os.environ.get('DEFAULT_FROM_EMAIL'),
             [self.object.user.email]
         )
         email.content_subtype = "html"
