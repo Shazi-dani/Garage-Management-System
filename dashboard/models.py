@@ -8,7 +8,6 @@ class Vehicle(models.Model):
         ('truck', 'Truck'),
         ('bicycle', 'Bicycle'),
         ('motorcycle', 'Motorcycle'),
-        ('rickshaw', 'rickshaw'),
         ('other', 'Other'),
     ]
 

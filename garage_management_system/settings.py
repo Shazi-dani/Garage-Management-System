@@ -35,20 +35,23 @@ AUTH_USER_MODEL = 'users.CustomUser'
 ALLOWED_HOSTS = [
     '.herokuapp.com',
     '8000-shazidani-garagemanagem-zixyev14yor.ws-us115.gitpod.io',
-    '127.0.0.1'
+    '127.0.0.1',
+    '8000-shazidani-garagemanagem-jp5pjx8uxc1.ws.codeinstitute-ide.net'
 ]
 
 CORS_ALLOW_ALL_ORIGINS = True  # For development only, not for production
 CORS_ALLOWED_ORIGINS = [
     'https://*.herokuapp.com',
     'https://8000-shazidani-garagemanagem-zixyev14yor.ws-us115.gitpod.io',
-    'http://127.0.0.1'
+    'http://127.0.0.1',
+    'https://8000-shazidani-garagemanagem-jp5pjx8uxc1.ws.codeinstitute-ide.net',
     # Add any other origins you want to allow
 ]
 CSRF_TRUSTED_ORIGINS = [
     'https://*.herokuapp.com',
     'https://8000-shazidani-garagemanagem-zixyev14yor.ws-us115.gitpod.io',
-    'http://127.0.0.1'
+    'http://127.0.0.1',
+    'https://8000-shazidani-garagemanagem-jp5pjx8uxc1.ws.codeinstitute-ide.net',
     # Add any other origins you want to allow
 ]
 # Application definition
