@@ -108,7 +108,7 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')  # Use an app-specific password if two-factor authentication is enabled
-DEFAULT_FROM_EMAIL = 'admin_gms@gmail.com'
+DEFAULT_FROM_EMAIL = 'admin_dt_autos@gmail.com'
 
 WSGI_APPLICATION = 'garage_management_system.wsgi.application'
 

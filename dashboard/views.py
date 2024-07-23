@@ -90,7 +90,7 @@ class AppointmentCreateView(CreateView):
         
         # Send an email notification
         email = EmailMessage(
-            'GSM - Appointment Confirmation',
+            'DT Autos - Appointment Confirmation',
             html_content,
             os.environ.get('DEFAULT_FROM_EMAIL'),
             [self.object.user.email]
@@ -125,7 +125,7 @@ class AppointmentUpdateView(UpdateView):
         
         # Send an email notification
         email = EmailMessage(
-            'GSM - Appointment Update Confirmation',
+            'DT Autos - Appointment Update Confirmation',
             html_content,
             os.environ.get('DEFAULT_FROM_EMAIL'),
             [self.object.user.email]
@@ -156,7 +156,7 @@ class AppointmentDeleteView(DeleteView):
         
         # Send an email notification
         email = EmailMessage(
-            'GSM - Appointment Cancellation Confirmation',
+            'DT Autos - Appointment Cancellation Confirmation',
             html_content,
             os.environ.get('DEFAULT_FROM_EMAIL'),
             [self.object.user.email]
