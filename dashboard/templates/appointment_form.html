@@ -39,7 +39,20 @@
 $(document).ready(function() {
     $('#id_appointment_date').datetimepicker({
         format: 'Y-m-d H:i',
-        step: 15,
+        step: 30,  // Sets the minute selection step to 30 minutes
+        minDate: 0,  // Disables past dates
+        defaultTime: '09:00',  // Sets the default time to 9:00 AM
+        allowTimes: [
+            '09:00', '09:30',
+            '10:00', '10:30',
+            '11:00', '11:30',
+            '12:00', '12:30',
+            '13:00', '13:30',
+            '14:00', '14:30',
+            '15:00', '15:30',
+            '16:00', '16:30',
+            '17:00'  // Last selectable time
+        ],        
         timepicker: true,
         closeOnDateSelect: false,
         validateOnBlur: true,
