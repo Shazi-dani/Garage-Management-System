@@ -80,8 +80,8 @@ class AppointmentCreateView(CreateView):
         # Prepare the email message
         context = {
             'user': self.object.user,
-            'vehicle': self.object.vehicle,
-            'service': self.object.service,
+            'vehicle': self.object.vehicle.license_plate_no,
+            'service': self.object.service.description,
             'appointment_date': self.object.appointment_date,
             'description': self.object.description
         }
@@ -115,7 +115,7 @@ class AppointmentUpdateView(UpdateView):
         # Prepare the email message
         context = {
             'user': self.object.user,
-            'vehicle': self.object.vehicle,
+            'vehicle': self.object.vehicle.license_plate_no,
             'service': self.object.service.description,
             'appointment_date': self.object.appointment_date,
             'description': self.object.description
@@ -148,10 +148,8 @@ class AppointmentDeleteView(DeleteView):
         self.object = self.get_object()
         context = {
             'user': self.object.user,
-            'vehicle': self.object.vehicle,
-            'service': self.object.service,
+            'vehicle': self.object.vehicle.license_plate_no,
             'appointment_date': self.object.appointment_date,
-            'description': self.object.description
         }
         html_content = render_to_string('emails/appointment_delete_email.html', context)
         text_content = strip_tags(html_content)  # Plain-text version

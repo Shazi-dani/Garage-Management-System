@@ -11,23 +11,19 @@
             <tbody>
                 <tr>
                     <th scope="row">Vehicle:</th>
-                    <td>{{ vehicle.license_plate_no }}</td>
+                    <td>{{ vehicle }}</td>
                 </tr>
                 <tr>
                     <th scope="row">Service:</th>
-                    <td>{{ service.description }}</td>
+                    <td>{{ service }}</td>
                 </tr>
                 <tr>
                     <th scope="row">Date and Time:</th>
-                    <td>{{ appointment.appointment_date|date:"F d, Y H:i" }}</td>
-                </tr>
-                <tr>
-                    <th scope="row">Status:</th>
-                    <td>{{ appointment.status }}</td>
+                    <td>{{ appointment_date|date:"F d, Y H:i" }}</td>
                 </tr>
                 <tr>
                     <th scope="row">Description:</th>
-                    <td>{{ appointment.description }}</td>
+                    <td>{{ description }}</td>
                 </tr>
             </tbody>
         </table>
