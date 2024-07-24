@@ -1,11 +1,5 @@
 from django.contrib import admin
-from .models import BlacklistedToken, CustomUser
-
-
-@admin.register(BlacklistedToken)
-class BlacklistedTokenAdmin(admin.ModelAdmin):
-    list_display = ['token', 'blacklisted_at']
-    readonly_fields = ['blacklisted_at']
+from .models import CustomUser
 
 @admin.register(CustomUser)
 class CustomUserAdmin(admin.ModelAdmin):
