@@ -220,6 +220,7 @@
                             alert('Thank you for your inquiry!');
                             $('#contactModal').modal('hide');
                             $('#contactForm')[0].reset();
+                            window.location.href = '/'; // Redirect to home page
                         } else {
                             alert('There was an error. Please try again.');
                         }
