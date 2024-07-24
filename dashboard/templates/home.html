@@ -1,0 +1,303 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'dashboard/css/style.css' %}">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.full.min.js"></script>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#home">
+                <img src="{% static 'dashboard/images/DT_logo.png' %}" alt="DT Autos" style="width: 100%; height: auto; max-width: 75px;">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#cars-for-sale">Cars for Sale</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#book-now">Book Now</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-toggle="modal" data-target="#contactModal">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header with Background Image -->
+    <header class="header" id="home">
+        <div class="container text-center">
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container mt-5" id="services">
+        <h2 style="line-height:1em; text-align:center; font-size:28px;">
+            <span style="color: white; text-align: center; font-style: italic;">SERVICE DOES YOUR VEHICLE NEED?</span></h2>
+        <p style="color: white; text-align: center; font-style: italic; font-size: 16px;" >At D&T Autos, we offer a wide range of car repair and maintenance services to keep your vehicle operating at its best. From basic car checks to complex breakdown services, our certified experts are dedicated to providing you with top-notch solutions. No matter the issue, our specialists are here to help you get back on the road safely. Contact us now for the best quote!</p>
+        
+        <table>
+            <tr>
+                <th style="padding-left: 50px; padding-right: 50px;">
+                    <div>
+                        <img src="{% static 'dashboard/images/certified_author.png' %}" alt="Certified Author" style="width: 80px; height: 80px;">
+                    </div>
+                </th>
+                <th style="padding-left: 50px; padding-right: 50px;">
+                    <div>
+                        <img src="{% static 'dashboard/images/schedule.png' %}" alt="Comprehensive car inspections" style="width: 80px; height: 80px;">
+                    </div>
+                </th>
+                <th style="padding-left: 50px; padding-right: 50px;">
+                    <div>
+                        <img src="{% static 'dashboard/images/lubricant.png' %}" alt="Comprehensive car inspections" style="width: 80px; height: 80px;">
+                    </div>
+                </th>
+            </tr>
+            <tr>
+                <td style="padding: 5px;">
+                    <h2 style="font-size: 18px">
+                        <span>CERTIFIED MECHANICS</span>
+                    </h2>
+                </td>
+                <td style="padding: 5px;">
+                    <h2 style="font-size: 18px;">
+                        <span>COMPREHENSIVE CAR INSPECTIONS</span>
+                    </h2>
+                </td>
+                <td style="padding: 5px;">
+                    <h2 style="font-size: 18px;">
+                        <span>PRECISION OIL & BRAKE CHECKS</span>
+                    </h2>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p style="padding: 20px; font-size: 16px;">
+                        Our team of certified mechanics at D&T GARAGE is committed to delivering exceptional service to address all your car repair and maintenance needs. With years of experience and expertise, we ensure that your vehicle receives the care and attention it deserves.
+                    </p>
+                </td>
+                <td>
+                    <p style="padding: 20px; font-size: 16px;">When it comes to car care, regular inspections are crucial. At D&T GARAGE, we offer comprehensive car checks to identify any potential issues and ensure that your vehicle is in optimal condition. Trust our experts to keep your car running smoothly.
+                    </p>
+                </td>
+                <td>
+                    <p style="padding: 20px; font-size: 16px;">
+                        Maintaining proper oil and brake levels is essential for the overall performance of your vehicle. At D&T GARAGE, we offer precision oil and brake checks to ensure that your car's vital components are functioning optimally. Leave it to our experts to keep your vehicle safe and reliable.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding-left: 50px; padding-right: 50px;">
+                    <div>
+                        <img src="{% static 'dashboard/images/truck.png' %}" alt="Certified Author" style="width: 80px; height: 80px;">
+                    </div>
+                </td>
+                <td style="padding-left: 50px; padding-right: 50px;">
+                    <div>
+                        <img src="{% static 'dashboard/images/tyre.png' %}" alt="Comprehensive car inspections" style="width: 80px; height: 80px;">
+                    </div>
+                </td>
+                <td style="padding-left: 50px; padding-right: 50px;">
+                    <div>
+                        <img src="{% static 'dashboard/images/battery.png' %}" alt="Comprehensive car inspections" style="width: 80px; height: 80px;">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 5px;">
+                    <h2 style="font-size: 18px">
+                        <span>EMERGENCY RECOVERY BREAKDOWN ASSISTANCE</span>
+                    </h2>
+                </td>
+                <td style="padding: 5px;">
+                    <h2 style="font-size: 18px;">
+                        <span>PROFESSIONAL TYRE SERVICES</span>
+                    </h2>
+                </td>
+                <td style="padding: 5px;">
+                    <h2 style="font-size: 18px;">
+                        <span>SEAMLESS BATTERY REPLACEMENT</span>
+                    </h2>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p style="padding: 20px; font-size: 16px;">Experiencing a breakdown? Don't worry! At D&T GARAGE, we provide prompt and reliable breakdown services to get you back on track. Our dedicated team is equipped to handle emergency situations and assist you with the necessary repairs to ensure your safety on the road.</p>
+                </td>
+                <td>
+                    <p style="padding: 20px; font-size: 16px;">Need a tire change? Our professional tire services at D&T GARAGE have got you covered. Whether it's a tire replacement or repair, we provide efficient and effective solutions to keep your vehicle performing at its best.</p>
+                </td>
+                <td>
+                    <p style="padding: 20px; font-size: 16px;">Is your car's battery giving you trouble? Let us take care of it! At D&T GARAGE, we provide seamless battery replacement services to keep your vehicle powered up. Count on us for swift and efficient solutions to address your battery-related concerns.</p>
+                </td>
+            </tr>
+        </table>
+        <div style="padding-left: 450px;">
+            <input type="submit" value="Schedule Service" style="display: flex;"/>
+        </div>
+    </div>
+
+    <!-- About Us Section -->
+    <section id="about-us" class="mt-5">
+        <div style="color: white; text-align: center; margin: 30px; padding: 50px; font-style: italic; font-size: 16px;">
+            <h2>About Us</h2>
+            <p>Welcome to DT Autos, your premier destination for comprehensive garage management solutions. At DD Tech, we specialize in leveraging cutting-edge technology to streamline and enhance the operational efficiency of automotive repair and maintenance facilities. Our mission is to provide garage owners and managers with intuitive, reliable, and powerful tools that simplify day-to-day operations, improve customer satisfaction, and drive business growth.</p>
+            <p>Our innovative Garage Management System integrates seamlessly with your existing workflows, offering a user-friendly interface and a suite of features designed to optimize resource allocation, track inventory, manage appointments, and generate detailed reports. With our system, you can effortlessly monitor vehicle repairs, communicate with customers, and manage your team, all from a single, centralized platform. Our commitment to excellence and customer support ensures that you have all the resources you need to succeed in an increasingly competitive market.</p>
+            <p>DT Autos, we understand the challenges faced by modern garages and automotive service centers. That's why we are dedicated to continuously improving our solutions based on customer feedback and industry advancements. Our team of experts is passionate about providing you with the best possible tools to elevate your business operations. Join us on the journey towards innovation and excellence, and experience the future of garage management today.</p>
+        </div>
+    </section>
+
+    <!-- Contact Us Modal -->
+    <div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="contactModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="contactModalLabel">Get in touch with us</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label style="font-style: italic;" for="fname">First Name:</label>
+                            <input type="text" class="form-control" id="fname" name="fname" required>
+                        </div>
+                        <div class="form-group">
+                            <label style="font-style: italic;" for="lname">Last Name:</label>
+                            <input type="text" class="form-control" id="lname" name="lname" required>
+                        </div>
+                        <div class="form-group">
+                            <label style="font-style: italic;" for="email">Email:</label>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label style="font-style: italic;" for="subject">Subject:</label>
+                            <input type="text" class="form-control" id="subject" name="subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label style="font-style: italic;" for="message">Message:</label>
+                            <textarea class="form-control" id="message" name="message" rows="3" required></textarea>
+                        </div>
+                        <input type="submit" value="Reach us"/>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Footer-->
+
+    <footer class="text-white text-center text-lg-start" style="background-color: #23242a;">
+        <!-- Grid container -->
+        <div class="container p-4">
+          <!--Grid row-->
+          <div class="row mt-4">
+            <!--Grid column-->
+            <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
+              <h5 class="text-uppercase mb-4">About company</h5>
+    
+              <p>
+                At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
+                voluptatum deleniti atque corrupti.
+              </p>
+    
+              <p>
+                Blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas
+                molestias.
+              </p>
+    
+              <div class="mt-4">
+                <!-- Facebook -->
+                <a type="button" class="btn btn-floating btn-warning btn-lg"><i class="fab fa-facebook-f"></i></a>
+                <!-- Dribbble -->
+                <a type="button" class="btn btn-floating btn-warning btn-lg"><i class="fab fa-dribbble"></i></a>
+                <!-- Twitter -->
+                <a type="button" class="btn btn-floating btn-warning btn-lg"><i class="fab fa-twitter"></i></a>
+                <!-- Google + -->
+                <a type="button" class="btn btn-floating btn-warning btn-lg"><i class="fab fa-google-plus-g"></i></a>
+                <!-- Linkedin -->
+              </div>
+            </div>
+            <!--Grid column-->
+    
+            <!--Grid column-->
+            <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+              
+              <ul class="fa-ul" style="margin-left: 1.65em;">
+                <li class="mb-3">
+                  <span class="fa-li"><i class="fas fa-home"></i></span><span class="ms-2">New York, NY 10012, US</span>
+                </li>
+                <li class="mb-3">
+                  <span class="fa-li"><i class="fas fa-envelope"></i></span><span class="ms-2">info@example.com</span>
+                </li>
+                <li class="mb-3">
+                  <span class="fa-li"><i class="fas fa-phone"></i></span><span class="ms-2">+ 01 234 567 88</span>
+                </li>
+                <li class="mb-3">
+                  <span class="fa-li"><i class="fas fa-print"></i></span><span class="ms-2">+ 01 234 567 89</span>
+                </li>
+              </ul>
+            </div>
+            <!--Grid column-->
+    
+            <!--Grid column-->
+            <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+              <h5 class="text-uppercase mb-4">Opening hours</h5>
+    
+              <table class="table text-center text-white">
+                <tbody class="font-weight-normal">
+                  <tr>
+                    <td>Mon - Thu:</td>
+                    <td>8am - 9pm</td>
+                  </tr>
+                  <tr>
+                    <td>Fri - Sat:</td>
+                    <td>8am - 1am</td>
+                  </tr>
+                  <tr>
+                    <td>Sunday:</td>
+                    <td>9am - 10pm</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!--Grid column-->
+          </div>
+          <!--Grid row-->
+        </div>
+        <!-- Grid container -->
+    
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+          © 2024 Copyright:
+          <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+        </div>
+        <!-- Copyright -->
+      </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

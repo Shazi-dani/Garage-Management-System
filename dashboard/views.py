@@ -23,6 +23,11 @@ from .email_utils import send_appointment_creation_email, send_appointment_updat
 # Create your views here.
 User = get_user_model()
 
+class HomeView(TemplateView):
+    template_name = 'home.html'
+    permission_classes = [AllowAny]
+    authentication_classes = [SessionAuthentication]
+
 class DashboardView(TemplateView):
     template_name = 'dashboard.html'
     permission_classes = [AllowAny]

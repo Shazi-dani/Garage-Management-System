@@ -1,13 +1,14 @@
 from django.urls import path
 
-from .views import DashboardView
+from .views import HomeView, DashboardView
 from .views import AppointmentCreateView, AppointmentUpdateView, AppointmentDeleteView, AppointmentListView
 
 
 app_name = 'dashboard'
 
 urlpatterns = [
-    path('', DashboardView.as_view(), name='dashboard'),
+    path('', HomeView.as_view(), name='home'),
+    path('dashboard/', DashboardView.as_view(), name='dashboard'),
     path('appointments/new/', AppointmentCreateView.as_view(), name='create_appointment'),
     path('appointments/<int:pk>/edit/', AppointmentUpdateView.as_view(), name='appointment_edit'),
     path('appointments/<int:pk>/delete/', AppointmentDeleteView.as_view(), name='appointment_delete'),    

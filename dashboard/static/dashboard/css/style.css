@@ -1,0 +1,167 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #424242;
+    font-size: 1.2rem;
+}
+
+.navbar {
+    background-color: rgba(0, 0, 0, 0.7);
+    transition: background-color 0.5s ease;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-link {
+    color: #fff !important;
+    font-size: 1.1rem;
+}
+
+.navbar-nav .nav-item .nav-link {
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+    color: #ffdd57 !important;
+}
+
+.header {
+    background: url('/static/dashboard/images/cover.jpeg') no-repeat center center;
+    background-size: cover;
+    padding: 300px 0;
+    color: white;
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.header p {
+    font-size: 1.5rem;
+}
+
+.modal-header, .modal-footer {
+    border: none;
+}
+
+.background-section {
+    padding: 50px 0;
+    color: white;
+    text-align: center;
+}
+
+.background-section .btn {
+    background-color: #fdc124;
+    border: none;
+}
+
+.background-section .btn:hover {
+    background-color: #e0a81b;
+}
+
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+    background-color: rgb(238, 98, 63);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+table {
+    width: 100%;
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table, tr, th, td {
+    color: white;
+    font-style: italic;
+    text-align: center;
+    vertical-align: middle;
+}
+
+td {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+label {
+    display: block;
+    margin-top: 20px;
+}
+input, select, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 6px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+.btn-primary, .btn-secondary {
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+.btn-primary:hover, .btn-secondary:hover {
+    opacity: 0.8;
+}
+#appointmentsList {
+    display: flex;
+    overflow-x: auto;
+    padding: 20px;
+}
+.card {
+    flex: 0 0 auto;
+    width: 300px;
+    margin-right: 15px;
+}
+.card-header {
+    background-color: #3bac9f;
+    color: rgb(15, 15, 15);
+    display: block;
+}
+.card-body {
+    background-color: #f3f6fa;
+}
+.info-block {
+    background-color: #8f8176aa;
+    border-left: 3px solid #2c8ab0;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+.info-block label {
+    font-weight: bold;
+    color: #442727;
+    display: block;
+}
+.info-block span {
+    display: block;
+    padding-left: 10px;
+}
