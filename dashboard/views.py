@@ -16,7 +16,7 @@ from rest_framework.response import Response
 from rest_framework.authentication import SessionAuthentication
 
 from .models import Appointment
-from .forms import AppointmentForm
+from .forms import AppointmentForm, Inquiry
 from .serializers import AppointmentSerializer
 from .email_utils import send_appointment_creation_email, send_appointment_update_email, send_appointment_delete_email
 
@@ -161,3 +161,14 @@ class AppointmentDeleteView(DeleteView):
         # Proceed with deleting the object
         response = super().delete(request, *args, **kwargs)
         return response
+
+# Handle User Inquiry View submission
+def submit_inquiry(request):
+    if request.method == 'POST':
+        form = InquiryForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return JsonResponse({'status': 'success'}, status=200)
+        else:
+            return JsonResponse({'status': 'error', 'errors': form.errors}, status=400)
+    return JsonResponse({'status': 'error', 'message': 'Invalid request'}, status=400)

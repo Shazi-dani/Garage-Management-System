@@ -1,6 +1,6 @@
 from django import forms
 from django.utils.safestring import mark_safe
-from .models import Appointment, Vehicle
+from .models import Appointment, Vehicle, Inquiry
 import base64
 
 
@@ -37,3 +37,10 @@ class VehicleAdminForm(forms.ModelForm):
         if commit:
             instance.save()
         return instance
+
+
+# Custom Model to Save User inquiries in a database
+class InquiryForm(forms.ModelForm):
+    class Meta:
+        model = Inquiry
+        fields = ['first_name', 'last_name', 'email', 'subject', 'message']

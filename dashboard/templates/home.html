@@ -205,6 +205,32 @@
             </div>
         </div>
     </div>
+    <script>
+        $(document).ready(function() {
+            $('#contactForm').submit(function(event) {
+                event.preventDefault();
+                var formData = $(this).serialize();
+    
+                $.ajax({
+                    type: 'POST',
+                    url: '{% url "dashboard:submit_inquiry" %}',
+                    data: formData,
+                    success: function(response) {
+                        if (response.status === 'success') {
+                            alert('Thank you for your inquiry!');
+                            $('#contactModal').modal('hide');
+                            $('#contactForm')[0].reset();
+                        } else {
+                            alert('There was an error. Please try again.');
+                        }
+                    },
+                    error: function(response) {
+                        alert('There was an error. Please try again.');
+                    }
+                });
+            });
+        });
+    </script>
 
     <!--Footer-->
 
