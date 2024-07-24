@@ -24,16 +24,25 @@ from .email_utils import send_appointment_creation_email, send_appointment_updat
 User = get_user_model()
 
 class HomeView(TemplateView):
+    """
+    View to render the home page of the website.
+    """
     template_name = 'home.html'
     permission_classes = [AllowAny]
     authentication_classes = [SessionAuthentication]
 
 class DashboardView(TemplateView):
+    """
+    View to render the dashboard page, providing user-specific data if authenticated.
+    """
     template_name = 'dashboard.html'
     permission_classes = [AllowAny]
     authentication_classes = [SessionAuthentication]
 
     def get_context_data(self, **kwargs):
+        """
+        Adds user type and username to the context for rendering in the template.
+        """
         context = super().get_context_data(**kwargs)
         # You can add more context variables if needed
         user = self.request.user
@@ -50,10 +59,16 @@ class DashboardView(TemplateView):
         return context
 
 class AppointmentListView(generics.ListAPIView):
+    """
+    API view to list appointments based on the user type, filtering for specific users if necessary.
+    """
     serializer_class = AppointmentSerializer
     permission_classes = [AllowAny]
 
     def get_queryset(self):
+        """
+        Returns a queryset of appointments based on the user's type and authentication status.
+        """
         user = self.request.user
         if user.is_authenticated:
             if user.user_type == 'Customer':
@@ -65,11 +80,17 @@ class AppointmentListView(generics.ListAPIView):
             return Appointment.objects.none()
 
 class AppointmentCreateView(CreateView):
+    """
+    View to create a new appointment with an automated email notification upon creation.
+    """
     model = Appointment
     fields = ['vehicle', 'service', 'appointment_date', 'description']
     template_name = 'appointment_form.html'
 
     def form_valid(self, form):
+        """
+        Processes the form, sends an email on successful creation, and redirects to the dashboard.
+        """
         form.instance.user = self.request.user  # Set the user from the request
         response = super().form_valid(form)
 
@@ -97,15 +118,23 @@ class AppointmentCreateView(CreateView):
         return response
 
     def get_success_url(self):
+        """
+        Returns the URL to redirect to after successfully creating an appointment.
+        """
         return reverse_lazy('dashboard:dashboard')  # Redirect to the dashboard after creating
 
 class AppointmentUpdateView(UpdateView):
+    """
+    View to update an existing appointment with an automated email notification upon update.
+    """
     model = Appointment
     fields = ['vehicle', 'service', 'appointment_date', 'description']
     template_name = 'appointment_form.html'
 
     def form_valid(self, form):
-        # Save the form instance
+        """
+        Processes the form, sends an email on successful update, and redirects to the dashboard.
+        """
         response = super().form_valid(form)
 
         # Prepare the email message
@@ -132,15 +161,23 @@ class AppointmentUpdateView(UpdateView):
         return response
     
     def get_success_url(self):
+        """
+        Returns the URL to redirect to after successfully updating an appointment.
+        """
         return reverse_lazy('dashboard:dashboard')  # Redirect to the dashboard after updating
 
 class AppointmentDeleteView(DeleteView):
+    """
+    View to delete an existing appointment with an automated email notification upon deletion.
+    """
     model = Appointment
     template_name = 'appointment_confirm_delete.html'
     success_url = reverse_lazy('dashboard:dashboard')  # Redirect to the dashboard after deletion
 
     def delete(self, request, *args, **kwargs):
-        # Fetch the object to be deleted
+        """
+        Deletes the appointment and sends an email notification to the user.
+        """
         self.object = self.get_object()
         context = {
             'user': self.object.user,
@@ -166,6 +203,9 @@ class AppointmentDeleteView(DeleteView):
 
 # Handle User Inquiry View submission
 def submit_inquiry(request):
+    """
+    Handles submission of user inquiries via a form, returning JSON responses based on success or failure.
+    """
     if request.method == 'POST':
         form = InquiryForm(request.POST)
         if form.is_valid():

@@ -5,6 +5,15 @@ import base64
 
 
 class AppointmentForm(forms.ModelForm):
+    """
+    A ModelForm for creating and updating Appointment instances.
+
+    Attributes:
+        Meta:
+            model (Model): The model class this form is linked to.
+            fields (list): List of model fields included in the form.
+            widgets (dict): Custom widgets to use in the form for specific fields.
+    """
     class Meta:
         model = Appointment
         fields = ['user', 'vehicle', 'service', 'appointment_date', 'description']
@@ -14,6 +23,19 @@ class AppointmentForm(forms.ModelForm):
 
 # Need custom Vehicle model in order to show image field in views
 class VehicleAdminForm(forms.ModelForm):
+    """
+    A custom ModelForm for Vehicle to handle image uploads via a file field instead of directly handling binary data.
+    
+    This form includes a FileField for uploading images and excludes the original binary image field in the model.
+    It also displays a preview of the current image if it exists.
+
+    Attributes:
+        image_file (FileField): A field for uploading an image file, not required.
+        
+    Methods:
+        __init__: Customizes initialization to possibly include an image preview.
+        save: Overrides the default save method to handle image file saving.
+    """
     image_file = forms.FileField(required=False)
 
     class Meta:
@@ -30,6 +52,15 @@ class VehicleAdminForm(forms.ModelForm):
             )
     
     def save(self, commit=True):
+        """
+        Saves the form instance and handles the uploaded image file, saving it in binary format if provided.
+
+        Args:
+            commit (bool): Whether to save the instance to the database immediately.
+
+        Returns:
+            instance (Vehicle): The saved Vehicle model instance, with image data updated if provided.
+        """
         instance = super(VehicleAdminForm, self).save(commit=False)
         image_file = self.cleaned_data.get('image_file')
         if image_file:
@@ -41,6 +72,14 @@ class VehicleAdminForm(forms.ModelForm):
 
 # Custom Model to Save User inquiries in a database
 class InquiryForm(forms.ModelForm):
+    """
+    A ModelForm for creating Inquiry instances, capturing various user inputs like name, email, and message.
+    
+    Attributes:
+        Meta:
+            model (Model): The model class this form is linked to.
+            fields (list): List of model fields included in the form.
+    """
     class Meta:
         model = Inquiry
         fields = ['first_name', 'last_name', 'email', 'subject', 'message']
