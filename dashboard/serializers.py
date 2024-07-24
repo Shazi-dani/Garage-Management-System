@@ -1,3 +1,4 @@
+import base64
 from rest_framework import serializers
 from .models import Appointment, Service, Vehicle
 from users.serializers import CustomUserSerializer
@@ -13,7 +14,7 @@ class VehicleSerializer(serializers.ModelSerializer):
     def to_representation(self, instance):
         representation = super().to_representation(instance)
         if instance.image:
-            representation['image'] = instance.image.tobytes()  # Convert binary data to bytes
+            representation['image'] = base64.b64encode(instance.image).decode('utf-8')  # Encode binary data to Base64
         return representation
 
     def create(self, validated_data):

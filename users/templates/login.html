@@ -44,17 +44,9 @@ $(document).ready(function() {
             method: 'POST',
             data: data,
             success: function(response) {
-                console.log('Server response:', response); // Debug statement
-                if (response.access && response.refresh) {
-                    localStorage.setItem('access_token', response.access); // Store access token in localStorage
-                    localStorage.setItem('refresh_token', response.refresh); // Store refresh token in localStorage
-                    console.log('Stored access token:', response.access); // Debug statement
-                    alert('Login successful!');
-                    window.location.href = '/';
-                } else {
-                    console.error('Tokens not found in response:', response);
-                    alert('Login failed. Please try again.');
-                }
+                console.log('Login successful:', response); // Debug statement
+                alert('Login successful!');
+                window.location.href = '/';
             },
             error: function() {
                 alert('Invalid credentials. Please try again.');

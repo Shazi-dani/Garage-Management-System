@@ -13,7 +13,7 @@ from rest_framework import generics, status
 from rest_framework.permissions import AllowAny, IsAuthenticated
 from rest_framework.views import APIView
 from rest_framework.response import Response
-from rest_framework_simplejwt.authentication import JWTAuthentication
+from rest_framework.authentication import SessionAuthentication
 
 from .models import Appointment
 from .forms import AppointmentForm
@@ -26,7 +26,7 @@ User = get_user_model()
 class DashboardView(TemplateView):
     template_name = 'dashboard.html'
     permission_classes = [AllowAny]
-    authentication_classes = [JWTAuthentication]
+    authentication_classes = [SessionAuthentication]
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -44,30 +44,18 @@ class DashboardView(TemplateView):
         })
 
         return context
-    
-    def dispatch(self, request, *args, **kwargs):
-        if request.content_type == 'application/json':
-            self.authentication_classes = [JWTAuthentication]
-            self.permission_classes = [AllowAny]
-            return APIView.dispatch(self, request, *args, **kwargs)
-        return super().dispatch(request, *args, **kwargs)
-
 
 class AppointmentListView(generics.ListAPIView):
-    serializer_class = AppointmentSerializer
-    permission_classes = [IsAuthenticated]
-
-    def get_queryset(self):
-        # Fetch appointments for the logged-in user only
-        return Appointment.objects.filter(user=self.request.user)
-
-class AppointmentAllView(generics.ListAPIView):
     serializer_class = AppointmentSerializer
     permission_classes = [AllowAny]
 
     def get_queryset(self):
+        user = self.request.user
+        if user.is_authenticated:
         # Fetch appointments for the logged-in user only
-        return Appointment.objects.all()
+            return Appointment.objects.filter(user=self.request.user)
+        else:
+            return Appointment.objects.all()
 
 class AppointmentCreateView(CreateView):
     model = Appointment
@@ -111,7 +99,7 @@ class AppointmentUpdateView(UpdateView):
     def form_valid(self, form):
         # Save the form instance
         response = super().form_valid(form)
-        
+
         # Prepare the email message
         context = {
             'user': self.object.user,
