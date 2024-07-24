@@ -59,10 +59,11 @@ class AppointmentListView(generics.ListAPIView):
 
 class AppointmentCreateView(CreateView):
     model = Appointment
-    fields = ['user', 'vehicle', 'service', 'appointment_date', 'description']
+    fields = ['vehicle', 'service', 'appointment_date', 'description']
     template_name = 'appointment_form.html'
 
     def form_valid(self, form):
+        form.instance.user = self.request.user  # Set the user from the request
         response = super().form_valid(form)
 
         # Prepare the email message
@@ -84,7 +85,7 @@ class AppointmentCreateView(CreateView):
             [self.object.user.email]
         )
         email.content_subtype = "html"  # Main content is now text/html
-        email.send(fail_silently=False)
+        email.send(fail_silently=True)
 
         return response
 
@@ -119,7 +120,7 @@ class AppointmentUpdateView(UpdateView):
             [self.object.user.email]
         )
         email.content_subtype = "html"
-        email.send(fail_silently=False)
+        email.send(fail_silently=True)
         
         return response
     
@@ -150,7 +151,7 @@ class AppointmentDeleteView(DeleteView):
             [self.object.user.email]
         )
         email.content_subtype = "html"
-        email.send(fail_silently=False)
+        email.send(fail_silently=True)
 
         # Proceed with deleting the object
         response = super().delete(request, *args, **kwargs)

@@ -2,81 +2,6 @@
 
 {% block title %}Appointment Form - DT Autos{% endblock %}
 
-{% block extra_css %}
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.min.css">
-<style>
-    .form-group {
-        margin-bottom: 1rem;
-    }
-    label {
-        display: block;
-        margin-top: 20px;
-    }
-    input, select, textarea {
-        width: 100%;
-        padding: 8px;
-        margin-top: 6px;
-        display: inline-block;
-        border: 1px solid #ccc;
-        box-sizing: border-box;
-    }
-    .btn-primary, .btn-secondary {
-        margin-top: 10px;
-        padding: 10px 20px;
-        border: none;
-        cursor: pointer;
-    }
-    .btn-primary:hover, .btn-secondary:hover {
-        opacity: 0.8;
-    }
-</style>
-{% endblock %}
-
-{% block extra_js %}
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.full.min.js"></script>
-<script>
-$(document).ready(function() {
-    $('#id_appointment_date').datetimepicker({
-        format: 'Y-m-d H:i',
-        step: 30,  // Sets the minute selection step to 30 minutes
-        minDate: 0,  // Disables past dates
-        defaultTime: '09:00',  // Sets the default time to 9:00 AM
-        allowTimes: [
-            '09:00', '09:30',
-            '10:00', '10:30',
-            '11:00', '11:30',
-            '12:00', '12:30',
-            '13:00', '13:30',
-            '14:00', '14:30',
-            '15:00', '15:30',
-            '16:00', '16:30',
-            '17:00'  // Last selectable time
-        ],        
-        timepicker: true,
-        closeOnDateSelect: false,
-        validateOnBlur: true,
-        onShow: function(ct, $i) {
-            var scrollPos = $(window).scrollTop();
-            var windowHeight = $(window).height();
-            var pickerHeight = $(this).datetimepicker('widget').outerHeight();
-            var inputOffset = $i.offset().top;
-            var inputHeight = $i.outerHeight();
-            var position = {};
-
-            if ((inputOffset + inputHeight + pickerHeight) > (scrollPos + windowHeight)) {
-                position = {top: (inputOffset - pickerHeight)};
-            } else {
-                position = {top: (inputOffset + inputHeight)};
-            }
-
-            $(this).datetimepicker('widget').css(position);
-        }
-    });
-});
-</script>
-{% endblock %}
-
 {% block content %}
 <div class="container mt-4">
     <h2>{% if object %}Edit Appointment{% else %}Create Appointment{% endif %}</h2>
@@ -100,4 +25,44 @@ $(document).ready(function() {
         <a href="{% url 'dashboard:dashboard' %}" class="btn btn-secondary">Cancel</a>
     </form>
 </div>
+<script>
+    $(document).ready(function() {
+        $('#id_appointment_date').datetimepicker({
+            format: 'Y-m-d H:i',
+            step: 30,  // Sets the minute selection step to 30 minutes
+            minDate: 0,  // Disables past dates
+            defaultTime: '09:00',  // Sets the default time to 9:00 AM
+            allowTimes: [
+                '09:00', '09:30',
+                '10:00', '10:30',
+                '11:00', '11:30',
+                '12:00', '12:30',
+                '13:00', '13:30',
+                '14:00', '14:30',
+                '15:00', '15:30',
+                '16:00', '16:30',
+                '17:00'  // Last selectable time
+            ],        
+            timepicker: true,
+            closeOnDateSelect: false,
+            validateOnBlur: true,
+            onShow: function(ct, $i) {
+                var scrollPos = $(window).scrollTop();
+                var windowHeight = $(window).height();
+                var pickerHeight = $(this).datetimepicker('widget').outerHeight();
+                var inputOffset = $i.offset().top;
+                var inputHeight = $i.outerHeight();
+                var position = {};
+    
+                if ((inputOffset + inputHeight + pickerHeight) > (scrollPos + windowHeight)) {
+                    position = {top: (inputOffset - pickerHeight)};
+                } else {
+                    position = {top: (inputOffset + inputHeight)};
+                }
+    
+                $(this).datetimepicker('widget').css(position);
+            }
+        });
+    });
+</script>    
 {% endblock %}
