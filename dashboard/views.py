@@ -47,7 +47,6 @@ class DashboardView(TemplateView):
             'user_type': user_type,
             'username': username,
         })
-
         return context
 
 class AppointmentListView(generics.ListAPIView):
@@ -57,10 +56,13 @@ class AppointmentListView(generics.ListAPIView):
     def get_queryset(self):
         user = self.request.user
         if user.is_authenticated:
-        # Fetch appointments for the logged-in user only
-            return Appointment.objects.filter(user=self.request.user)
+            if user.user_type == 'Customer':
+                # Fetch appointments for the logged-in user only
+                return Appointment.objects.filter(user=self.request.user)
+            elif user.user_type == 'Technician':
+               return Appointment.objects.all()
         else:
-            return Appointment.objects.all()
+            return Appointment.objects.none()
 
 class AppointmentCreateView(CreateView):
     model = Appointment
