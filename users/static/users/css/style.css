@@ -45,6 +45,16 @@ body {
     width: 500px;
 }
 
+.login-container {
+    margin-top: 200px;
+    background-color: #424242;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(75, 73, 73, 0.1);
+    width: 500px;    
+}
+
 h2 {
     text-align: center;
     margin-bottom: 20px;
