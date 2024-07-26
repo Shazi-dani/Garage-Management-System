@@ -11,43 +11,7 @@
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.full.min.js"></script>
-
-    <style>
-        #appointmentsList {
-        display: flex;
-        overflow-x: auto;
-        padding: 20px;
-        }
-        .card {
-            flex: 0 0 auto;
-            width: 300px;
-            margin-right: 15px;
-        }
-        .card-header {
-            background-color: #3bac9f;
-            color: rgb(15, 15, 15);
-            display: block;
-        }
-        .card-body {
-            background-color: #f3f6fa;
-        }
-        .info-block {
-            background-color: #8f8176aa;
-            border-left: 3px solid #2c8ab0;
-            padding: 10px;
-            margin-bottom: 10px;
-            border-radius: 5px;
-        }
-        .info-block label {
-            font-weight: bold;
-            color: #442727;
-            display: block;
-        }
-        .info-block span {
-            display: block;
-            padding-left: 10px;
-        }
-    </style>
+    <link rel="stylesheet" href="{% static 'dashboard/css/style.css' %}">
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #000000; opacity: 0.7;">
@@ -59,6 +23,15 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link text-white" href="{% static 'dashboard/templates/home.html' %}">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white" href="#cars-for-sale">Cars for Sale</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white" href="#" data-toggle="modal" data-target="#contactModal">Contact Us</a>
+            </li>
             {% if user.is_authenticated %}
                 <li class="nav-item">
                     <a class="nav-link text-white" href="#" id="logout-button">Log Out</a>
@@ -77,6 +50,7 @@
 <form id="logout-form" action="{% url 'users:logout' %}" method="post" style="display: none;">
     {% csrf_token %}
 </form>
+
 <script>
     document.getElementById('logout-button').addEventListener('click', function(event) {
         event.preventDefault();
@@ -86,5 +60,92 @@
 <!-- Block for main content -->
 {% block content %}
 {% endblock %}
+   <!--Footer-->
+
+   <footer class="text-white text-center text-lg-start" style="background-color: #23242a;">
+    <!-- Grid container -->
+    <div class="container p-4">
+      <!--Grid row-->
+      <div class="row mt-4">
+        <!--Grid column-->
+        <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
+          <h5 class="text-uppercase mb-4">About company</h5>
+
+          <p>
+            At DT  Autos Garage we want to keep your vehicle operating at its factory standard level. Our certified experts are dedicated to bringing you the best solutions.
+          </p>
+
+          <p>
+            No problem is too big or too small for us to handle, our specialists are here to help you.
+          </p>
+
+          <div class="mt-4">
+            <!-- Facebook -->
+            <a type="button" class="btn btn-floating btn-warning btn-lg"><i class="fab fa-facebook-f"></i></a>
+            <!-- Dribbble -->
+            <a type="button" class="btn btn-floating btn-warning btn-lg"><i class="fab fa-dribbble"></i></a>
+            <!-- Twitter -->
+            <a type="button" class="btn btn-floating btn-warning btn-lg"><i class="fab fa-twitter"></i></a>
+            <!-- Google + -->
+            <a type="button" class="btn btn-floating btn-warning btn-lg"><i class="fab fa-google-plus-g"></i></a>
+            <!-- Linkedin -->
+          </div>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+          
+          <ul class="fa-ul" style="margin-left: 1.65em;">
+            <li class="mb-3">
+              <span class="fa-li"><i class="fas fa-home"></i></span><span class="ms-2">Sword, dublin 10012, Ireland</span>
+            </li>
+            <li class="mb-3">
+              <span class="fa-li"><i class="fas fa-envelope"></i></span><span class="ms-2">info@example.com</span>
+            </li>
+            <li class="mb-3">
+              <span class="fa-li"><i class="fas fa-phone"></i></span><span class="ms-2">+ 01 234 567 88</span>
+            </li>
+            <li class="mb-3">
+              <span class="fa-li"><i class="fas fa-print"></i></span><span class="ms-2">+ 01 234 567 89</span>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase mb-4">Opening hours</h5>
+
+          <table class="table text-center text-white">
+            <tbody class="font-weight-normal">
+              <tr>
+                <td>Mon - Fri:</td>
+                <td>9am - 6pm</td>
+              </tr>
+              <tr>
+                <td>Sat:</td>
+                <td>9am - 3pm</td>
+              </tr>
+              <tr>
+                <td>Sunday:</td>
+                <td>Closed</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!--Grid column-->
+      </div>
+      <!--Grid row-->
+    </div>
+    <!-- Grid container -->
+
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2024 Copyright:
+      <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
 </body>
 </html>
