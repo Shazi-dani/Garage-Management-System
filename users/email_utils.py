@@ -2,6 +2,9 @@ import os
 from django.core.mail import send_mail
 from django.template.loader import render_to_string
 from django.utils.html import strip_tags
+import logging  # Using logger to log email task result
+
+logger = logging.getLogger()  #  get default logger to log values
 
 def send_signup_email(user):
     """
@@ -22,4 +25,8 @@ def send_signup_email(user):
     from_email = os.environ.get('DEFAULT_FROM_EMAIL')
     to = user.email
 
-    send_mail(subject, plain_message, from_email, [to], html_message=html_message)
+    # Validating email credentials before sending the mail
+    if os.environ.get('EMAIL_HOST_USER') and os.environ.get('EMAIL_HOST_PASSWORD'):
+        send_mail(subject, plain_message, from_email, [to], html_message=html_message)
+    else:
+        logger.debug('No Email credentials Found. Skipped email generation task.')
