@@ -1,0 +1,108 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #424242;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.navbar {
+    background-color: rgba(0, 0, 0, 0.7);
+    transition: background-color 0.5s ease;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-link {
+    color: #fff !important;
+    font-size: 1.1rem;
+}
+
+.navbar-nav .nav-item .nav-link {
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+    color: #ffdd57 !important;
+}
+
+.register-container {
+    margin-top: 200px;
+    background-color: #424242;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(75, 73, 73, 0.1);
+    width: 500px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+::placeholder {
+    color: white;
+    opacity: 1; /* Firefox */
+}
+
+::-ms-input-placeholder { /* Edge 12 -18 */
+    color: white;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 2px solid white;
+    border-radius: 20px;
+    background-color: #424242;
+    color: white;
+}
+
+.btn {
+    background-color: rgb(238, 98, 63);
+    border: none;
+    color: white;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: rgb(233, 88, 51);
+}
+
+.nav-li {
+    color: rgb(238, 98, 63);
+    text-decoration: none;
+}
+
+.nav-li:hover {
+    color: rgb(233, 88, 51);
+    text-decoration: underline;
+}
+
+.error {
+    color: red;
+    font-size: 0.9rem;
+    display: none;
+}
