@@ -86,7 +86,7 @@
                     </div>
                     <div class="card-actions">
                       <!-- Don't allow User to update or delete appointment if it has been marked as Done  -->
-                      {% if appointment.status == "Done" %}
+                      {% if appointment.status == "done" %}
                         <a href="#" class="btn btn-info disabled" aria-disabled="true">Edit</a>
                         <a href="#" class="btn btn-danger disabled" aria-disabled="true">Delete</a>
                       {% else %}  
