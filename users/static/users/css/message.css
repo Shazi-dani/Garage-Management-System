@@ -39,3 +39,24 @@ body::before {
 .btn:hover {
     background-color: rgb(233, 88, 51);
 }
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .popup {
+        width: 80%; /* Adjust width for better viewing on smaller screens */
+        padding: 15px; /* Slightly reduce padding */
+    }
+    .btn {
+        padding: 8px; /* Adjust button padding for better touch interaction */
+        font-size: 14px; /* Reduce font size for buttons */
+    }
+}
+
+@media (max-width: 480px) {
+    .popup {
+        width: 95%; /* Maximize width usage on very small screens */
+    }
+    .btn {
+        font-size: 12px; /* Further reduce button font size for very small screens */
+    }
+}

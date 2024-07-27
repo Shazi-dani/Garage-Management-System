@@ -200,3 +200,76 @@ display: flex;
     margin-bottom: 10px;
     margin-left: 10px;
 }
+
+/* Media Queries */
+@media (max-width: 1024px) {
+    .navbar-brand, .nav-link, .header h1, .header p {
+        font-size: 90%; /* Slightly reduce font sizes for medium screens */
+    }
+
+    .header {
+        padding: 150px 0; /* Reduce padding for smaller headers */
+    }
+    
+    .card {
+        width: 240px; /* Adjust card width for smaller screens */
+    }
+
+    .card-body {
+        height: 400px; /* Adjust card body height */
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 1rem; /* Reduce base font size */
+    }
+    
+    .header {
+        padding: 100px 0; /* Further reduce padding for smaller headers */
+    }
+
+    .navbar-brand, .nav-link {
+        font-size: 0.9rem; /* Reduce font size for navigation links */
+    }
+
+    .card {
+        width: 200px; /* Further reduce card width */
+    }
+
+    .card-body {
+        height: 300px; /* Further reduce card body height */
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        background-color: rgba(0, 0, 0, 0.8); /* Slightly adjust navbar background for clarity */
+    }
+
+    .header h1 {
+        font-size: 2rem; /* Significantly reduce title font size */
+    }
+
+    .header p {
+        font-size: 1rem; /* Reduce subtitle font size */
+    }
+
+    .header {
+        padding: 80px 0; /* Minimal padding for small screens */
+    }
+
+    .card {
+        width: 100%; /* Full width cards for very small screens */
+        margin-right: 0; /* Remove margin between cards */
+    }
+
+    .card-body {
+        height: auto; /* Auto-adjust height based on content */
+        overflow-y: visible; /* Remove scrolling within card */
+    }
+
+    .form-group label {
+        margin-top: 10px; /* Reduce margin for form labels */
+    }
+}

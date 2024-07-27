@@ -115,3 +115,34 @@ input {
     font-size: 0.9rem;
     display: none;
 }
+
+/* Media Queries */
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+        font-size: 1rem;
+    }
+    .register-container, 
+    .login-container {
+        width: 90%;
+        margin-top: 50px;
+    }
+    .navbar-brand,
+    .nav-link {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar-nav .nav-item .nav-link,
+    .navbar-brand {
+        font-size: 0.9rem;
+    }
+    h2 {
+        font-size: 1.2rem;
+    }
+    .btn {
+        padding: 8px;
+        font-size: 14px;
+    }
+}
