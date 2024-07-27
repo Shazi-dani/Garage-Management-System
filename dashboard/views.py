@@ -1,6 +1,6 @@
 import os
 
-from django.shortcuts import redirect
+from django.shortcuts import redirect, render
 from django.urls import reverse_lazy
 from django.contrib.auth import get_user_model
 from django.contrib.auth.mixins import LoginRequiredMixin
@@ -16,9 +16,9 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework.authentication import SessionAuthentication
 
-from .models import Appointment
+from .models import Appointment, Vehicle
 from .forms import AppointmentForm, Inquiry
-from .serializers import AppointmentSerializer
+from .serializers import AppointmentSerializer, VehicleSerializer
 from .email_utils import send_appointment_creation_email, send_appointment_update_email, send_appointment_delete_email
 
 # Create your views here.
@@ -192,3 +192,10 @@ def submit_inquiry(request):
         else:
             return JsonResponse({'status': 'error', 'errors': form.errors}, status=400)
     return JsonResponse({'status': 'error', 'message': 'Invalid request'}, status=400)
+
+
+# List all Vehicles for Sale section
+def vehicle_list(request):
+    vehicles = Vehicle.objects.all()
+    vehicle_data = VehicleSerializer(vehicles, many=True).data
+    return render(request, 'vehicle_list.html', {'vehicles': vehicle_data})
