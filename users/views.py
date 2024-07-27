@@ -18,6 +18,9 @@ User = get_user_model()
 def signup_success(request):
     return render(request, 'register_success.html')
 
+def login_success(request):
+    return render(request, 'login_success.html')
+
 class UserRegistrationView(CreateView):
     template_name = 'register.html'
     form_class = UserRegistrationForm
@@ -74,7 +77,7 @@ class UserLoginView(APIView):
             if user is not None:
                 login(request, user)
                 messages.success(request, 'Logged in successfully.')
-                return redirect('dashboard:dashboard')
+                return redirect('users:login_success')
             else:
                 messages.error(request, 'Invalid username or password.')
                 return Response({'error': 'Invalid Credentials'}, status=status.HTTP_400_BAD_REQUEST)

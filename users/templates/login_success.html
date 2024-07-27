@@ -18,7 +18,7 @@
 <script>
     function closePopup() {
         document.getElementById('popupMessage').style.display = 'none';
-        window.location.href = "{% url 'users:login' %}"; // Redirect to the userlogin page
+        window.location.href = "{% url 'dashboard:dashboard' %}"; // Redirect to the dashboard page
     }
 </script>
 {% endblock %}
