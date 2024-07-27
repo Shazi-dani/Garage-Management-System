@@ -1,7 +1,7 @@
 ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
 ## Project Scope
-The DT Autos Management System will encompass a comprehensive user module with robust authentication and authorization mechanisms, ensuring secure access for various user roles including Admin, Customer, and Garage Technician. The system will feature a customer management interface for registration, profile management, and a self-service portal to view service records and invoices. Employee management will include role assignments and detailed profiles, facilitating efficient operational workflows. A secure JWT-based authentication process will be implemented, along with role-based access control to regulate permissions for different functionalities, thereby ensuring a secure and streamlined user experience.
+The DT Autos Garage Management System will encompass a comprehensive user module with robust authentication and authorization mechanisms, ensuring secure access for various user roles including Admin, Customer, and Garage Technician. The system will feature a customer management interface for registration, profile management, and a self-service portal to view service records and invoices. Employee management will include role assignments and detailed profiles, facilitating efficient operational workflows. A secure JWT-based authentication process will be implemented, along with role-based access control to regulate permissions for different functionalities, thereby ensuring a secure and streamlined user experience.
 
 This project aims to streamline garage operations by providing an efficient platform for booking and managing automobile services. When you first start it, register and login, you will be on the home page which displays a dashboard with upcoming appointments and service details. The core functionality of this system is to enable customers to easily book their vehicles for servicing and other related tasks, allowing the garage to manage and schedule its operations effectively. In vehicle management, admins can add vehicle details including pictures and prices for vehicles that are for sale, and customers can view these vehicles and their details. This feature enhances the service offering by allowing customers to explore and purchase vehicles directly through the system.
 
@@ -375,20 +375,76 @@ warranty information.
 
 
 ## Technologies Used
-For the backend development, ``Python``/``Django`` has been used along with ``DjangoREST framework`` to implement some of the REST Api end points.
-``Postgres`` database was used to build and deploy external database and university provided external database was configured 
-with ``Django``. 
-For the frontend development, ``HTML``/``CSS`` has been used along with default bootstrap css for templating and styling. 
-For building and debugging the project, the provided ``gitpod`` instance was used.
+
+- [**Django/Jinja**](https://docs.djangoproject.com/en/5.0/) - main Framework of the project and 
+   DjangoREST framework to implement some of the REST Api end points.
+- [**Python**](https://www.python.org/) - main BackEnd programming language of the project
+- [**HTML**](https://developer.mozilla.org/en-US/docs/Web/HTML) - templates programming language of this project (FrontEnd)
+- [**CSS**](https://developer.mozilla.org/en-US/docs/Web/CSS) - styling the project via external CSS file `./static/css/style.css`
+- [**Java Script**](https://developer.mozilla.org/en-US/docs/Web/JavaScript) - dynamic templates programming language of this project (FrontEnd)
+- [**jQuery**](https://api.jquery.com/) - API for JavaScript - dynamic templates programming language of this project (FrontEnd)
+- [**Bootstrap v. 5.3**](https://getbootstrap.com/) - styling framework used in this project (FrontEnd)
+- [**Heroku**](https://heroku.com) - to deploy this project
+- [**Balsamiq**](https://balsamiq.com/support/) - to create wireframes
+- [**Git**](https://git-scm.com/doc) - to make commitments of progress and push the results back to GitHub
+- [**GitHub**](https://github.com/) - to keep the track of version control
+- [**Gitpod**](https://gitpod.com/) - online IDE - CodeAnywhere was initially used to create this project
+- [**Postgres**](https://www.postgresql.org/) - Postgres database was used to build and deploy external database and institute provided external database was configured.
+- [**ChatGPT**](hhttps://chatgpt.com/) - Use ChatGPT for creating website logo.
+- [**MDB Snippets**](https://mdbootstrap.com/snippet) - Use MDB Snippets for creating icons.
 
 [Go Top](https://github.com/Shazi-dani/Garage-Management-System/edit/main/README.md)
 
 ## Deployment
-``Heroku`` was used to deploy the project live for users. The university provided credentials were used to host the project 
-and serve to users.
+To ensure users are able to view live version of "DT Autos garage" project.
+
+I followed the following steps:
+
+1:Register & Log In with heroku
+
+2: Navigate to New > Create New App
+
+3: Select Name of the app that is unique
+
+4: Navigate to Settings > Reveal Config Vars
+
+5: Add all variables from env.py to ConfigVars of Heroku App
+
+6: Add variable pair PORT:8000
+
+7: For the testing deployment add variable pair COLLECT_STATIC:1
+
+8:  Add the Heroku app URL into ALLOWED HOSTS in settings.py
+
+9: In root create file name Procfile
+
+10:Navigate to Deploy > GitHub > Connect
+
+11: Navigate to Deploy > Deploy Branch
+
+12: Optionally, you can enable automatic deploys
+
+See the deployment log - if the deployment was successful, you will be prompted with option to see live page
 
 [Go Top](https://github.com/Shazi-dani/Garage-Management-System/edit/main/README.md)
 
 ## Credits
+
+* Code Institute course content without that I had no base to begin a project. https://codeinstitute.net/ie/
+
+* Get ideas formaking my Readme.md best from @kera-cudmore readme template. https://github.com/
+* The Code Institute Tutors and specially my mentor @rory_patrick who assisted me with troubleshooting when I was stuck on a particularly difficult bug.
+
+* The Slack community - for someone always been there no matter the time and with advice or direction. https://slack.com
+ 
+* StackOverflow for all the information to assit with my project .https://stackoverflow.com
+
+* Google Images- for providing good quality free copyright images
+
+* Youtube Tutorials - For better understating and learning django framework, python,database authentication and for main project idea.(https://www.youtube.com/watch?v=opzK3E4Xx6o&list=WL&index=8&t=917s,https://www.youtube.com/watch?v=lERvLBEfCaY&t=833s,)
+
+* Copied Code / Code assistance
+As stated in Technologies / Support Used I used and sort out help and code from numerous sources as well as fonts and images. However, I did exclusively get inspiration from Love running and coders coffee house for the full website. Stack over flow and Tutor Support played a huge roll in my overall development.
+
 
 [Go Top](https://github.com/Shazi-dani/Garage-Management-System/edit/main/README.md)
