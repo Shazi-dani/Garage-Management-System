@@ -160,8 +160,11 @@
             </tr>
         </table>
         <div style="padding-left: 450px; padding-right: 450px;">
+            {% if user.is_authenticated%}
+            <a href="/dashboard/" class="btn btn-primary" style="background-color: rgb(238, 98, 63);">Schedule Service</a>
+            {% else %}
             <a href="/userapi/register" class="btn btn-primary" style="background-color: rgb(238, 98, 63);">Schedule Service</a>
-            <!-- <input type="submit"  id="scheduleServiceBtn" value="Schedule Service" style="display: flex;"/> -->
+            {% endif %}
         </div>
     </div>
 
