@@ -180,6 +180,16 @@ The home page of the Garage Management System is designed to provide an informat
 
 <img width="1248" alt="Screenshot 2024-07-27 at 10 33 42 PM" src="https://github.com/user-attachments/assets/02b39c66-6786-4f2e-8159-7e8fe409fd0f">
 
+## Nevigation Bar 
+The navigation bar makes it easy to navigate the features of site.Nevigation bar shows the Logo & Having access to 
+* Services
+* Cars for sale,
+* Book Appointment
+* Contact Us
+
+By Clicking on **Services** websites proceeds us to services of Concern Garage. When we Click on **Cars for Sale** we nevegate to the List of Cars showcase for Sale.On clicking **Book Now** we nevegate Login / Register Screen, After Login Successfuly we nevigate to appointment Page. & on Clicking the **Contact Us** we can type any kind of Queries. So it's very easy to nevigate the other features through this nevigation.
+
+<img width="1279" alt="Screenshot 2024-07-27 at 10 18 30 PM" src="https://github.com/user-attachments/assets/ba4c7683-8b70-4805-b969-6701c433d5d8">
 
 
 
