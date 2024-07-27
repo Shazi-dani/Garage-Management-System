@@ -1,54 +1,35 @@
 from django.shortcuts import render, redirect
+from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth import get_user_model
+from django.views.generic.edit import CreateView
+from django.urls import reverse_lazy
+
 from rest_framework import generics, status
 from rest_framework.permissions import AllowAny
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from .serializers import UserRegistrationSerializer, UserLoginSerializer
 from .email_utils import send_signup_email
+from .forms import UserRegistrationForm
 
 User = get_user_model()
 
-class UserRegistrationView(generics.CreateAPIView):
-    """
-    View for handling user registration.
+def signup_success(request):
+    return render(request, 'register_success.html')
 
-    Attributes:
-        queryset: Queryset of all User objects.
-        serializer_class: Serializer class for user registration.
-        permission_classes: Permissions for the view.
-    """
-    queryset = User.objects.all()
-    serializer_class = UserRegistrationSerializer
-    permission_classes = (AllowAny,)
+class UserRegistrationView(CreateView):
+    template_name = 'register.html'
+    form_class = UserRegistrationForm
+    success_url = reverse_lazy('users:register_success')  # Redirect URL after success
 
-    def get(self, request, *args, **kwargs):
-        """
-        Handle GET requests to render the registration page.
-
-        Args:
-            request: The HTTP request object.
-            *args: Additional positional arguments.
-            **kwargs: Additional keyword arguments.
-
-        Returns:
-            HttpResponse: Rendered registration page.
-        """
-        return render(request, 'register.html')
-    
-    def perform_create(self, serializer):
-        """
-        Save the new user and send a signup email.
-
-        Args:
-            serializer: The serializer with validated data.
-
-        Returns:
-            None
-        """
-        user = serializer.save()
+    def form_valid(self, form):
+        response = super().form_valid(form)
+        user = form.save()
+        # Send an email or display a message
+        messages.success(self.request, 'You have successfully signed up!')
         send_signup_email(user)
+        return response
 
 class UserLoginView(APIView):
     """
@@ -92,9 +73,14 @@ class UserLoginView(APIView):
                                 password=serializer.validated_data['password'])
             if user is not None:
                 login(request, user)
+                messages.success(request, 'Logged in successfully.')
                 return redirect('dashboard:dashboard')
             else:
+                messages.error(request, 'Invalid username or password.')
                 return Response({'error': 'Invalid Credentials'}, status=status.HTTP_400_BAD_REQUEST)
+        else:
+            for msg in serializer.errors.values():
+                messages.error(request, msg[0])
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 class UserLogoutView(APIView):
@@ -112,4 +98,5 @@ class UserLogoutView(APIView):
             HttpResponse: Redirects to the dashboard after logout.
         """
         logout(request)
-        return redirect('dashboard:dashboard')
+        messages.info(request, 'You have been logged out. Redirecitng to Home Page.')
+        return redirect('dashboard:home')
