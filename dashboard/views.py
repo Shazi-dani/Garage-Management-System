@@ -1,7 +1,8 @@
 import os
 
-from django.shortcuts import redirect, render
+from django.shortcuts import redirect, render, get_object_or_404
 from django.urls import reverse_lazy
+from django.contrib import messages
 from django.contrib.auth import get_user_model
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic import CreateView, UpdateView, DeleteView, DetailView, TemplateView
@@ -16,7 +17,7 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework.authentication import SessionAuthentication
 
-from .models import Appointment, Vehicle
+from .models import Appointment, Vehicle, PurchaseInterest
 from .forms import AppointmentForm, Inquiry
 from .serializers import AppointmentSerializer, VehicleSerializer
 from .email_utils import send_appointment_creation_email, send_appointment_update_email, send_appointment_delete_email
@@ -199,3 +200,29 @@ def vehicle_list(request):
     vehicles = Vehicle.objects.all()
     vehicle_data = VehicleSerializer(vehicles, many=True).data
     return render(request, 'vehicle_list.html', {'vehicles': vehicle_data})
+
+def submit_interest(request, vehicle_id):
+    if not request.user.is_authenticated:
+        messages.error(request, "You need to log in to submit a purchase request.")
+        return redirect('users:register')  # Redirect to login if user is not authenticated
+    
+    vehicle = get_object_or_404(Vehicle, id=vehicle_id)
+    # Check if the user has already submitted an interest for this vehicle
+    existing_interest = PurchaseInterest.objects.filter(user=request.user, vehicle=vehicle).exists()
+    
+    if not existing_interest:
+        # Create a new interest since it does not exist
+        PurchaseInterest.objects.create(user=request.user, vehicle=vehicle)
+        # Send an email to the admin
+        subject = 'New Purchase Interest Submitted'
+        message = f'User {request.user.username} has shown interest in purchasing {vehicle.model} {vehicle.make}.'
+        email_from = settings.DEFAULT_FROM_EMAIL
+        recipient_list = settings.EMAIL_HOST_USER  # Send email to admin as a record
+        send_mail(subject, message, email_from, recipient_list)
+        # Redirect or indicate success
+        messages.success(request, "Your purchase interest has been successfully submitted.")
+        return redirect('dashboard:home')  # Redirect to a success page or the same page with a success message
+
+    # Redirect or indicate failure (already requested)
+    messages.info(request, "You have already submitted an interest for this vehicle.")
+    return redirect('dashboard:home')  # Redirect to a failure page or the same page with an error message

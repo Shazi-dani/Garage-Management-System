@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Vehicle, Service, Appointment
+from .models import Vehicle, Service, Appointment, PurchaseInterest
 from .forms import VehicleAdminForm
 
 
@@ -48,3 +48,8 @@ class AppointmentAdmin(admin.ModelAdmin):
     list_display = ['user', 'vehicle', 'service']
     search_fields = ['user__username', 'vehicle__license_plate_no', 'service__description']
     list_filter = ['service', 'vehicle__make', 'vehicle__model']
+
+
+@admin.register(PurchaseInterest)
+class PurchaseInterestAdmin(admin.ModelAdmin):
+    list_display = ['user', 'vehicle', 'created_at']

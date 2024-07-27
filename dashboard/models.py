@@ -101,3 +101,11 @@ class Inquiry(models.Model):
 
     def __str__(self):
         return f"{self.first_name} {self.last_name} - {self.subject}"
+
+class PurchaseInterest(models.Model):
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    vehicle = models.ForeignKey(Vehicle, on_delete=models.CASCADE)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"{self.user.username} request to purchase {self.vehicle.license_plate_no}"
