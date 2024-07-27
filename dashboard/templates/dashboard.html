@@ -1,91 +1,188 @@
-{% extends "base.html" %}
+{% load static %}
 
-{% block content %}
-<div>
-    <div id="appointmentsList"></div>
-</div>
-<div class="my-3">
-    {% if user.is_authenticated %}
-        <a href="{% url 'dashboard:create_appointment' %}" class="btn btn-primary ml-3" id="createAppointmentButton">Register A New Appointment</a>
-    {% endif %}
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.full.min.js"></script>
+    <link rel="stylesheet" href="{% static 'dashboard/css/style.css' %}">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #000000; opacity: 0.7;">
+    <a class="navbar-brand" href="#home">
+        <img src="{% static 'dashboard/images/DT_logo.png' %}" alt="DT Autos" style="width: 100%; height: auto; max-width: 75px;">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <!-- <li class="nav-item">
+                <a class="nav-link text-white" href="{% static 'dashboard/templates/home.html' %}">Home</a>
+            </li> -->
+            <li class="nav-item">
+                <a class="nav-link text-white" href="#cars-for-sale">Cars for Sale</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white" href="#" data-toggle="modal" data-target="#contactModal">Contact Us</a>
+            </li>
+            {% if user.is_authenticated %}
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#" id="logout-button">Log Out</a>
+                </li>
+            {% else %}
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="{% url 'users:login' %}">Log in</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="{% url 'users:register' %}">Register</a>
+                </li>
+            {% endif %}
+        </ul>
+    </div>
+</nav>
+<form id="logout-form" action="{% url 'users:logout' %}" method="post" style="display: none;">
+    {% csrf_token %}
+</form>
+
 <script>
-// appointment edit and delete function
-function editAppointment(appointmentId) {
-// Redirect to edit page
-window.location.href = `/appointments/${appointmentId}/edit/`;
-}
-function deleteAppointment(appointmentId) {
-// Redirect to delete page
-window.location.href = `/appointments/${appointmentId}/delete/`;
-}
-$(document).ready(function() {
-    // Handle CSRF protection in views
-    $.ajaxSetup({
-        beforeSend: function(xhr, settings) {
-            if (!/^(GET|HEAD|OPTIONS|TRACE)$/i.test(settings.type) && !this.crossDomain) {
-                xhr.setRequestHeader("X-CSRFToken", getCookie('csrftoken'));
-            }
-        }
+    document.getElementById('logout-button').addEventListener('click', function(event) {
+        event.preventDefault();
+        document.getElementById('logout-form').submit();
     });
+</script>
 
-    function getCookie(name) {
-        let cookieValue = null;
-        if (document.cookie && document.cookie !== '') {
-            const cookies = document.cookie.split(';');
-            for (let i = 0; i < cookies.length; i++) {
-                const cookie = jQuery.trim(cookies[i]);
-                if (cookie.substring(0, name.length + 1) === (name + '=')) {
-                    cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
-                    break;
-                }
-            }
-        }
-        return cookieValue;
-    }
+<div class="main-content">
+    {% if user_type == 'Customer' %}
+    <div class="mt-3">
+        <a href="{% url 'dashboard:create_appointment' %}" class="btn btn-primary appointment-btn">Register A New Appointment</a>
+    </div>
+    {% endif %}
 
-    // Fetch appointments data
-    $.ajax({
-        url: '{% url "dashboard:appointments" %}',
-        method: 'GET',
-        success: function(appointments) {
-            const appointmentsList = appointments.map(appointment => `
-                <div class="card">
-                    <div class="card-header">
-                        ${appointment.user.first_name} ${appointment.user.last_name}
+    <!-- Responsive container for appointments -->
+    <div id="appointmentsContainer">
+        <div id="appointmentsList">
+            {% for appointment in appointments %}
+            <div class="card">
+                <div class="card-header">
+                    {{ appointment.user.first_name }} {{ appointment.user.last_name }}
+                </div>
+                <div class="card-body">
+                    <div class="info-block">
+                        <label>Vehicle Model/Make</label>
+                        <span>{{ appointment.vehicle.model }} {{ appointment.vehicle.make }}</span>
+                        
+                        <label>Booking DateTime</label>
+                        <span>{{ appointment.appointment_date }}</span>
+                        
+                        <label>Status</label>
+                        <span>{{ appointment.status }}</span>
+                        
+                        <label>Service Type</label>
+                        <span>{{ appointment.service.description }}</span>
+                        
+                        <label>Appointment Details</label>
+                        <span>{{ appointment.description }}</span>
                     </div>
-                    <div class="card-body">
-                        <div class="info-block">
-                            <label>Vehicle Model/Make</label>
-                            <span>${appointment.vehicle.model} ${appointment.vehicle.make}</span>
-
-                            <label>Booking DateTime</label>
-                            <span>${appointment.appointment_date}</span>
-
-                            <label>Status</label>
-                            <span>${appointment.status}</span>
-
-                            <label>Service Type</label>
-                            <span>${appointment.service.description}</span>
-
-                            <label>Appointment Details</label>
-                            <span>${appointment.description}</span>
-                        </div>
-                        <!-- Buttons for Edit and Delete -->
-                        {% if user.is_authenticated %}
-                            <button onclick="editAppointment(${appointment.id})" class="btn btn-info">Edit</button>
-                            <button onclick="deleteAppointment(${appointment.id})" class="btn btn-danger">Delete</button>
-                        {% endif %}
+                    <div class="card-actions">
+                        <a href="{% url 'dashboard:edit_appointment' appointment.id %}" class="btn btn-info">Edit</a>
+                        <a href="{% url 'dashboard:delete_appointment' appointment.id %}" class="btn btn-danger">Delete</a>
                     </div>
                 </div>
-            `);
-            $('#appointmentsList').html(appointmentsList.join(''));
-        },
-        error: function() {
-            console.log('Error fetching appointments.');
-            alert('Failed to fetch appointments. Please try again.');
-        }
-    });
-});
-</script>
-{% endblock %}
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    </div>
+</div>
+
+<!--Footer-->
+<footer class="text-white text-center text-lg-start" style="background-color: #23242a;">
+ <!-- Grid container -->
+ <div class="container p-4">
+   <!--Grid row-->
+   <div class="row mt-4">
+     <!--Grid column-->
+     <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
+       <h5 class="text-uppercase mb-4">About company</h5>
+
+       <p>
+         At DT  Autos Garage we want to keep your vehicle operating at its factory standard level. Our certified experts are dedicated to bringing you the best solutions.
+       </p>
+       <div class="mt-4">
+         <!-- Facebook -->
+         <a type="button" class="btn btn-floating btn-warning btn-lg"><i class="fab fa-facebook-f"></i></a>
+         <!-- Dribbble -->
+         <a type="button" class="btn btn-floating btn-warning btn-lg"><i class="fab fa-dribbble"></i></a>
+         <!-- Twitter -->
+         <a type="button" class="btn btn-floating btn-warning btn-lg"><i class="fab fa-twitter"></i></a>
+         <!-- Google + -->
+         <a type="button" class="btn btn-floating btn-warning btn-lg"><i class="fab fa-google-plus-g"></i></a>
+         <!-- Linkedin -->
+       </div>
+     </div>
+     <!--Grid column-->
+
+     <!--Grid column-->
+     <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+       
+       <ul class="fa-ul" style="margin-left: 1.65em;">
+         <li class="mb-3">
+           <span class="fa-li"><i class="fas fa-home"></i></span><span class="ms-2">Sword, dublin 10012, Ireland</span>
+         </li>
+         <li class="mb-3">
+           <span class="fa-li"><i class="fas fa-envelope"></i></span><span class="ms-2">info@example.com</span>
+         </li>
+         <li class="mb-3">
+           <span class="fa-li"><i class="fas fa-phone"></i></span><span class="ms-2">+ 01 234 567 88</span>
+         </li>
+         <li class="mb-3">
+           <span class="fa-li"><i class="fas fa-print"></i></span><span class="ms-2">+ 01 234 567 89</span>
+         </li>
+       </ul>
+     </div>
+     <!--Grid column-->
+
+     <!--Grid column-->
+     <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+       <h5 class="text-uppercase mb-4">Opening hours</h5>
+
+       <table class="table text-center text-white">
+         <tbody class="font-weight-normal">
+           <tr>
+             <td>Mon - Fri:</td>
+             <td>9am - 6pm</td>
+           </tr>
+           <tr>
+             <td>Sat:</td>
+             <td>9am - 3pm</td>
+           </tr>
+           <tr>
+             <td>Sunday:</td>
+             <td>Closed</td>
+           </tr>
+         </tbody>
+       </table>
+     </div>
+     <!--Grid column-->
+   </div>
+   <!--Grid row-->
+ </div>
+ <!-- Grid container -->
+
+ <!-- Copyright -->
+ <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+   © 2024 Copyright:
+   <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+ </div>
+ <!-- Copyright -->
+</footer>
+</body>
+</html>

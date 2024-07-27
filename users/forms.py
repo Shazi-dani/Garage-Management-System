@@ -1,5 +1,6 @@
 from django import forms
 from django.core.exceptions import ValidationError
+from django.contrib.auth.hashers import make_password
 from .models import CustomUser
 
 class UserRegistrationForm(forms.ModelForm):
@@ -18,3 +19,10 @@ class UserRegistrationForm(forms.ModelForm):
             self.add_error('confirmPassword', "Passwords do not match.")
 
         return cleaned_data
+    
+    def save(self, commit=True):
+        user = super(UserRegistrationForm, self).save(commit=False)
+        user.password = make_password(self.cleaned_data["password"])  # This hashes the password
+        if commit:
+            user.save()
+        return user

@@ -4,6 +4,7 @@ html {
 
 body {
     background-color: #424242;
+    color: white;
     font-size: 1.2rem;
 }
 
@@ -136,36 +137,66 @@ input, select, textarea {
 /*styling for base page*/
 #appointmentsList {
 display: flex;
-overflow-x: auto;
-padding: 20px;
 }
+
+#appointmentsContainer {
+    overflow-x: auto;
+    display: flex;
+    white-space: nowrap;
+    padding: 20px 0;
+}
+
 .card {
     flex: 0 0 auto;
     width: 300px;
     margin-right: 15px;
+    display: inline-block;
 }
+
 .card-header {
-    background-color: #3bac9f;
-    color: rgb(15, 15, 15);
-    display: block;
+    background-color: #121111;
+    color: white;
+    text-align: center;
 }
+
 .card-body {
-    background-color: #f3f6fa;
+    background-color: #424242;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-y: auto; /* Allows vertical scrolling within the card body if needed */
+    height: 550px;
 }
+
+.card-actions {
+    text-align: center;
+    padding-top: 10px;
+}
+
 .info-block {
     background-color: #8f8176aa;
-    border-left: 3px solid #2c8ab0;
+    border-left: 3px solid #424242;
     padding: 10px;
     margin-bottom: 10px;
     border-radius: 5px;
+    overflow-wrap: break-word; /* Ensures words can be broken and wrapped to the next line */
+    white-space: normal; /* Allows text to wrap to the next line */
 }
+
 .info-block label {
     font-weight: bold;
-    color: #442727;
+    color: black;
     display: block;
 }
+
 .info-block span {
     display: block;
     padding-left: 10px;
 }
 
+.appointment-btn {
+    background-color: rgb(238, 98, 63);
+    margin-bottom: 10px;
+    margin-left: 10px;
+}

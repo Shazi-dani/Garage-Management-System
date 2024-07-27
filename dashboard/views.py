@@ -3,6 +3,7 @@ import os
 from django.shortcuts import redirect
 from django.urls import reverse_lazy
 from django.contrib.auth import get_user_model
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic import CreateView, UpdateView, DeleteView, DetailView, TemplateView
 from django.utils.timezone import now
 from django.core.mail import EmailMessage
@@ -31,53 +32,30 @@ class HomeView(TemplateView):
     permission_classes = [AllowAny]
     authentication_classes = [SessionAuthentication]
 
-class DashboardView(TemplateView):
+class DashboardView(LoginRequiredMixin, TemplateView):
     """
     View to render the dashboard page, providing user-specific data if authenticated.
     """
     template_name = 'dashboard.html'
-    permission_classes = [AllowAny]
     authentication_classes = [SessionAuthentication]
 
     def get_context_data(self, **kwargs):
-        """
-        Adds user type and username to the context for rendering in the template.
-        """
         context = super().get_context_data(**kwargs)
-        # You can add more context variables if needed
         user = self.request.user
-        if user.is_authenticated:
-            user_type = getattr(user, 'user_type', 'customer')
-            username = user.username
+        user_type = getattr(user, 'user_type', 'Customer')
+        if user_type == 'Customer':
+            appointments = Appointment.objects.filter(user=user)
+        elif user_type == 'Technician':
+            appointments = Appointment.objects.all()
         else:
-            user_type = 'guest'
-            username = 'Guest'
+            appointments = []
+
         context.update({
             'user_type': user_type,
-            'username': username,
+            'username': user.username,
+            'appointments': appointments,
         })
         return context
-
-class AppointmentListView(generics.ListAPIView):
-    """
-    API view to list appointments based on the user type, filtering for specific users if necessary.
-    """
-    serializer_class = AppointmentSerializer
-    permission_classes = [AllowAny]
-
-    def get_queryset(self):
-        """
-        Returns a queryset of appointments based on the user's type and authentication status.
-        """
-        user = self.request.user
-        if user.is_authenticated:
-            if user.user_type == 'Customer':
-                # Fetch appointments for the logged-in user only
-                return Appointment.objects.filter(user=self.request.user)
-            elif user.user_type == 'Technician':
-               return Appointment.objects.all()
-        else:
-            return Appointment.objects.none()
 
 class AppointmentCreateView(CreateView):
     """
