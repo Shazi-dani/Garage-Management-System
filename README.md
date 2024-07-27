@@ -165,14 +165,32 @@ The fonts i used for this project were plain, simple & easy to read and look ple
 
 ## Project Features 
 
+* Home Page 
 * User Module with Authentication & Authorization
 * Dashboard
 * Settings (Admin panel, User profile settings)
 * Supplier Management
 * Vehicle/Product Management
 * Inventory Management
+
+## 1. Home Page of Garage Management System
+The home page of the Garage Management System is designed to provide an informative and user-friendly experience for visitors. It effectively communicates the range of services offered, the garage's commitment to quality, and provides easy navigation to other important sections of the website.The home page of the Garage Management System (GMS) features a clean and organized layout, emphasizing various services offered by the garage. The navigation bar at the top provides easy access to different sections of the website, such as "Services," "Cars for Sale," "Book Now," and "Contact Us." Below is a detailed description of the main features and sections visible on the home page:
+[You can see here: Home Page ](https://garage-management-system-78c320f4e5b8.herokuapp.com/)
+
+
+<img width="1248" alt="Screenshot 2024-07-27 at 10 33 42 PM" src="https://github.com/user-attachments/assets/02b39c66-6786-4f2e-8159-7e8fe409fd0f">
+
+
+
+
+
+
+
+
+
+
   
-## 1. User Module with Authentication & Authorization
+## 2. User Module with Authentication & Authorization
    
 #### Customer Management:
 
@@ -238,7 +256,7 @@ Staff, Branch Admin.
 
 [Go Top](https://github.com/Shazi-dani/Garage-Management-System/edit/main/README.md)
 
-## 2. Dashboard
+## 3. Dashboard
  ![Dashboard view for client](https://github.com/user-attachments/assets/d3c80db5-168d-4a9c-a4f1-5f12cf1a8851)
 Dashboard View for logged in Client (Showing only the user's appointments)
 
@@ -263,7 +281,7 @@ Dashboard View for Un Authenticated users (Guest Users) [Showing appointments of
 
 [Go Top](https://github.com/Shazi-dani/Garage-Management-System/edit/main/README.md)
 
-## 3. Settings (Admin panel, User profile settings)
+## 4. Settings (Admin panel, User profile settings)
 
 #### Admin Panel:
 
@@ -299,7 +317,7 @@ Dashboard View for Un Authenticated users (Guest Users) [Showing appointments of
 
 [Go Top](https://github.com/Shazi-dani/Garage-Management-System/edit/main/README.md)
 
-## 4. Supplier Management
+## 5. Supplier Management
 
 #### Create:
 
@@ -333,7 +351,7 @@ purposes.
   
 [Go Top](https://github.com/Shazi-dani/Garage-Management-System/edit/main/README.md)
 
-## 5. Vehicle/Product Management
+## 6. Vehicle/Product Management
 
 #### Create:
 
