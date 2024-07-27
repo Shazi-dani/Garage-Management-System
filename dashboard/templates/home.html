@@ -4,7 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
     <meta name="description" content="DT Autos, DT garage, repair, car repair, car repair in ireland, autos repair in ireland, online garage, garage in ireland, online Autos garage, online motor garage,Autos, car for sale, buy used car, auto mechanics, auto mechanics in ireland">
+=======
+    <meta name="description" content="Autos repair, car repair, car repair in Ireland, autos repair in Ireland, online garage, garage in Ireland, online Autos garage, online motor garage, Autos, car for sale, buy used car, auto mechanics, auto mechanics in Ireland">
+    
+>>>>>>> c26562a7840581523e3a0b17ad80772a1146c49a
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
@@ -18,7 +23,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="#home">
+            <a class="navbar-brand" href="{% url 'dashboard:home' %}">
                 <img src="{% static 'dashboard/images/DT_logo.png' %}" alt="DT Autos" style="width: 100%; height: auto; max-width: 80px;">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -30,11 +35,17 @@
                         <a class="nav-link" href="#services">Services</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#cars-for-sale">Cars for Sale</a>
+                        <a class="nav-link" href="/vehicles/">Cars for Sale</a>
                     </li>
+                    {% if user.is_authenticated%}
+                    <li class="nav-item">
+                        <a class="nav-link" href="/dashboard">Book Now</a>
+                    </li>
+                    {% else %}
                     <li class="nav-item">
                         <a class="nav-link" href="/userapi/register">Book Now</a>
                     </li>
+                    {% endif %}
                     <li class="nav-item">
                         <a class="nav-link" href="#" data-toggle="modal" data-target="#contactModal">Contact Us</a>
                     </li>
@@ -153,8 +164,11 @@
             </tr>
         </table>
         <div style="padding-left: 450px; padding-right: 450px;">
+            {% if user.is_authenticated %}
+            <a href="/dashboard/" class="btn btn-primary" style="background-color: rgb(238, 98, 63);">Schedule Service</a>
+            {% else %}
             <a href="/userapi/register" class="btn btn-primary" style="background-color: rgb(238, 98, 63);">Schedule Service</a>
-            <!-- <input type="submit"  id="scheduleServiceBtn" value="Schedule Service" style="display: flex;"/> -->
+            {% endif %}
         </div>
     </div>
 
@@ -176,7 +190,7 @@
     <!-- Contact Us Modal -->
     <div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="contactModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
-            <div class="modal-content">
+            <div class="modal-content" style="color: black;">
                 <div class="modal-header">
                     <h5 class="modal-title" id="contactModalLabel">Get in touch with us</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">

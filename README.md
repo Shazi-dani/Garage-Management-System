@@ -116,48 +116,115 @@ The fonts i used for this project were plain, simple & easy to read and look ple
 
 ## Wireframes
 
-#### Home 
+## Home 
+<img width="536" alt="Screenshot 2024-07-27 at 9 06 50 PM" src="https://github.com/user-attachments/assets/f0c1ce17-8947-41b5-8a83-89cea19fd8c7">
 
-<img width="579" alt="Home" src="https://github.com/user-attachments/assets/f2310ea3-9f3d-4d76-9265-50b4058c74b0">
+#### Services (Home)
+<img width="536" alt="Services" src="https://github.com/user-attachments/assets/30e51567-f5cd-46ad-b71c-7f1205d42a80">
 
-#### Services
-<img width="315" alt="Services" src="https://github.com/user-attachments/assets/e7c0b445-678d-4f58-92e6-a34546775606">
+#### About us (Home)
+<img width="536" alt="Screenshot 2024-07-27 at 9 07 45 PM" src="https://github.com/user-attachments/assets/8461ce15-7035-4c2a-8a25-53c926a21f8e">
 
-#### About us
-<img width="315" alt="About Us" src="https://github.com/user-attachments/assets/a5b57812-f2c9-4afe-a2f8-46270e952e43">
+#### Home Page Footer 
+<img width="536" alt="Screenshot 2024-07-27 at 9 10 21 PM" src="https://github.com/user-attachments/assets/2423cba3-b153-41a1-98e4-5c44e24f1e29">
 
-#### Login Page
-
-<img width="315" alt="Login" src="https://github.com/user-attachments/assets/a370914b-97d7-4284-a29c-26b4976b0fe6">
-
-#### Login Pop-up
-<img width="315" alt="Login Pop-up" src="https://github.com/user-attachments/assets/cd200429-e1f1-4890-8608-c8843598c368">
-
+#### Contact us
+<img width="536" alt="Screenshot 2024-07-27 at 9 18 40 PM" src="https://github.com/user-attachments/assets/79cf936b-cae2-4d65-83a8-d7dd1988a8a2">
 
 #### Register User
-<img width="315" alt="Register" src="https://github.com/user-attachments/assets/1d9a4f63-fe8a-41f6-bc09-7853909e9040">
+<img width="536" alt="Screenshot 2024-07-27 at 9 17 50 PM" src="https://github.com/user-attachments/assets/e62022dc-3273-44cb-a59e-dc93b710920b">
 
+#### Login Page
+<img width="536" alt="Screenshot 2024-07-27 at 9 19 35 PM" src="https://github.com/user-attachments/assets/601a5870-bc92-4185-bd83-cbceef1c6448">
+
+#### Login Pop-up
+<img width="536" alt="Screenshot 2024-07-27 at 9 20 31 PM" src="https://github.com/user-attachments/assets/dbce0f61-ff7d-4204-82a2-14f7ee9620b9">
+
+#### After Login view
+<img width="536" alt="Screenshot 2024-07-27 at 9 23 12 PM" src="https://github.com/user-attachments/assets/0655a438-36e4-4f33-a040-a930bf88da80">
+
+#### Book Appointment
+<img width="536" alt="Screenshot 2024-07-27 at 9 24 59 PM" src="https://github.com/user-attachments/assets/5547865c-2e59-4d83-bf9e-76e9ac889770">
+
+#### Edit Appointment
+<img width="536" alt="Screenshot 2024-07-27 at 9 42 33 PM" src="https://github.com/user-attachments/assets/ff194919-4b06-41fb-8bbc-c2b292ce4cbd">
+
+#### Delete Appointment
+<img width="536" alt="Screenshot 2024-07-27 at 9 26 23 PM" src="https://github.com/user-attachments/assets/6b327b52-7f6d-4228-a129-a09ae2e9a5cf">
+
+#### Add Vehicles for Sale
+<img width="536" alt="Screenshot 2024-07-27 at 10 00 34 PM" src="https://github.com/user-attachments/assets/e5dea7e4-e945-459d-a137-109744b15766">
 
 #### Admin Login
 <img width="585" alt="Admin Login Screen" src="https://github.com/user-attachments/assets/1118ca24-c03c-4574-90d9-f39c2bf7edc3">
 
-
 #### Admin View
 <img width="673" alt="Admin View" src="https://github.com/user-attachments/assets/ea25a66a-63b2-412f-aa19-094de7be096d">
-
 
 [Go Top](https://github.com/Shazi-dani/Garage-Management-System/edit/main/README.md)
 
 ## Project Features 
 
+* Home Page 
 * User Module with Authentication & Authorization
 * Dashboard
 * Settings (Admin panel, User profile settings)
 * Supplier Management
 * Vehicle/Product Management
 * Inventory Management
+
+## 1. Home Page of Garage Management System
+The home page of the Garage Management System is designed to provide an informative and user-friendly experience for visitors. It effectively communicates the range of services offered, the garage's commitment to quality, and provides easy navigation to other important sections of the website.The home page of the Garage Management System (GMS) features a clean and organized layout, emphasizing various services offered by the garage. The navigation bar at the top provides easy access to different sections of the website, such as "Services," "Cars for Sale," "Book Now," and "Contact Us." Below is a detailed description of the main features and sections visible on the home page:
+[You can see here: Home Page ](https://garage-management-system-78c320f4e5b8.herokuapp.com/)
+
+
+<img width="1248" alt="Screenshot 2024-07-27 at 10 33 42 PM" src="https://github.com/user-attachments/assets/02b39c66-6786-4f2e-8159-7e8fe409fd0f">
+
+## Nevigation Bar 
+The navigation bar makes it easy to navigate the features of site.Nevigation bar shows the Logo & Having access to 
+* Services
+* Cars for sale,
+* Book Appointment
+* Contact Us
+
+By Clicking on **Services** websites proceeds us to services of Concern Garage. When we Click on **Cars for Sale** we nevegate to the List of Cars showcase for Sale.On clicking **Book Now** we nevegate Login / Register Screen, After Login Successfuly we nevigate to appointment Page. & on Clicking the **Contact Us** we can type any kind of Queries. So it's very easy to nevigate the other features through this nevigation.
+
+<img width="1279" alt="Screenshot 2024-07-27 at 10 18 30 PM" src="https://github.com/user-attachments/assets/ba4c7683-8b70-4805-b969-6701c433d5d8">
+
+## Services 
+Detailed view of services Provided by The Garage including Certified Mechanics, Comrihensive Car inspection, Precision oil & brake checks, Emergency Recovery, Breakdown Assistance , Professional Tyre Services, Seamless Battery replacement. This also contain a **Button** at the bottom for **Schedule Service** . By clicking this button we can directly nevigate to the Login Page & than Book Appointment.
+
+[You can see here: Services ](https://garage-management-system-78c320f4e5b8.herokuapp.com/#services)
+
+<img width="882" alt="Screenshot 2024-07-27 at 11 05 49 PM" src="https://github.com/user-attachments/assets/ba98f2cb-d0bf-4425-9889-e544f95907e1">
+
+## Book Now > Register > Login
+**Registration Form of user**
+
+The user which is not registered can easily register himself by filling these details. 
+
+<img width="1262" alt="Screenshot 2024-07-27 at 11 18 27 PM" src="https://github.com/user-attachments/assets/c5e093b2-2239-4f55-9c5d-8af30fe147ed">
+
+
+
+**Login Page**
+
+Registered user can easily access through his UserName & Password.
+
+<img width="1280" alt="Screenshot 2024-07-27 at 12 31 47 PM" src="https://github.com/user-attachments/assets/aa0d100c-8e5b-4daf-a67d-e9ca64f9974a">
+
+
+
+
+
+
+
+
+
+
+
   
-## 1. User Module with Authentication & Authorization
+## 2. User Module with Authentication & Authorization
    
 #### Customer Management:
 
@@ -223,7 +290,7 @@ Staff, Branch Admin.
 
 [Go Top](https://github.com/Shazi-dani/Garage-Management-System/edit/main/README.md)
 
-## 2. Dashboard
+## 3. Dashboard
  ![Dashboard view for client](https://github.com/user-attachments/assets/d3c80db5-168d-4a9c-a4f1-5f12cf1a8851)
 Dashboard View for logged in Client (Showing only the user's appointments)
 
@@ -248,7 +315,7 @@ Dashboard View for Un Authenticated users (Guest Users) [Showing appointments of
 
 [Go Top](https://github.com/Shazi-dani/Garage-Management-System/edit/main/README.md)
 
-## 3. Settings (Admin panel, User profile settings)
+## 4. Settings (Admin panel, User profile settings)
 
 #### Admin Panel:
 
@@ -284,7 +351,7 @@ Dashboard View for Un Authenticated users (Guest Users) [Showing appointments of
 
 [Go Top](https://github.com/Shazi-dani/Garage-Management-System/edit/main/README.md)
 
-## 4. Supplier Management
+## 5. Supplier Management
 
 #### Create:
 
@@ -318,7 +385,7 @@ purposes.
   
 [Go Top](https://github.com/Shazi-dani/Garage-Management-System/edit/main/README.md)
 
-## 5. Vehicle/Product Management
+## 6. Vehicle/Product Management
 
 #### Create:
 
