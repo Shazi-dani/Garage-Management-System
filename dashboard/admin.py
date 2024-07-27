@@ -15,11 +15,31 @@ class VehicleAdmin(admin.ModelAdmin):
         list_filter (list): Defines the fields that will be used for filtering in the list view.
         fields (tuple): Specifies the fields to be included in the form view of the model.
     """
+
     form = VehicleAdminForm
-    list_display = ['make', 'model', 'color', 'license_plate_no', 'vehicle_number', 'vehicle_type', 'owner']
-    search_fields = ['make', 'model', 'license_plate_no', 'vehicle_number']
-    list_filter = ['make', 'model', 'vehicle_type', 'color']
-    fields = ('model', 'make', 'color', 'license_plate_no', 'vehicle_number', 'vehicle_type', 'owner', 'description', 'image_file')  # Use image_file
+    list_display = [
+        "make",
+        "model",
+        "color",
+        "license_plate_no",
+        "vehicle_number",
+        "vehicle_type",
+        "owner",
+    ]
+    search_fields = ["make", "model", "license_plate_no", "vehicle_number"]
+    list_filter = ["make", "model", "vehicle_type", "color"]
+    fields = (
+        "model",
+        "make",
+        "color",
+        "license_plate_no",
+        "vehicle_number",
+        "vehicle_type",
+        "owner",
+        "description",
+        "image_file",
+    )  # Use image_file
+
 
 @admin.register(Service)
 class ServiceAdmin(admin.ModelAdmin):
@@ -31,9 +51,11 @@ class ServiceAdmin(admin.ModelAdmin):
         search_fields (list): Specifies the fields that should be searchable in the admin list view.
         list_filter (list): Defines the fields that will be used for filtering in the list view.
     """
-    list_display = ['description', 'cost']
-    search_fields = ['description']
-    list_filter = ['cost']
+
+    list_display = ["description", "cost"]
+    search_fields = ["description"]
+    list_filter = ["cost"]
+
 
 @admin.register(Appointment)
 class AppointmentAdmin(admin.ModelAdmin):
@@ -45,11 +67,16 @@ class AppointmentAdmin(admin.ModelAdmin):
         search_fields (list): Specifies the fields that should be searchable in the admin list view.
         list_filter (list): Defines the fields that will be used for filtering in the list view.
     """
-    list_display = ['user', 'vehicle', 'service']
-    search_fields = ['user__username', 'vehicle__license_plate_no', 'service__description']
-    list_filter = ['service', 'vehicle__make', 'vehicle__model']
+
+    list_display = ["user", "vehicle", "service"]
+    search_fields = [
+        "user__username",
+        "vehicle__license_plate_no",
+        "service__description",
+    ]
+    list_filter = ["service", "vehicle__make", "vehicle__model"]
 
 
 @admin.register(PurchaseInterest)
 class PurchaseInterestAdmin(admin.ModelAdmin):
-    list_display = ['user', 'vehicle', 'created_at']
+    list_display = ["user", "vehicle", "created_at"]
