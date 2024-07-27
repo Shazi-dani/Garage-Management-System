@@ -146,16 +146,20 @@ The fonts i used for this project were plain, simple & easy to read and look ple
 #### Book Appointment
 <img width="536" alt="Screenshot 2024-07-27 at 9 24 59 PM" src="https://github.com/user-attachments/assets/5547865c-2e59-4d83-bf9e-76e9ac889770">
 
+#### Edit Appointment
+<img width="536" alt="Screenshot 2024-07-27 at 9 42 33 PM" src="https://github.com/user-attachments/assets/ff194919-4b06-41fb-8bbc-c2b292ce4cbd">
+
 #### Delete Appointment
 <img width="536" alt="Screenshot 2024-07-27 at 9 26 23 PM" src="https://github.com/user-attachments/assets/6b327b52-7f6d-4228-a129-a09ae2e9a5cf">
+
+#### Add Vehicles for Sale
+<img width="536" alt="Screenshot 2024-07-27 at 10 00 34 PM" src="https://github.com/user-attachments/assets/e5dea7e4-e945-459d-a137-109744b15766">
 
 #### Admin Login
 <img width="585" alt="Admin Login Screen" src="https://github.com/user-attachments/assets/1118ca24-c03c-4574-90d9-f39c2bf7edc3">
 
-
 #### Admin View
 <img width="673" alt="Admin View" src="https://github.com/user-attachments/assets/ea25a66a-63b2-412f-aa19-094de7be096d">
-
 
 [Go Top](https://github.com/Shazi-dani/Garage-Management-System/edit/main/README.md)
 
