@@ -85,8 +85,14 @@
                         <span>{{ appointment.description }}</span>
                     </div>
                     <div class="card-actions">
-                        <a href="{% url 'dashboard:edit_appointment' appointment.id %}" class="btn btn-info">Edit</a>
-                        <a href="{% url 'dashboard:delete_appointment' appointment.id %}" class="btn btn-danger">Delete</a>
+                      <!-- Don't allow User to update or delete appointment if it has been marked as Done  -->
+                      {% if appointment.status == "Done" %}
+                        <a href="#" class="btn btn-info disabled" aria-disabled="true">Edit</a>
+                        <a href="#" class="btn btn-danger disabled" aria-disabled="true">Delete</a>
+                      {% else %}  
+                          <a href="{% url 'dashboard:edit_appointment' appointment.id %}" class="btn btn-info">Edit</a>
+                          <a href="{% url 'dashboard:delete_appointment' appointment.id %}" class="btn btn-danger">Delete</a>
+                      {% endif %}
                     </div>
                 </div>
             </div>
