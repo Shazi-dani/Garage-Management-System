@@ -1,5 +1,6 @@
 import os
 
+from django.conf import settings
 from django.shortcuts import redirect, render, get_object_or_404
 from django.urls import reverse_lazy
 from django.contrib import messages
@@ -189,6 +190,21 @@ def submit_inquiry(request):
         form = InquiryForm(request.POST)
         if form.is_valid():
             form.save()
+            first_name = request.POST.get('first_name')
+            last_name = request.POST.get('last_name')
+            email = request.POST.get('email')
+            subject = request.POST.get('subject')
+            message = request.POST.get('message')
+
+            # Email content
+            email_subject = f"New Inquiry from {first_name} {last_name}"
+            email_message = f"Subject: {subject}\nFrom: {first_name} {last_name} ({email})\n\nMessage:\n{message}"
+            email_from = settings.DEFAULT_FROM_EMAIL
+            recipient_list = settings.EMAIL_HOST_USER  # Send email to admin as a record
+
+            # Send email
+            send_mail(email_subject, email_message, email_from, recipient_list)            # Redirect or indicate success
+            messages.success(request, "Your purchase interest has been successfully submitted.")
             return JsonResponse({'status': 'success'}, status=200)
         else:
             return JsonResponse({'status': 'error', 'errors': form.errors}, status=400)
