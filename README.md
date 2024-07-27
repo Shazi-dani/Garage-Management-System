@@ -118,15 +118,24 @@ The fonts i used for this project were plain, simple & easy to read and look ple
 
 #### Home 
 
-<img width="511" alt="Home" src="https://github.com/user-attachments/assets/e064ce59-a3b7-4119-bd33-99581ae0e47c">
+<img width="579" alt="Home" src="https://github.com/user-attachments/assets/f2310ea3-9f3d-4d76-9265-50b4058c74b0">
+
+#### Services
+<img width="315" alt="Services" src="https://github.com/user-attachments/assets/e7c0b445-678d-4f58-92e6-a34546775606">
+
+#### About us
+<img width="315" alt="About Us" src="https://github.com/user-attachments/assets/a5b57812-f2c9-4afe-a2f8-46270e952e43">
 
 #### Login Page
 
-<img width="578" alt="Login Screen" src="https://github.com/user-attachments/assets/f324df6e-06bb-4ac1-8bce-2de0a301c12e">
+<img width="315" alt="Login" src="https://github.com/user-attachments/assets/a370914b-97d7-4284-a29c-26b4976b0fe6">
+
+#### Login Pop-up
+<img width="315" alt="Login Pop-up" src="https://github.com/user-attachments/assets/cd200429-e1f1-4890-8608-c8843598c368">
 
 
 #### Register User
-<img width="399" alt="Register Screen" src="https://github.com/user-attachments/assets/9cf590f1-d480-4dac-8f2b-8c1f8ab958e8">
+<img width="315" alt="Register" src="https://github.com/user-attachments/assets/1d9a4f63-fe8a-41f6-bc09-7853909e9040">
 
 
 #### Admin Login
@@ -363,32 +372,6 @@ warranty information.
 
 [Go Top](https://github.com/Shazi-dani/Garage-Management-System/edit/main/README.md)
 
-## Project Run Guide
-The project consists of Python/Django backend with HTML/JS front end 
-and uses postgres as database. 
-To run the application locally for testing, you need to perform following steps:
-
-#### 1. Install Postgresql Server
-Ensure that postgresql server is installed and running on your system. You can download and install postgresql from the official postgresql website.
-To run the program locally, make sure both ``Python`` and ``pip`` are already installed 
-
-#### 2. Install package requirements
-Install the package requirements using the following command
-```
-pip install -r requirements.txt
-```
-#### 3. Apply the migrations 
-```
-python manage.py migrate
-```
-#### 4. Run the Application and Access in browser
-Run the project using the following command and access on address http://127.0.0.1:8000/
-```
-python manage.py runserver
-```
------- 
-
-[Go Top](https://github.com/Shazi-dani/Garage-Management-System/edit/main/README.md)
 
 
 ## Technologies Used
