@@ -116,27 +116,38 @@ The fonts i used for this project were plain, simple & easy to read and look ple
 
 ## Wireframes
 
-#### Home 
+## Home 
+<img width="536" alt="Screenshot 2024-07-27 at 9 06 50 PM" src="https://github.com/user-attachments/assets/f0c1ce17-8947-41b5-8a83-89cea19fd8c7">
 
-<img width="579" alt="Home" src="https://github.com/user-attachments/assets/f2310ea3-9f3d-4d76-9265-50b4058c74b0">
+#### Services (Home)
+<img width="536" alt="Services" src="https://github.com/user-attachments/assets/30e51567-f5cd-46ad-b71c-7f1205d42a80">
 
-#### Services
-<img width="315" alt="Services" src="https://github.com/user-attachments/assets/e7c0b445-678d-4f58-92e6-a34546775606">
+#### About us (Home)
+<img width="536" alt="Screenshot 2024-07-27 at 9 07 45 PM" src="https://github.com/user-attachments/assets/8461ce15-7035-4c2a-8a25-53c926a21f8e">
 
-#### About us
-<img width="315" alt="About Us" src="https://github.com/user-attachments/assets/a5b57812-f2c9-4afe-a2f8-46270e952e43">
+#### Home Page Footer 
+<img width="536" alt="Screenshot 2024-07-27 at 9 10 21 PM" src="https://github.com/user-attachments/assets/2423cba3-b153-41a1-98e4-5c44e24f1e29">
 
-#### Login Page
-
-<img width="315" alt="Login" src="https://github.com/user-attachments/assets/a370914b-97d7-4284-a29c-26b4976b0fe6">
-
-#### Login Pop-up
-<img width="315" alt="Login Pop-up" src="https://github.com/user-attachments/assets/cd200429-e1f1-4890-8608-c8843598c368">
-
+#### Contact us
+<img width="536" alt="Screenshot 2024-07-27 at 9 18 40 PM" src="https://github.com/user-attachments/assets/79cf936b-cae2-4d65-83a8-d7dd1988a8a2">
 
 #### Register User
-<img width="315" alt="Register" src="https://github.com/user-attachments/assets/1d9a4f63-fe8a-41f6-bc09-7853909e9040">
+<img width="536" alt="Screenshot 2024-07-27 at 9 17 50 PM" src="https://github.com/user-attachments/assets/e62022dc-3273-44cb-a59e-dc93b710920b">
 
+#### Login Page
+<img width="536" alt="Screenshot 2024-07-27 at 9 19 35 PM" src="https://github.com/user-attachments/assets/601a5870-bc92-4185-bd83-cbceef1c6448">
+
+#### Login Pop-up
+<img width="536" alt="Screenshot 2024-07-27 at 9 20 31 PM" src="https://github.com/user-attachments/assets/dbce0f61-ff7d-4204-82a2-14f7ee9620b9">
+
+#### After Login view
+<img width="536" alt="Screenshot 2024-07-27 at 9 23 12 PM" src="https://github.com/user-attachments/assets/0655a438-36e4-4f33-a040-a930bf88da80">
+
+#### Book Appointment
+<img width="536" alt="Screenshot 2024-07-27 at 9 24 59 PM" src="https://github.com/user-attachments/assets/5547865c-2e59-4d83-bf9e-76e9ac889770">
+
+#### Delete Appointment
+<img width="536" alt="Screenshot 2024-07-27 at 9 26 23 PM" src="https://github.com/user-attachments/assets/6b327b52-7f6d-4228-a129-a09ae2e9a5cf">
 
 #### Admin Login
 <img width="585" alt="Admin Login Screen" src="https://github.com/user-attachments/assets/1118ca24-c03c-4574-90d9-f39c2bf7edc3">
