@@ -191,6 +191,13 @@ By Clicking on **Services** websites proceeds us to services of Concern Garage. 
 
 <img width="1279" alt="Screenshot 2024-07-27 at 10 18 30 PM" src="https://github.com/user-attachments/assets/ba4c7683-8b70-4805-b969-6701c433d5d8">
 
+## Services 
+Detailed view of services Provided by The Garage including Certified Mechanics, Comrihensive Car inspection, Precision oil & brake checks, Emergency Recovery, Breakdown Assistance , Professional Tyre Services, Seamless Battery replacement. This also contain a **Button** at the bottom for **Schedule Service** . By clicking this button we can directly nevigate to the Login Page & than Book Appointment.
+
+[You can see here: Services ](https://garage-management-system-78c320f4e5b8.herokuapp.com/#services)
+
+<img width="882" alt="Screenshot 2024-07-27 at 11 05 49 PM" src="https://github.com/user-attachments/assets/ba98f2cb-d0bf-4425-9889-e544f95907e1">
+
 
 
 
