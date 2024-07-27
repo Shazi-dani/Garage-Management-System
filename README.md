@@ -198,6 +198,20 @@ Detailed view of services Provided by The Garage including Certified Mechanics, 
 
 <img width="882" alt="Screenshot 2024-07-27 at 11 05 49 PM" src="https://github.com/user-attachments/assets/ba98f2cb-d0bf-4425-9889-e544f95907e1">
 
+## Book Now > Register > Login
+**Registration Form of user**
+
+The user which is not registered can easily register himself by filling these details. 
+
+<img width="1262" alt="Screenshot 2024-07-27 at 11 18 27 PM" src="https://github.com/user-attachments/assets/c5e093b2-2239-4f55-9c5d-8af30fe147ed">
+
+**Login Page**
+Registered user can easily access through his UserName & Password.
+
+<img width="1280" alt="Screenshot 2024-07-27 at 12 31 47 PM" src="https://github.com/user-attachments/assets/aa0d100c-8e5b-4daf-a67d-e9ca64f9974a">
+
+
+
 
 
 
