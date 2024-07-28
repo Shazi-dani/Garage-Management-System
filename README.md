@@ -205,23 +205,64 @@ The user which is not registered can easily register himself by filling these de
 
 <img width="1262" alt="Screenshot 2024-07-27 at 11 18 27 PM" src="https://github.com/user-attachments/assets/c5e093b2-2239-4f55-9c5d-8af30fe147ed">
 
-
-
 **Login Page**
 
 Registered user can easily access through his UserName & Password.
 
 <img width="1280" alt="Screenshot 2024-07-27 at 12 31 47 PM" src="https://github.com/user-attachments/assets/aa0d100c-8e5b-4daf-a67d-e9ca64f9974a">
 
+## User Dashboard View
+
+After Login User proceed to his Dashboard View. Through this Registered user can easily Create, Edit & Delete his Bookings.This page have Three Buttons **Register a new appointment** , **Edit** & **Delete**.  
+<img width="1280" alt="Screenshot 2024-07-27 at 9 35 00 PM" src="https://github.com/user-attachments/assets/16d635ee-78ec-4441-b2fb-764ac246b673">
+
+## Book a new appointment
+
+User can create a new appointment by simply Clicking on given button.
+<img width="1248" alt="Screenshot 2024-07-28 at 5 15 12 AM" src="https://github.com/user-attachments/assets/673478ec-eef0-43c9-8bd1-3c8c24f1ec66">
+## Steps to Complete
+ **Appointment Form**
+ User can create a new appointment by filling This form completely. 
+ 
+ **1:Form**
+ <img width="1280" alt="Screenshot 2024-07-28 at 5 17 25 AM" src="https://github.com/user-attachments/assets/d8237de0-84b6-4eab-87de-6d88326e6573">
+ **2:Add Vehicle Details**
+ 
+ By clicking on vehicle a Dropdown is accessible to select the Vehicle Name & Model.
+ <img width="1280" alt="Screenshot 2024-07-27 at 9 32 47 PM" src="https://github.com/user-attachments/assets/a34f86e5-f7be-4e04-8a3f-01a3bae57c45">
+**3:Add Service type**
+
+User can add Service type that Which kind of service user needed the most.Here is also a dropdown through which he select the Service.  
+<img width="1280" alt="Screenshot 2024-07-27 at 9 32 56 PM" src="https://github.com/user-attachments/assets/c9eff2dc-e395-4c6e-a000-0c1096b5bb99">
+**4:Add Time & Date**
+
+User Friendly Calender & Time integration is added.To make user comfirtable and make his experience better. User can select Appropriate Time & Date for his service.User cannot select backdate and only can choose time during working hours
+<img width="1280" alt="Screenshot 2024-07-27 at 9 33 29 PM" src="https://github.com/user-attachments/assets/da0a9a27-93cc-40aa-b933-0fb2eb0901b3">
+**5:Add Description**
+
+User Also add Description for his Booking if there any kind of acknowledgement which is necessary to deliver to the Garage members or service provider.
+
+User can add in this **Description Box**.
+<img width="1280" alt="Screenshot 2024-07-28 at 5 29 31 AM" src="https://github.com/user-attachments/assets/3080b86c-0f61-484c-87d8-d979514add66">
+
+**7: Edit Appointment**
+
+User can Edit any appointment & add any changes to this by clicking on Editing Button
+<img width="1280" alt="Screenshot 2024-07-27 at 9 35 24 PM" src="https://github.com/user-attachments/assets/47860b12-b714-4eaa-b6b0-cf3080299f5d">
+## Email Integration
+
+Email integration add for the user satisfactioon.User receive confirmation Email to that email which he given during Registeration. He can receive e-mail for 
+* Registration or Signup Confirmation
+* Login Confirmation
+* Appointment Confirmation
+* Edit already existing appointment
+
+<img width="488" alt="Screenshot 2024-07-28 at 5 52 31 AM" src="https://github.com/user-attachments/assets/50f7e245-6258-4388-a8e3-70ea83c7839d">
+<img width="488" alt="Screenshot 2024-07-28 at 5 52 43 AM" src="https://github.com/user-attachments/assets/d2fe8d35-a9a1-42ae-948b-cff3380af8a9">
+<img width="488" alt="Screenshot 2024-07-28 at 5 52 52 AM" src="https://github.com/user-attachments/assets/472f2295-9b8e-4bcd-9fe2-19cae4eb610f">
 
 
-
-
-
-
-
-
-
+[Go Top](https://github.com/Shazi-dani/Garage-Management-System/edit/main/README.md)
 
   
 ## 2. User Module with Authentication & Authorization
