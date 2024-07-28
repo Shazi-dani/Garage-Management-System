@@ -220,6 +220,11 @@ Registered user can easily access through his UserName & Password.
 
 <img width="1280" alt="Screenshot 2024-07-27 at 12 31 47 PM" src="https://github.com/user-attachments/assets/aa0d100c-8e5b-4daf-a67d-e9ca64f9974a">
 
+**Login Pop-up**
+
+<img width="462" alt="Screenshot 2024-07-28 at 2 11 11 PM" src="https://github.com/user-attachments/assets/86d00d1f-4be8-4a89-88e5-d236f84e9891">
+
+
 ## User Dashboard View
 
 After Login User proceed to his Dashboard View. Through this Registered user can easily Create, Edit & Delete his Bookings.This page have Three Buttons **Register a new appointment** , **Edit** & **Delete**.  
