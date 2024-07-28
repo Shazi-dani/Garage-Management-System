@@ -244,13 +244,17 @@ User can Edit any appointment & add any changes to this by clicking on Editing B
 <img width="1280" alt="Screenshot 2024-07-27 at 9 35 24 PM" src="https://github.com/user-attachments/assets/47860b12-b714-4eaa-b6b0-cf3080299f5d">
 ## Email Integration
 Email integration add for the user satisfactioon.User receive confirmation Email to that email which he given during Registeration. He can receive e-mail for 
-* After Registration or Signup
-* After Successfully Login
-* After Booking an Appointment
+* Registration or Signup Confirmation
+* Login Confirmation
+* Appointment Confirmation
+* Edit already existing appointment
 
-![Signup:Registration](https://github.com/user-attachments/assets/ae30f9f8-fd48-48d7-b550-b1f393b963c2) ![Confirmation Email](https://github.com/user-attachments/assets/6e543811-e391-49d4-9098-12dbe7fb2181)  ![Edit Appointmant](https://github.com/user-attachments/assets/d84b4fd1-dccf-4706-af0a-afb5e8c02ab1)
+<img width="488" alt="Screenshot 2024-07-28 at 5 52 31 AM" src="https://github.com/user-attachments/assets/50f7e245-6258-4388-a8e3-70ea83c7839d">
+<img width="488" alt="Screenshot 2024-07-28 at 5 52 43 AM" src="https://github.com/user-attachments/assets/d2fe8d35-a9a1-42ae-948b-cff3380af8a9">
+<img width="488" alt="Screenshot 2024-07-28 at 5 52 52 AM" src="https://github.com/user-attachments/assets/472f2295-9b8e-4bcd-9fe2-19cae4eb610f">
 
 
+[Go Top](https://github.com/Shazi-dani/Garage-Management-System/edit/main/README.md)
 
   
 ## 2. User Module with Authentication & Authorization
