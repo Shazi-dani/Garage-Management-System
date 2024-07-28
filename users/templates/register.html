@@ -3,9 +3,9 @@
 {% load static %}
 {% block content %}
 <div>
-<div class="register-container" style="border: 1px,solid,#fff; box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.3)">
+<div class="register-container" style="border: 1px,solid,#fff; box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.3);">
     <h2 style="color: rgb(232, 219, 219);" >Get Started</h2>
-    <form id="registerForm",method="POST",action="{% url 'users:register' %}">
+    <form id="registerForm", method="POST", action="{% url 'users:register' %}">
         {% csrf_token %}
         <div class="form-group">
             <input type="text" id="firstName" name="first_name" placeholder="First Name" required>
