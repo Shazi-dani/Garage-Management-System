@@ -269,17 +269,12 @@ Email integration add for the user satisfactioon.User receive confirmation Email
 <img width="488" alt="Screenshot 2024-07-28 at 5 52 43 AM" src="https://github.com/user-attachments/assets/d2fe8d35-a9a1-42ae-948b-cff3380af8a9">
 <img width="488" alt="Screenshot 2024-07-28 at 5 52 52 AM" src="https://github.com/user-attachments/assets/472f2295-9b8e-4bcd-9fe2-19cae4eb610f">
 
-
 [Go Top](https://github.com/Shazi-dani/Garage-Management-System/edit/main/README.md)
 
   
 
 ## 3. Dashboard
- ![Dashboard view for client](https://github.com/user-attachments/assets/d3c80db5-168d-4a9c-a4f1-5f12cf1a8851)
-Dashboard View for logged in Client (Showing only the user's appointments)
 
-![Dashboard view for unauthentication users ](https://github.com/user-attachments/assets/4241f3d1-7e60-45aa-ace9-69b81691c854)
-Dashboard View for Un Authenticated users (Guest Users) [Showing appointments of all the users on the dashboard] with no appointment registration option
 #### Management Reports:
 
 ○ Summarize free and paid services.
@@ -299,38 +294,26 @@ Dashboard View for Un Authenticated users (Guest Users) [Showing appointments of
 
 [Go Top](https://github.com/Shazi-dani/Garage-Management-System/edit/main/README.md)
 
-## 6. Vehicle/Product Management
+## 4. Vehicle/Product Management
 
-#### Create:
-
-○ Add and categorize vehicles by type (e.g., car, bike, hatchback), brand (e.g.,
-BMW, Audi), and model.
-
-○ Capture product details: unique identifiers, manufacturer details, pricing, and
+**Create:**
+User can Add and categorize vehicles by type (e.g., car, bike, hatchback), brand (e.g.,
+BMW, Audi), and model.He can Add Image of product/ Vehicle. Also Capture product details Like unique identifiers, manufacturer details, pricing, and
 warranty information.
+<img width="1280" alt="Screenshot 2024-07-28 at 6 43 51 AM" src="https://github.com/user-attachments/assets/d52ee6a8-c2d7-49d0-a910-50298a3a12c9">
 
-#### Read:
-
+**Read:**
 ○ View detailed profiles of vehicles and products.
+<img width="1247" alt="Screenshot 2024-07-28 at 6 45 10 AM" src="https://github.com/user-attachments/assets/0de5d776-648c-4bd7-8274-e64b2ab635af">
 
-#### Update:
+**Update/Edit/Delete**
 
 ○ Edit and update vehicle and product details as necessary.
-
-#### Delete:
-
 ○ Remove vehicles and products from the system when no longer needed.
 
-## Steps to Complete:
-
-- 1. Create:Develop forms for adding vehicle and product details.
-- 2. Read:Create interfaces for viewing detailed vehicle and product profiles.
-- 3. Update:Implement forms and workflows for updating vehicle and product details.
-- 4. Delete:Develop mechanisms for securely removing vehicle and product data.
-  
 [Go Top](https://github.com/Shazi-dani/Garage-Management-System/edit/main/README.md)
 
-## 4. Settings (Admin panel, User profile settings)
+## 5. Settings (Admin panel, User profile settings)
 
 #### Admin Panel:
 
