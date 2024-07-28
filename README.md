@@ -274,6 +274,17 @@ Email integration add for the user satisfactioon.User receive confirmation Email
   
 
 ## 3. Dashboard
+There two dashboard views one for the user and other for the admin 
+#### User Dashboard View
+
+After Login User proceed to his Dashboard View where he can easily Create, Watch, Edit & Delete his Bookings.This page have Three Buttons **Register a new appointment** , **Edit** & **Delete**.  
+<img width="1280" alt="Screenshot 2024-07-27 at 9 35 00 PM" src="https://github.com/user-attachments/assets/16d635ee-78ec-4441-b2fb-764ac246b673">
+
+#### Admin Dashboard View
+After Login Admin can inquire all the activities .Admin can watch users, mechanics, vehiclas, Appointments & Purchase interest etc 
+<img width="1280" alt="Screenshot 2024-07-28 at 6 43 19 AM" src="https://github.com/user-attachments/assets/2319d9dc-2844-4705-be7b-15db623cee52">
+
+
 
 #### Management Reports:
 
