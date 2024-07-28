@@ -205,14 +205,11 @@ The user which is not registered can easily register himself by filling these de
 
 <img width="1262" alt="Screenshot 2024-07-27 at 11 18 27 PM" src="https://github.com/user-attachments/assets/c5e093b2-2239-4f55-9c5d-8af30fe147ed">
 
-
-
 **Login Page**
 
 Registered user can easily access through his UserName & Password.
 
 <img width="1280" alt="Screenshot 2024-07-27 at 12 31 47 PM" src="https://github.com/user-attachments/assets/aa0d100c-8e5b-4daf-a67d-e9ca64f9974a">
-
 
 ## User Dashboard View
 
@@ -232,18 +229,30 @@ User can create a new appointment by simply Clicking on given button.
  **2:Add Vehicle Details**
  By clicking on vehicle a Dropdown is accessible to select the Vehicle Name & Model.
  <img width="1280" alt="Screenshot 2024-07-27 at 9 32 47 PM" src="https://github.com/user-attachments/assets/a34f86e5-f7be-4e04-8a3f-01a3bae57c45">
-
 **3:Add Service type**
 User can add Service type that Which kind of service user needed the most.Here is also a dropdown through which he select the Service.  
 <img width="1280" alt="Screenshot 2024-07-27 at 9 32 56 PM" src="https://github.com/user-attachments/assets/c9eff2dc-e395-4c6e-a000-0c1096b5bb99">
-**3:Add Time & Date**
+**4:Add Time & Date**
 Calender & Time integration is added to make user comfirtable and make his experience better.User can select Appropriate Time & Date for his service.
 <img width="1280" alt="Screenshot 2024-07-27 at 9 33 29 PM" src="https://github.com/user-attachments/assets/da0a9a27-93cc-40aa-b933-0fb2eb0901b3">
-**4:Add Description**
+**5:Add Description**
 User Also add Description for his Booking if there any kind of ackowlwdgement necessary to delliver to the Garage members or service provider user can add in this .
 <img width="1280" alt="Screenshot 2024-07-28 at 5 29 31 AM" src="https://github.com/user-attachments/assets/3080b86c-0f61-484c-87d8-d979514add66">
 
+**7: Edit Appointment**
+User can Edit any appointment & add any changes to this by clicking on Editing Button
+<img width="1280" alt="Screenshot 2024-07-27 at 9 35 24 PM" src="https://github.com/user-attachments/assets/47860b12-b714-4eaa-b6b0-cf3080299f5d">
+## Email Integration
+Email integration add for the user satisfactioon.User receive confirmation Email to that email which he given during Registeration. He can receive e-mail for 
+* After Registration or Signup
+* After Successfully Login
+* After Booking an Appointment
 
+![Signup:Registration](https://github.com/user-attachments/assets/ae30f9f8-fd48-48d7-b550-b1f393b963c2) ![Confirmation Email](https://github.com/user-attachments/assets/6e543811-e391-49d4-9098-12dbe7fb2181)  ![Edit Appointmant](https://github.com/user-attachments/assets/d84b4fd1-dccf-4706-af0a-afb5e8c02ab1)
+
+
+
+  
 ## 2. User Module with Authentication & Authorization
    
 #### Customer Management:
