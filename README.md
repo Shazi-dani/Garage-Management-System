@@ -337,7 +337,14 @@ https://github.com/user-attachments/assets/790259d7-3da6-47b1-934f-62b9b351eedf
 Admin Pannel interface provides the tools necessary to effectively manage a garage, including handling appointments, tracking customer interests, managing services, and overseeing user accounts. The recent actions feature enhances accountability and transparency by keeping a log of the admin's activities.
 <img width="1280" alt="Screenshot 2024-07-28 at 6 43 19 AM" src="https://github.com/user-attachments/assets/6e134979-534c-415d-a9dd-c942c7b572a9">
 
-Admin Side Detailed view of
+## Admin Side Detailed view of
+* Appointments
+* Purchase Interests
+* Users
+* Services
+* Vehicles
+* My Action
+
 #### Appointments: 
 View, add, or change appointments. This section allows you to manage the scheduling and details of customer appointments for various services.
 
