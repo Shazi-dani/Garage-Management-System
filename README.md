@@ -169,8 +169,8 @@ The fonts i used for this project were plain, simple & easy to read and look ple
 * User Module with Authentication & Authorization
 * Dashboard
 * Settings (Admin panel, User profile settings)
-* Supplier Management
 * Vehicle/Product Management
+* Supplier Management
 * Inventory Management
 
 ## 1. Home Page of Garage Management System
@@ -198,7 +198,15 @@ Detailed view of services Provided by The Garage including Certified Mechanics, 
 
 <img width="882" alt="Screenshot 2024-07-27 at 11 05 49 PM" src="https://github.com/user-attachments/assets/ba98f2cb-d0bf-4425-9889-e544f95907e1">
 
-## Book Now > Register > Login
+## About Us
+
+Home page include information about the DT Autos. 
+<img width="1279" alt="Screenshot 2024-07-27 at 10 17 39 PM" src="https://github.com/user-attachments/assets/66edd7ee-925d-49d0-b2aa-aaedf5a67b75">
+
+## 2. User Module with Authentication & Authorization
+
+#### Book Now > Register > Login
+
 **Registration Form of user**
 
 The user which is not registered can easily register himself by filling these details. 
@@ -265,71 +273,6 @@ Email integration add for the user satisfactioon.User receive confirmation Email
 [Go Top](https://github.com/Shazi-dani/Garage-Management-System/edit/main/README.md)
 
   
-## 2. User Module with Authentication & Authorization
-   
-#### Customer Management:
-
-○ Capture customer details: first name, last name, display name, company details,
-date of birth, email, mobile number, address, and profile image.
-
-○ Self-service portal for customers to view service reminders, invoices, and
-records.
-
-○ Secure login and password management for customers.
-
-
-#### Employee Management:
-
-○ Capture employee details: email, phone number, date of birth, joining date,
-designation, and address.
-
-○ Role assignment and secure system access for employees.
-
-#### Authentication:
-
-○ Secure login with email and password for all users.
-
-○ Password reset and recovery options.
-
-#### Authorization:
-
-○ Role-based access control with customizable permissions for viewing, adding,
-updating, deleting, and owning data.
-
-○ User roles: Super Admin, Customer, Garage Technician, Accountant, Support
-Staff, Branch Admin.
-
-[Go Top](https://github.com/Shazi-dani/Garage-Management-System/edit/main/README.md)
-
-## Steps to Complete:
-
-#### Customer Management:
-- Create customer registration forms capturing all required details.
-- Develop self-service portal interfaces for customer access.
-- Implement secure authentication methods and password management.
-#### Employee Management:
-- Create employee registration and profile forms.
-- Develop role assignment functionality with detailed permissions.
-- Implement secure authentication and password management.
-#### Authentication:
-- Develop secure login pages with email and password inputs.
-- Implement password reset and recovery workflows.
-#### Authorization:
-- Define role-based access control mechanisms.
-- Implement permission management for various user roles.
-
-[Go Top](https://github.com/Shazi-dani/Garage-Management-System/edit/main/README.md)
-
-
-#### User Login
-
-![Login page](https://github.com/user-attachments/assets/ee83bb49-2db5-49cf-babb-5b632ba3bd65)
-
-#### Register User 
-![Register](https://github.com/user-attachments/assets/45922c57-1f8a-4ea7-96d0-004b03a45e7d)
-
-
-[Go Top](https://github.com/Shazi-dani/Garage-Management-System/edit/main/README.md)
 
 ## 3. Dashboard
  ![Dashboard view for client](https://github.com/user-attachments/assets/d3c80db5-168d-4a9c-a4f1-5f12cf1a8851)
@@ -354,6 +297,37 @@ Dashboard View for Un Authenticated users (Guest Users) [Showing appointments of
 ○ Develop real-time data dashboards using charts and graphs.
 ○ Implement data updating mechanisms to keep information current.
 
+[Go Top](https://github.com/Shazi-dani/Garage-Management-System/edit/main/README.md)
+
+## 6. Vehicle/Product Management
+
+#### Create:
+
+○ Add and categorize vehicles by type (e.g., car, bike, hatchback), brand (e.g.,
+BMW, Audi), and model.
+
+○ Capture product details: unique identifiers, manufacturer details, pricing, and
+warranty information.
+
+#### Read:
+
+○ View detailed profiles of vehicles and products.
+
+#### Update:
+
+○ Edit and update vehicle and product details as necessary.
+
+#### Delete:
+
+○ Remove vehicles and products from the system when no longer needed.
+
+## Steps to Complete:
+
+- 1. Create:Develop forms for adding vehicle and product details.
+- 2. Read:Create interfaces for viewing detailed vehicle and product profiles.
+- 3. Update:Implement forms and workflows for updating vehicle and product details.
+- 4. Delete:Develop mechanisms for securely removing vehicle and product data.
+  
 [Go Top](https://github.com/Shazi-dani/Garage-Management-System/edit/main/README.md)
 
 ## 4. Settings (Admin panel, User profile settings)
@@ -392,32 +366,23 @@ Dashboard View for Un Authenticated users (Guest Users) [Showing appointments of
 
 [Go Top](https://github.com/Shazi-dani/Garage-Management-System/edit/main/README.md)
 
-## 5. Supplier Management
+## Thigns To add in FUture 
 
-#### Create:
+**Supplier Management & Inventory**
+**Note:** Due to time constraints, it was not possible to implement the supplier management and inventory features at this time. However, we plan to develop and enhance these features in future updates.
 
-○ Add new supplier information: first name, last name, company details, email,
+####  Supplier Management
+
+**Create:** Add new supplier information: first name, last name, company details, email,
 mobile number, and address.
-
-#### Read:
-
-○ View detailed supplier profiles and communication history.
-
-#### Update:
-
-○ Edit and update supplier details as necessary.
-
-#### Delete:
-
-○ Remove suppliers from the system when no longer needed.
+**Read:**  View detailed supplier profiles and communication history.
+**Update:**  Edit and update supplier details as necessary.
+**Delete:**  Remove suppliers from the system when no longer needed.
 
 #### Inventory Association:
 
 ○ Track parts and inventory received from suppliers for billing and service
 purposes.
-
-## Steps to Complete:
-
 - 1. Create:Develop forms for capturing supplier information.
 - 2. Read:Create interfaces to view supplier profiles and communication history.
 - 3. Update:Implement forms and workflows for updating supplier details.
@@ -426,36 +391,7 @@ purposes.
   
 [Go Top](https://github.com/Shazi-dani/Garage-Management-System/edit/main/README.md)
 
-## 6. Vehicle/Product Management
 
-#### Create:
-
-○ Add and categorize vehicles by type (e.g., car, bike, hatchback), brand (e.g.,
-BMW, Audi), and model.
-
-○ Capture product details: unique identifiers, manufacturer details, pricing, and
-warranty information.
-
-#### Read:
-
-○ View detailed profiles of vehicles and products.
-
-#### Update:
-
-○ Edit and update vehicle and product details as necessary.
-
-#### Delete:
-
-○ Remove vehicles and products from the system when no longer needed.
-
-## Steps to Complete:
-
-- 1. Create:Develop forms for adding vehicle and product details.
-- 2. Read:Create interfaces for viewing detailed vehicle and product profiles.
-- 3. Update:Implement forms and workflows for updating vehicle and product details.
-- 4. Delete:Develop mechanisms for securely removing vehicle and product data.
-  
-[Go Top](https://github.com/Shazi-dani/Garage-Management-System/edit/main/README.md)
 
 
 ## Bugs found during Project
