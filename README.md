@@ -169,8 +169,8 @@ The fonts i used for this project were plain, simple & easy to read and look ple
 * User Module with Authentication & Authorization
 * Dashboard
 * Settings (Admin panel, User profile settings)
-* Supplier Management
 * Vehicle/Product Management
+* Supplier Management
 * Inventory Management
 
 ## 1. Home Page of Garage Management System
@@ -187,6 +187,7 @@ The navigation bar makes it easy to navigate the features of site.Nevigation bar
 * Book Appointment
 * Contact Us
 
+
 By Clicking on **Services** websites proceeds us to services of Concern Garage. When we Click on **Cars for Sale** we nevegate to the List of Cars showcase for Sale.On clicking **Book Now** we nevegate Login / Register Screen, After Login Successfuly we nevigate to appointment Page. & on Clicking the **Contact Us** we can type any kind of Queries. So it's very easy to nevigate the other features through this nevigation.
 
 <img width="1279" alt="Screenshot 2024-07-27 at 10 18 30 PM" src="https://github.com/user-attachments/assets/ba4c7683-8b70-4805-b969-6701c433d5d8">
@@ -198,7 +199,15 @@ Detailed view of services Provided by The Garage including Certified Mechanics, 
 
 <img width="882" alt="Screenshot 2024-07-27 at 11 05 49 PM" src="https://github.com/user-attachments/assets/ba98f2cb-d0bf-4425-9889-e544f95907e1">
 
-## Book Now > Register > Login
+## About Us
+
+Home page include information about the DT Autos. 
+<img width="1279" alt="Screenshot 2024-07-27 at 10 17 39 PM" src="https://github.com/user-attachments/assets/66edd7ee-925d-49d0-b2aa-aaedf5a67b75">
+
+## 2. User Module with Authentication & Authorization
+
+#### Book Now > Register > Login
+
 **Registration Form of user**
 
 The user which is not registered can easily register himself by filling these details. 
@@ -211,16 +220,24 @@ Registered user can easily access through his UserName & Password.
 
 <img width="1280" alt="Screenshot 2024-07-27 at 12 31 47 PM" src="https://github.com/user-attachments/assets/aa0d100c-8e5b-4daf-a67d-e9ca64f9974a">
 
+**Login Pop-up**
+
+<img width="462" alt="Screenshot 2024-07-28 at 2 11 11 PM" src="https://github.com/user-attachments/assets/86d00d1f-4be8-4a89-88e5-d236f84e9891">
+
+
 ## User Dashboard View
 
 After Login User proceed to his Dashboard View. Through this Registered user can easily Create, Edit & Delete his Bookings.This page have Three Buttons **Register a new appointment** , **Edit** & **Delete**.  
 <img width="1280" alt="Screenshot 2024-07-27 at 9 35 00 PM" src="https://github.com/user-attachments/assets/16d635ee-78ec-4441-b2fb-764ac246b673">
 
-## Book a new appointment
+## Book appointment
 
-User can create a new appointment by simply Clicking on given button.
+Any User can create a new appointment by simply Clicking on given button Ecxept Technician.Technician cannot create  appointment only admin and customers can create appointment. Technician can delete or update appointment.
+
 <img width="1248" alt="Screenshot 2024-07-28 at 5 15 12 AM" src="https://github.com/user-attachments/assets/673478ec-eef0-43c9-8bd1-3c8c24f1ec66">
+
 ## Steps to Complete
+
  **Appointment Form**
  User can create a new appointment by filling This form completely. 
  
@@ -261,102 +278,46 @@ Email integration add for the user satisfactioon.User receive confirmation Email
 <img width="488" alt="Screenshot 2024-07-28 at 5 52 43 AM" src="https://github.com/user-attachments/assets/d2fe8d35-a9a1-42ae-948b-cff3380af8a9">
 <img width="488" alt="Screenshot 2024-07-28 at 5 52 52 AM" src="https://github.com/user-attachments/assets/472f2295-9b8e-4bcd-9fe2-19cae4eb610f">
 
-
 [Go Top](https://github.com/Shazi-dani/Garage-Management-System/edit/main/README.md)
 
-  
-## 2. User Module with Authentication & Authorization
-   
-#### Customer Management:
+## Cras for Sale
+User can view all the vehicles for sale and request purshase here. Every vehicle deatiled box consist of his name , model, colour, Image view & Price. User can easily make purchase here.
+<img width="1280" alt="Screenshot 2024-07-28 at 7 22 34 AM" src="https://github.com/user-attachments/assets/c6a3f522-6449-47bf-b7f7-9fd7f868a639">
 
-○ Capture customer details: first name, last name, display name, company details,
-date of birth, email, mobile number, address, and profile image.
-
-○ Self-service portal for customers to view service reminders, invoices, and
-records.
-
-○ Secure login and password management for customers.
-
-
-#### Employee Management:
-
-○ Capture employee details: email, phone number, date of birth, joining date,
-designation, and address.
-
-○ Role assignment and secure system access for employees.
-
-#### Authentication:
-
-○ Secure login with email and password for all users.
-
-○ Password reset and recovery options.
-
-#### Authorization:
-
-○ Role-based access control with customizable permissions for viewing, adding,
-updating, deleting, and owning data.
-
-○ User roles: Super Admin, Customer, Garage Technician, Accountant, Support
-Staff, Branch Admin.
-
-[Go Top](https://github.com/Shazi-dani/Garage-Management-System/edit/main/README.md)
-
-## Steps to Complete:
-
-#### Customer Management:
-- Create customer registration forms capturing all required details.
-- Develop self-service portal interfaces for customer access.
-- Implement secure authentication methods and password management.
-#### Employee Management:
-- Create employee registration and profile forms.
-- Develop role assignment functionality with detailed permissions.
-- Implement secure authentication and password management.
-#### Authentication:
-- Develop secure login pages with email and password inputs.
-- Implement password reset and recovery workflows.
-#### Authorization:
-- Define role-based access control mechanisms.
-- Implement permission management for various user roles.
-
-[Go Top](https://github.com/Shazi-dani/Garage-Management-System/edit/main/README.md)
-
-
-#### User Login
-
-![Login page](https://github.com/user-attachments/assets/ee83bb49-2db5-49cf-babb-5b632ba3bd65)
-
-#### Register User 
-![Register](https://github.com/user-attachments/assets/45922c57-1f8a-4ea7-96d0-004b03a45e7d)
-
-
-[Go Top](https://github.com/Shazi-dani/Garage-Management-System/edit/main/README.md)
 
 ## 3. Dashboard
- ![Dashboard view for client](https://github.com/user-attachments/assets/d3c80db5-168d-4a9c-a4f1-5f12cf1a8851)
-Dashboard View for logged in Client (Showing only the user's appointments)
+There two dashboard views one for the user and other for the admin 
+#### User Dashboard View
 
-![Dashboard view for unauthentication users ](https://github.com/user-attachments/assets/4241f3d1-7e60-45aa-ace9-69b81691c854)
-Dashboard View for Un Authenticated users (Guest Users) [Showing appointments of all the users on the dashboard] with no appointment registration option
-#### Management Reports:
+After Login User proceed to his Dashboard View where he can easily Create, Watch, Edit & Delete his Bookings.This page have Three Buttons **Register a new appointment** , **Edit** & **Delete**.  
+<img width="1280" alt="Screenshot 2024-07-27 at 9 35 00 PM" src="https://github.com/user-attachments/assets/16d635ee-78ec-4441-b2fb-764ac246b673">
 
-○ Summarize free and paid services.
-
-- Data Visualization:
-
-○ Real-time updates based on inputted service data.
-
-## Steps to Complete:
-
-#### 1. Management Reports:
-○ Design report templates for free and paid services.
-○ Implement data aggregation and summary views.
-#### 2. Data Visualization:
-○ Develop real-time data dashboards using charts and graphs.
-○ Implement data updating mechanisms to keep information current.
+#### Admin Dashboard View
+After Login Admin can inquire all the activities .Admin can watch users, mechanics, vehiclas, Appointments & Purchase interest etc. Real-time updates based on inputted service data.
+<img width="1280" alt="Screenshot 2024-07-28 at 6 43 19 AM" src="https://github.com/user-attachments/assets/2319d9dc-2844-4705-be7b-15db623cee52">
 
 [Go Top](https://github.com/Shazi-dani/Garage-Management-System/edit/main/README.md)
 
-## 4. Settings (Admin panel, User profile settings)
+## 4. Vehicle/Product Management
+
+**Create:**
+User can Add and categorize vehicles by type (e.g., car, bike, hatchback), brand (e.g.,
+BMW, Audi), and model.He can Add Image of product/ Vehicle. Also Capture product details Like unique identifiers, manufacturer details, pricing, and
+warranty information.
+<img width="1280" alt="Screenshot 2024-07-28 at 6 43 51 AM" src="https://github.com/user-attachments/assets/d52ee6a8-c2d7-49d0-a910-50298a3a12c9">
+
+**Read:**
+○ View detailed profiles of vehicles and products.
+<img width="1247" alt="Screenshot 2024-07-28 at 6 45 10 AM" src="https://github.com/user-attachments/assets/0de5d776-648c-4bd7-8274-e64b2ab635af">
+
+**Update/Edit/Delete**
+
+○ Edit and update vehicle and product details as necessary.
+○ Remove vehicles and products from the system when no longer needed.
+
+[Go Top](https://github.com/Shazi-dani/Garage-Management-System/edit/main/README.md)
+
+## 5. Settings (Admin panel, User profile settings)
 
 #### Admin Panel:
 
@@ -374,86 +335,89 @@ Dashboard View for Un Authenticated users (Guest Users) [Showing appointments of
 #### Admin Login
  ![Admin Login](https://github.com/user-attachments/assets/c94188bb-555a-439b-99c0-bb901b7ab5cd)
 
-#### Admin View
-![Admin Dashboard](https://github.com/user-attachments/assets/28d034b9-4548-45eb-869d-875bd9d99057)
+ 
+#### Change Theme
+Here User can change theme of this site by clicing on Sun & Moon.
+
+https://github.com/user-attachments/assets/790259d7-3da6-47b1-934f-62b9b351eedf
+
+## 1. Admin Panel:
+Admin Pannel interface provides the tools necessary to effectively manage a garage, including handling appointments, tracking customer interests, managing services, and overseeing user accounts. The recent actions feature enhances accountability and transparency by keeping a log of the admin's activities.
+<img width="1280" alt="Screenshot 2024-07-28 at 6 43 19 AM" src="https://github.com/user-attachments/assets/6e134979-534c-415d-a9dd-c942c7b572a9">
+
+## Admin Side Detailed view of
+* Appointments
+* Purchase Interests
+* Users
+* Services
+* Vehicles
+* My Action
+
+#### Appointments: 
+View, add, or change appointments. This section allows you to manage the scheduling and details of customer appointments for various services.
+
+<img width="1248" alt="Screenshot 2024-07-28 at 12 12 48 PM" src="https://github.com/user-attachments/assets/dafa3ebf-88d9-40e9-a62e-f35d189b21ad">
+
+#### Purchase Interests: 
+Track and manage customer purchase interests. This feature helps you keep a record of potential vehicle purchases and customer preferences.
+
+<img width="1248" alt="Screenshot 2024-07-28 at 12 13 03 PM" src="https://github.com/user-attachments/assets/87a0fd7c-d60d-4af3-b7f7-d1b1bd37d036">
+
+#### Services: 
+Manage the services offered by the garage. You can add new services or update existing ones, including maintenance and repair services.
+
+<img width="1248" alt="Screenshot 2024-07-28 at 12 13 21 PM" src="https://github.com/user-attachments/assets/1267c154-34cc-4ec9-92aa-5494cdf3a8b6">
+
+#### Vehicles: 
+Manage the vehicles in the system. This section allows you to add new vehicles, update vehicle information, and track service history.
+
+<img width="1248" alt="Screenshot 2024-07-28 at 12 12 35 PM" src="https://github.com/user-attachments/assets/bf17b384-d9e1-4cb9-93cc-2e1abfa96261">
+
+#### Users: 
+Manage user accounts. You can add new users, change existing user details, and control user access and permissions within the system.
+
+<img width="1248" alt="Screenshot 2024-07-28 at 12 15 47 PM" src="https://github.com/user-attachments/assets/bbcab5f1-ec97-43a3-b5f2-f8b5be1137e3">
+
+#### My Actions: 
+Displays a list of recent actions performed by the logged-in admin user. This includes details of appointments made, users added or removed, and other significant activities. This helps in tracking the admin's recent activities and changes within the system.
+
+<img width="1248" alt="Screenshot 2024-07-28 at 12 17 29 PM" src="https://github.com/user-attachments/assets/c604cfb7-84bf-417d-b7de-38cb73e76fa5">
+
+## Contact Us
+User can conatct admin bu clicking  **Contact Us** in nevigation  bar.
+<img width="1280" alt="Screenshot 2024-07-27 at 1 10 12 PM" src="https://github.com/user-attachments/assets/17cb1cc9-7dfa-431a-9c31-2b62d0110299">
+
+## Logo Functionality 
+User on any page can go back to the Home page by clicking on logo .
+
+
+
+https://github.com/user-attachments/assets/125c24c9-e713-4d49-b583-b35de8e1b36e
+
+
+
+## Site Footer
+The footer consists of company deatils like adress , email , Location etc Also working Hours are mention here according to which a user can make his appointment clear.
+<img width="1280" alt="Screenshot 2024-07-27 at 9 32 00 PM" src="https://github.com/user-attachments/assets/595a7caa-5865-4f88-9431-495ae38615fa">
+
 
 [Go Top](https://github.com/Shazi-dani/Garage-Management-System/edit/main/README.md)
 
-## Steps to Complete:
+## Things To done in Future 
 
-#### 1. Admin Panel:
-- Develop forms for capturing system names, contact details, and logo uploads.
-- Create interfaces for setting business hours, holidays, and working days.
-- Implement currency and localization settings.
+**Supplier Management & Inventory**
+**Note:** Due to time constraints, it was not possible to implement the supplier management and inventory features at this time. However, we plan to develop and enhance these features in future updates.
 
-#### 2. User Profile Settings:
-- Develop user profile forms to update personal information.
-- Implement password change and management functionality
+####  Supplier Management
 
-[Go Top](https://github.com/Shazi-dani/Garage-Management-System/edit/main/README.md)
-
-## 5. Supplier Management
-
-#### Create:
-
-○ Add new supplier information: first name, last name, company details, email,
+**Create:** Add new supplier information: first name, last name, company details, email,
 mobile number, and address.
+**Read:**  View detailed supplier profiles and communication history.
+**Update:**  Edit and update supplier details as necessary.
+**Delete:**  Remove suppliers from the system when no longer needed.
+All these are The task to done in Future
+<img width="939" alt="Screenshot 2024-07-28 at 1 21 38 PM" src="https://github.com/user-attachments/assets/dc1ea053-d035-4840-b129-9aea002ed9f9">
 
-#### Read:
-
-○ View detailed supplier profiles and communication history.
-
-#### Update:
-
-○ Edit and update supplier details as necessary.
-
-#### Delete:
-
-○ Remove suppliers from the system when no longer needed.
-
-#### Inventory Association:
-
-○ Track parts and inventory received from suppliers for billing and service
-purposes.
-
-## Steps to Complete:
-
-- 1. Create:Develop forms for capturing supplier information.
-- 2. Read:Create interfaces to view supplier profiles and communication history.
-- 3. Update:Implement forms and workflows for updating supplier details.
-- 4. Delete:Develop mechanisms for securely removing supplier data.
-- 5. Inventory Association:Link suppliers to inventory items and track received parts.
-  
-[Go Top](https://github.com/Shazi-dani/Garage-Management-System/edit/main/README.md)
-
-## 6. Vehicle/Product Management
-
-#### Create:
-
-○ Add and categorize vehicles by type (e.g., car, bike, hatchback), brand (e.g.,
-BMW, Audi), and model.
-
-○ Capture product details: unique identifiers, manufacturer details, pricing, and
-warranty information.
-
-#### Read:
-
-○ View detailed profiles of vehicles and products.
-
-#### Update:
-
-○ Edit and update vehicle and product details as necessary.
-
-#### Delete:
-
-○ Remove vehicles and products from the system when no longer needed.
-
-## Steps to Complete:
-
-- 1. Create:Develop forms for adding vehicle and product details.
-- 2. Read:Create interfaces for viewing detailed vehicle and product profiles.
-- 3. Update:Implement forms and workflows for updating vehicle and product details.
-- 4. Delete:Develop mechanisms for securely removing vehicle and product data.
   
 [Go Top](https://github.com/Shazi-dani/Garage-Management-System/edit/main/README.md)
 
@@ -480,7 +444,44 @@ warranty information.
 
 [Go Top](https://github.com/Shazi-dani/Garage-Management-System/edit/main/README.md)
 
+## Lighthouse Testing 
 
+Tests in Lighthouse were Funtionaloty of every feature is tested.
+
+#### Home page testing
+
+![Home Page testing](https://github.com/user-attachments/assets/151e2b2a-f9a5-48e8-9d65-7b90f11bc866)
+
+#### Register Testing
+
+![register page testing](https://github.com/user-attachments/assets/e183f205-c003-4b2b-be7e-570e988b6f87)
+
+
+#### Login Testing
+
+![Login Testing](https://github.com/user-attachments/assets/ec46dd84-dccc-42d5-968c-96c5d68a2d20)
+
+#### Create Appointment page testing
+
+![create appointmemnt ](https://github.com/user-attachments/assets/6b376442-a6ce-45b4-9b26-e24049a9c1bc)
+
+#### Appointments dashboard lighthouse testing
+
+![Appointments](https://github.com/user-attachments/assets/bb948851-ac76-4a55-b4a5-a75759e15778)
+
+#### Appointments Edit Page testing 
+
+![Edit Page testing](https://github.com/user-attachments/assets/20830036-58e2-4f71-b1f1-39b9a0bac8b7)
+
+#### Delete Testing
+
+![Delete Testing](https://github.com/user-attachments/assets/cd016c3e-3287-4f56-af26-931dba4c0cf0)
+
+#### Vehicles for sale testing
+
+![Vehicles for sale](https://github.com/user-attachments/assets/cb6f0733-efa0-4827-b71b-6ff2bb4057b2)
+
+[Go Top](https://github.com/Shazi-dani/Garage-Management-System/edit/main/README.md)
 
 ## Technologies Used
 
