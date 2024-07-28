@@ -214,6 +214,10 @@ Registered user can easily access through his UserName & Password.
 <img width="1280" alt="Screenshot 2024-07-27 at 12 31 47 PM" src="https://github.com/user-attachments/assets/aa0d100c-8e5b-4daf-a67d-e9ca64f9974a">
 
 
+## User Dashboard View
+
+After Login User proceed to his Dashboard View. Through this Registered user can easily Create, Edit & Delete his Bookings. 
+<img width="1280" alt="Screenshot 2024-07-27 at 9 35 00 PM" src="https://github.com/user-attachments/assets/16d635ee-78ec-4441-b2fb-764ac246b673">
 
 
 
@@ -223,7 +227,6 @@ Registered user can easily access through his UserName & Password.
 
 
 
-  
 ## 2. User Module with Authentication & Authorization
    
 #### Customer Management:
