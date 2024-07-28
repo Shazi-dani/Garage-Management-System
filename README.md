@@ -227,9 +227,12 @@ After Login User proceed to his Dashboard View. Through this Registered user can
 
 ## Book appointment
 
-User can create a new appointment by simply Clicking on given button.
+Any User can create a new appointment by simply Clicking on given button Ecxept Technician.Technician cannot create  appointment only admin and customers can create appointment. Technician can delete or update appointment.
+
 <img width="1248" alt="Screenshot 2024-07-28 at 5 15 12 AM" src="https://github.com/user-attachments/assets/673478ec-eef0-43c9-8bd1-3c8c24f1ec66">
+
 ## Steps to Complete
+
  **Appointment Form**
  User can create a new appointment by filling This form completely. 
  
