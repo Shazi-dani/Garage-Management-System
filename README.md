@@ -327,6 +327,8 @@ warranty information.
 #### Admin Login
  ![Admin Login](https://github.com/user-attachments/assets/c94188bb-555a-439b-99c0-bb901b7ab5cd)
 
+ 
+#### Change Theme
 Here User can change theme of this site by clicing on Sun & Moon.
 
 https://github.com/user-attachments/assets/790259d7-3da6-47b1-934f-62b9b351eedf
@@ -375,6 +377,15 @@ Displays a list of recent actions performed by the logged-in admin user. This in
 ## Contact Us
 User can conatct admin bu clicking  **Contact Us** in nevigation  bar.
 <img width="1280" alt="Screenshot 2024-07-27 at 1 10 12 PM" src="https://github.com/user-attachments/assets/17cb1cc9-7dfa-431a-9c31-2b62d0110299">
+
+## Logo Functionality 
+User on any page can go back to the Home page by clicking on logo .
+
+
+
+https://github.com/user-attachments/assets/125c24c9-e713-4d49-b583-b35de8e1b36e
+
+
 
 ## Site Footer
 The footer consists of company deatils like adress , email , Location etc Also working Hours are mention here according to which a user can make his appointment clear.
@@ -468,7 +479,7 @@ Tests in Lighthouse were Funtionaloty of every feature is tested.
 
 ![Vehicles for sale](https://github.com/user-attachments/assets/cb6f0733-efa0-4827-b71b-6ff2bb4057b2)
 
-
+[Go Top](https://github.com/Shazi-dani/Garage-Management-System/edit/main/README.md)
 
 ## Technologies Used
 
