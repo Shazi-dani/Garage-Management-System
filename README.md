@@ -423,6 +423,24 @@ purposes.
 
 [Go Top](https://github.com/Shazi-dani/Garage-Management-System/edit/main/README.md)
 
+## Lighthouse Testing 
+Tests in Lighthouse were Funtionaloty of every feature is tested.
+
+#### Home page testing
+![Home Page testing](https://github.com/user-attachments/assets/151e2b2a-f9a5-48e8-9d65-7b90f11bc866)
+
+#### Create Appointment page testing
+![create appointmemnt ](https://github.com/user-attachments/assets/6b376442-a6ce-45b4-9b26-e24049a9c1bc)
+
+#### Appointments dashboard lighthouse testing
+![Appointments](https://github.com/user-attachments/assets/bb948851-ac76-4a55-b4a5-a75759e15778)
+
+#### Appointments Edit Page testing 
+![Edit Page testing](https://github.com/user-attachments/assets/20830036-58e2-4f71-b1f1-39b9a0bac8b7)
+
+#### Vehicles for sale
+![Vehicles for sale](https://github.com/user-attachments/assets/cb6f0733-efa0-4827-b71b-6ff2bb4057b2)
+
 
 
 ## Technologies Used
