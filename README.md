@@ -395,7 +395,7 @@ The footer consists of company deatils like adress , email , Location etc Also w
 
 [Go Top](https://github.com/Shazi-dani/Garage-Management-System/edit/main/README.md)
 
-## Thigns To done in Future 
+## Things To done in Future 
 
 **Supplier Management & Inventory**
 **Note:** Due to time constraints, it was not possible to implement the supplier management and inventory features at this time. However, we plan to develop and enhance these features in future updates.
@@ -410,15 +410,6 @@ mobile number, and address.
 All these are The task to done in Future
 <img width="939" alt="Screenshot 2024-07-28 at 1 21 38 PM" src="https://github.com/user-attachments/assets/dc1ea053-d035-4840-b129-9aea002ed9f9">
 
-#### Inventory Association:
-
-○ Track parts and inventory received from suppliers for billing and service
-purposes.
-- 1. Create:Develop forms for capturing supplier information.
-- 2. Read:Create interfaces to view supplier profiles and communication history.
-- 3. Update:Implement forms and workflows for updating supplier details.
-- 4. Delete:Develop mechanisms for securely removing supplier data.
-- 5. Inventory Association:Link suppliers to inventory items and track received parts.
   
 [Go Top](https://github.com/Shazi-dani/Garage-Management-System/edit/main/README.md)
 
