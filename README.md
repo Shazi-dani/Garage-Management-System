@@ -327,25 +327,55 @@ warranty information.
 #### Admin Login
  ![Admin Login](https://github.com/user-attachments/assets/c94188bb-555a-439b-99c0-bb901b7ab5cd)
 
+Here User can change theme of this site by clicing on Sun & Moon.
+
+https://github.com/user-attachments/assets/790259d7-3da6-47b1-934f-62b9b351eedf
+
+
 #### Admin View
 ![Admin Dashboard](https://github.com/user-attachments/assets/28d034b9-4548-45eb-869d-875bd9d99057)
 
 [Go Top](https://github.com/Shazi-dani/Garage-Management-System/edit/main/README.md)
 
-## Steps to Complete:
+## 1. Admin Panel:
+Admin Pannel interface provides the tools necessary to effectively manage a garage, including handling appointments, tracking customer interests, managing services, and overseeing user accounts. The recent actions feature enhances accountability and transparency by keeping a log of the admin's activities.
+<img width="1280" alt="Screenshot 2024-07-28 at 6 43 19 AM" src="https://github.com/user-attachments/assets/6e134979-534c-415d-a9dd-c942c7b572a9">
 
-#### 1. Admin Panel:
-- Develop forms for capturing system names, contact details, and logo uploads.
-- Create interfaces for setting business hours, holidays, and working days.
-- Implement currency and localization settings.
+Admin Side Detailed view of
+#### Appointments: 
+View, add, or change appointments. This section allows you to manage the scheduling and details of customer appointments for various services.
 
-#### 2. User Profile Settings:
-- Develop user profile forms to update personal information.
-- Implement password change and management functionality
+<img width="1248" alt="Screenshot 2024-07-28 at 12 12 48 PM" src="https://github.com/user-attachments/assets/dafa3ebf-88d9-40e9-a62e-f35d189b21ad">
+
+#### Purchase Interests: 
+Track and manage customer purchase interests. This feature helps you keep a record of potential vehicle purchases and customer preferences.
+
+<img width="1248" alt="Screenshot 2024-07-28 at 12 13 03 PM" src="https://github.com/user-attachments/assets/87a0fd7c-d60d-4af3-b7f7-d1b1bd37d036">
+
+#### Services: 
+Manage the services offered by the garage. You can add new services or update existing ones, including maintenance and repair services.
+
+<img width="1248" alt="Screenshot 2024-07-28 at 12 13 21 PM" src="https://github.com/user-attachments/assets/1267c154-34cc-4ec9-92aa-5494cdf3a8b6">
+
+#### Vehicles: 
+Manage the vehicles in the system. This section allows you to add new vehicles, update vehicle information, and track service history.
+
+<img width="1248" alt="Screenshot 2024-07-28 at 12 12 35 PM" src="https://github.com/user-attachments/assets/bf17b384-d9e1-4cb9-93cc-2e1abfa96261">
+
+#### Users: 
+Manage user accounts. You can add new users, change existing user details, and control user access and permissions within the system.
+
+<img width="1248" alt="Screenshot 2024-07-28 at 12 15 47 PM" src="https://github.com/user-attachments/assets/bbcab5f1-ec97-43a3-b5f2-f8b5be1137e3">
+
+#### My Actions: 
+Displays a list of recent actions performed by the logged-in admin user. This includes details of appointments made, users added or removed, and other significant activities. This helps in tracking the admin's recent activities and changes within the system.
+
+<img width="1248" alt="Screenshot 2024-07-28 at 12 17 29 PM" src="https://github.com/user-attachments/assets/c604cfb7-84bf-417d-b7de-38cb73e76fa5">
+
 
 [Go Top](https://github.com/Shazi-dani/Garage-Management-System/edit/main/README.md)
 
-## Thigns To add in FUture 
+## Thigns To add in Future 
 
 **Supplier Management & Inventory**
 **Note:** Due to time constraints, it was not possible to implement the supplier management and inventory features at this time. However, we plan to develop and enhance these features in future updates.
@@ -369,8 +399,6 @@ purposes.
 - 5. Inventory Association:Link suppliers to inventory items and track received parts.
   
 [Go Top](https://github.com/Shazi-dani/Garage-Management-System/edit/main/README.md)
-
-
 
 
 ## Bugs found during Project
