@@ -372,6 +372,14 @@ Displays a list of recent actions performed by the logged-in admin user. This in
 
 <img width="1248" alt="Screenshot 2024-07-28 at 12 17 29 PM" src="https://github.com/user-attachments/assets/c604cfb7-84bf-417d-b7de-38cb73e76fa5">
 
+## Contact Us
+User can conatct admin bu clicking  **Contact Us** in nevigation  bar.
+<img width="1280" alt="Screenshot 2024-07-27 at 1 10 12 PM" src="https://github.com/user-attachments/assets/17cb1cc9-7dfa-431a-9c31-2b62d0110299">
+
+## Site Footer
+The footer consists of company deatils like adress , email , Location etc Also working Hours are mention here according to which a user can make his appointment clear.
+<img width="1280" alt="Screenshot 2024-07-27 at 9 32 00 PM" src="https://github.com/user-attachments/assets/595a7caa-5865-4f88-9431-495ae38615fa">
+
 
 [Go Top](https://github.com/Shazi-dani/Garage-Management-System/edit/main/README.md)
 
