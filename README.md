@@ -361,7 +361,7 @@ View, add, or change appointments. This section allows you to manage the schedul
 <img width="1248" alt="Screenshot 2024-07-28 at 12 12 48 PM" src="https://github.com/user-attachments/assets/dafa3ebf-88d9-40e9-a62e-f35d189b21ad">
 
 #### Purchase Interests: 
-Track and manage customer purchase interests. This feature helps you keep a record of potential vehicle purchases and customer preferences.
+Track and manage customer purchase interests. This feature helps you keep a record of potential vehicle purchases and customer preferences.When customer press **“request purchase“** button on website then a purchase interest create at the admin site.
 
 <img width="1248" alt="Screenshot 2024-07-28 at 12 13 03 PM" src="https://github.com/user-attachments/assets/87a0fd7c-d60d-4af3-b7f7-d1b1bd37d036">
 
