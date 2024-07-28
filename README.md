@@ -333,12 +333,6 @@ Here User can change theme of this site by clicing on Sun & Moon.
 
 https://github.com/user-attachments/assets/790259d7-3da6-47b1-934f-62b9b351eedf
 
-
-#### Admin View
-![Admin Dashboard](https://github.com/user-attachments/assets/28d034b9-4548-45eb-869d-875bd9d99057)
-
-[Go Top](https://github.com/Shazi-dani/Garage-Management-System/edit/main/README.md)
-
 ## 1. Admin Panel:
 Admin Pannel interface provides the tools necessary to effectively manage a garage, including handling appointments, tracking customer interests, managing services, and overseeing user accounts. The recent actions feature enhances accountability and transparency by keeping a log of the admin's activities.
 <img width="1280" alt="Screenshot 2024-07-28 at 6 43 19 AM" src="https://github.com/user-attachments/assets/6e134979-534c-415d-a9dd-c942c7b572a9">
