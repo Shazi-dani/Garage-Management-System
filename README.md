@@ -406,6 +406,8 @@ mobile number, and address.
 **Read:**  View detailed supplier profiles and communication history.
 **Update:**  Edit and update supplier details as necessary.
 **Delete:**  Remove suppliers from the system when no longer needed.
+All these are The task to done in Future
+<img width="939" alt="Screenshot 2024-07-28 at 1 21 38 PM" src="https://github.com/user-attachments/assets/dc1ea053-d035-4840-b129-9aea002ed9f9">
 
 #### Inventory Association:
 
