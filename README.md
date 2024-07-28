@@ -333,6 +333,11 @@ warranty information.
 
 ○ Change and manage passwords.
 #### Admin Login
+
+Admin can login by using the Username "admin" & Password is also "admin" . Admin User can use the Link given here [Garage Management System Admin](https://garage-management-system-78c320f4e5b8.herokuapp.com/admin)
+
+
+
  ![Admin Login](https://github.com/user-attachments/assets/c94188bb-555a-439b-99c0-bb901b7ab5cd)
 
  
