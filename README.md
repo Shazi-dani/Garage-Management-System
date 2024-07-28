@@ -216,15 +216,32 @@ Registered user can easily access through his UserName & Password.
 
 ## User Dashboard View
 
-After Login User proceed to his Dashboard View. Through this Registered user can easily Create, Edit & Delete his Bookings. 
+After Login User proceed to his Dashboard View. Through this Registered user can easily Create, Edit & Delete his Bookings.This page have Three Buttons **Register a new appointment** , **Edit** & **Delete**.  
 <img width="1280" alt="Screenshot 2024-07-27 at 9 35 00 PM" src="https://github.com/user-attachments/assets/16d635ee-78ec-4441-b2fb-764ac246b673">
 
+## Book a new appointment
 
+User can create a new appointment by simply Clicking on given button.
+<img width="1248" alt="Screenshot 2024-07-28 at 5 15 12 AM" src="https://github.com/user-attachments/assets/673478ec-eef0-43c9-8bd1-3c8c24f1ec66">
+## Steps to Complete
+ **Appointment Form**
+ User can create a new appointment by filling This form completely. 
+ 
+ **1:Form**
+ <img width="1280" alt="Screenshot 2024-07-28 at 5 17 25 AM" src="https://github.com/user-attachments/assets/d8237de0-84b6-4eab-87de-6d88326e6573">
+ **2:Add Vehicle Details**
+ By clicking on vehicle a Dropdown is accessible to select the Vehicle Name & Model.
+ <img width="1280" alt="Screenshot 2024-07-27 at 9 32 47 PM" src="https://github.com/user-attachments/assets/a34f86e5-f7be-4e04-8a3f-01a3bae57c45">
 
-
-
-
-
+**3:Add Service type**
+User can add Service type that Which kind of service user needed the most.Here is also a dropdown through which he select the Service.  
+<img width="1280" alt="Screenshot 2024-07-27 at 9 32 56 PM" src="https://github.com/user-attachments/assets/c9eff2dc-e395-4c6e-a000-0c1096b5bb99">
+**3:Add Time & Date**
+Calender & Time integration is added to make user comfirtable and make his experience better.User can select Appropriate Time & Date for his service.
+<img width="1280" alt="Screenshot 2024-07-27 at 9 33 29 PM" src="https://github.com/user-attachments/assets/da0a9a27-93cc-40aa-b933-0fb2eb0901b3">
+**4:Add Description**
+User Also add Description for his Booking if there any kind of ackowlwdgement necessary to delliver to the Garage members or service provider user can add in this .
+<img width="1280" alt="Screenshot 2024-07-28 at 5 29 31 AM" src="https://github.com/user-attachments/assets/3080b86c-0f61-484c-87d8-d979514add66">
 
 
 ## 2. User Module with Authentication & Authorization
