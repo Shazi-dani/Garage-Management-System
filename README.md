@@ -329,7 +329,8 @@ warranty information.
 ○ Update personal information such as email, phone number, and address.
 
 ○ Change and manage passwords.
-#### Admin Login
+
+## Admin Login
 
 Admin can login by using the Username "admin" & Password is also "admin" . Admin User can use the Link given here [Garage Management System Admin](https://garage-management-system-78c320f4e5b8.herokuapp.com/admin)
 
@@ -338,7 +339,8 @@ Admin can login by using the Username "admin" & Password is also "admin" . Admin
  ![Admin Login](https://github.com/user-attachments/assets/c94188bb-555a-439b-99c0-bb901b7ab5cd)
 
  
-#### Change Theme
+ 
+ ## Change Theme
 Here User can change theme of this site by clicing on Sun & Moon.
 
 https://github.com/user-attachments/assets/790259d7-3da6-47b1-934f-62b9b351eedf
