@@ -30,63 +30,60 @@ Here are the parent epics, user stories, and associated tasks:
 
 #### Epic 2: Dashboard
 
-- User Story 4: As a user, I want to see a dashboard with relevant information so that I can quickly access key features. (#4)
-    - Task 4.1: Design dashboard layout
-    - Task 4.2: Implement dashboard functionality
-    - Task 4.3: Test dashboard functionality
-- User Story 5: As a user, I want the dashboard to be customizable so that I can prioritize the information I need. (#5)
-    - Task 5.1: Design customization options
-    - Task 5.2: Implement customization logic
-    - Task 5.3: Test customization functionality
-
+- User Story 3: As a user, I want to see a dashboard with relevant information so that I can quickly access key features. (#4)
+    - Task 3.1: Design dashboard layout
+    - Task 3.2: Implement dashboard functionality
+    - Task 3.3: Test dashboard functionality
+- User Story 4: As a user, I want the dashboard having information about appointments so that I can prioritize the information I need. (#5)
+   
 #### Epic 3: Settings
 
-- User Story 6: As an admin, I want to be able to set up an admin panel so that I can manage the system. (#6)
-    - Task 6.1: Design admin panel layout
-    - Task 6.2: Implement admin panel functionality
-    - Task 6.3: Test admin panel functionality
-- User Story 7: As a user, I want to be able to update my user profile settings so that I can customize my experience. (#7)
-    - Task 7.1: Design profile settings page
-    - Task 7.2: Implement profile settings logic
-    - Task 7.3: Test profile settings functionality
+- User Story 5: As an admin, I want to be able to set up an admin panel so that I can manage the system. (#6)
+    - Task 5.1: Design admin panel layout
+    - Task 5.2: Implement admin panel functionality
+    - Task 5.3: Test admin panel functionality
+- User Story 6: As a user, I want to be able to update my user profile settings so that I can customize my experience. (#7)
+    - Task 6.1: Design profile settings page
+    - Task 6.2: Implement profile settings logic
+    - Task 6.3: Test profile settings functionality
 
 #### Epic 4: Supplier Management
 
-- User Story 8: As a user, I want to be able to create a new supplier so that I can add new suppliers to the system. (#8)
-    - Task 8.1: Design supplier creation form
-    - Task 8.2: Implement supplier creation logic
-    - Task 8.3: Test supplier creation functionality
-- User Story 9: As a user, I want to be able to read supplier details so that I can view supplier information. (#9)
-    - Task 9.1: Design supplier details page
-    - Task 9.2: Implement supplier details logic
-    - Task 9.3: Test supplier details functionality
-- User Story 10: As a user, I want to be able to update supplier information so that I can edit existing suppliers. (#10)
-    - Task 10.1: Design supplier update form
-    - Task 10.2: Implement supplier update logic
-    - Task 10.3: Test supplier update functionality
-- User Story 11: As a user, I want to be able to delete suppliers so that I can remove unwanted suppliers. (#11)
-    - Task 11.1: Design supplier deletion functionality
-    - Task 11.2: Implement supplier deletion logic
-    - Task 11.3: Test supplier deletion functionality
+- User Story 7: As a user, I want to be able to create a new supplier so that I can add new suppliers to the system. (#8)
+    - Task 7.1: Design supplier creation form
+    - Task 7.2: Implement supplier creation logic
+    - Task 7.3: Test supplier creation functionality
+- User Story 8: As a user, I want to be able to read supplier details so that I can view supplier information. (#9)
+    - Task 8.1: Design supplier details page
+    - Task 8.2: Implement supplier details logic
+    - Task 8.3: Test supplier details functionality
+- User Story 9: As a user, I want to be able to update supplier information so that I can edit existing suppliers. (#10)
+    - Task 9.1: Design supplier update form
+    - Task 9.2: Implement supplier update logic
+    - Task 9.3: Test supplier update functionality
+- User Story 10: As a user, I want to be able to delete suppliers so that I can remove unwanted suppliers. (#11)
+    - Task 10.1: Design supplier deletion functionality
+    - Task 10.2: Implement supplier deletion logic
+    - Task 10.3: Test supplier deletion functionality
 
 #### Epic 5: Vehicle/Product Management
 
-- User Story 12: As a user, I want to be able to create a new vehicle/product so that I can add new vehicles/products to the system. (#12)
-    - Task 12.1: Design vehicle/product creation form
-    - Task 12.2: Implement vehicle/product creation logic
-    - Task 12.3: Test vehicle/product creation functionality
-- User Story 13: As a user, I want to be able to read vehicle/product details so that I can view vehicle/product information. (#13)
-    - Task 13.1: Design vehicle/product details page
-    - Task 13.2: Implement vehicle/product details logic
-    - Task 13.3: Test vehicle/product details functionality
-- User Story 14: As a user, I want to be able to update vehicle/product information so that I can edit existing vehicles/products. (#14)
-    - Task 14.1: Design vehicle/product update form
-    - Task 14.2: Implement vehicle/product update logic
-    - Task 14.3: Test vehicle/product update functionality
-- User Story 15: As a user, I want to be able to delete vehicles/products so that I can remove unwanted vehicles/products. (#15)
-    - Task 15.1: Design vehicle/product deletion functionality
-    - Task 15.2: Implement vehicle/product deletion logic
-    - Task 15.3: Test vehicle/product deletion functionality
+- User Story 11: As a user, I want to be able to create a new vehicle/product so that I can add new vehicles/products to the system. (#12)
+    - Task 11.1: Design vehicle/product creation form
+    - Task 11.2: Implement vehicle/product creation logic
+    - Task 11.3: Test vehicle/product creation functionality
+- User Story 12: As a user, I want to be able to read vehicle/product details so that I can view vehicle/product information. (#13)
+    - Task 12.1: Design vehicle/product details page
+    - Task 12.2: Implement vehicle/product details logic
+    - Task 12.3: Test vehicle/product details functionality
+- User Story 13: As a user, I want to be able to update vehicle/product information so that I can edit existing vehicles/products. (#14)
+    - Task 13.1: Design vehicle/product update form
+    - Task 13.2: Implement vehicle/product update logic
+    - Task 13.3: Test vehicle/product update functionality
+- User Story 14: As a user, I want to be able to delete vehicles/products so that I can remove unwanted vehicles/products. (#15)
+    - Task 14.1: Design vehicle/product deletion functionality
+    - Task 14.2: Implement vehicle/product deletion logic
+    - Task 14.3: Test vehicle/product deletion functionality
 
 These epics, user stories, and tasks can be used to organize and track the development of the project on a GitHub board or similar project management tool.
 
@@ -280,7 +277,7 @@ Email integration add for the user satisfactioon.User receive confirmation Email
 
 [Go Top](https://github.com/Shazi-dani/Garage-Management-System/edit/main/README.md)
 
-## Cras for Sale
+## Cars for Sale
 User can view all the vehicles for sale and request purshase here. Every vehicle deatiled box consist of his name , model, colour, Image view & Price. User can easily make purchase here.
 <img width="1280" alt="Screenshot 2024-07-28 at 7 22 34 AM" src="https://github.com/user-attachments/assets/c6a3f522-6449-47bf-b7f7-9fd7f868a639">
 
