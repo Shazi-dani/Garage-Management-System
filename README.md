@@ -187,6 +187,7 @@ The navigation bar makes it easy to navigate the features of site.Nevigation bar
 * Book Appointment
 * Contact Us
 
+
 By Clicking on **Services** websites proceeds us to services of Concern Garage. When we Click on **Cars for Sale** we nevegate to the List of Cars showcase for Sale.On clicking **Book Now** we nevegate Login / Register Screen, After Login Successfuly we nevigate to appointment Page. & on Clicking the **Contact Us** we can type any kind of Queries. So it's very easy to nevigate the other features through this nevigation.
 
 <img width="1279" alt="Screenshot 2024-07-27 at 10 18 30 PM" src="https://github.com/user-attachments/assets/ba4c7683-8b70-4805-b969-6701c433d5d8">
@@ -224,7 +225,7 @@ Registered user can easily access through his UserName & Password.
 After Login User proceed to his Dashboard View. Through this Registered user can easily Create, Edit & Delete his Bookings.This page have Three Buttons **Register a new appointment** , **Edit** & **Delete**.  
 <img width="1280" alt="Screenshot 2024-07-27 at 9 35 00 PM" src="https://github.com/user-attachments/assets/16d635ee-78ec-4441-b2fb-764ac246b673">
 
-## Book a new appointment
+## Book appointment
 
 User can create a new appointment by simply Clicking on given button.
 <img width="1248" alt="Screenshot 2024-07-28 at 5 15 12 AM" src="https://github.com/user-attachments/assets/673478ec-eef0-43c9-8bd1-3c8c24f1ec66">
@@ -271,7 +272,10 @@ Email integration add for the user satisfactioon.User receive confirmation Email
 
 [Go Top](https://github.com/Shazi-dani/Garage-Management-System/edit/main/README.md)
 
-  
+## Cras for Sale
+User can view all the vehicles for sale and request purshase here. Every vehicle deatiled box consist of his name , model, colour, Image view & Price. User can easily make purchase here.
+<img width="1280" alt="Screenshot 2024-07-28 at 7 22 34 AM" src="https://github.com/user-attachments/assets/c6a3f522-6449-47bf-b7f7-9fd7f868a639">
+
 
 ## 3. Dashboard
 There two dashboard views one for the user and other for the admin 
