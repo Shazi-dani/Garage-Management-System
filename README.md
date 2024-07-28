@@ -285,27 +285,8 @@ After Login User proceed to his Dashboard View where he can easily Create, Watch
 <img width="1280" alt="Screenshot 2024-07-27 at 9 35 00 PM" src="https://github.com/user-attachments/assets/16d635ee-78ec-4441-b2fb-764ac246b673">
 
 #### Admin Dashboard View
-After Login Admin can inquire all the activities .Admin can watch users, mechanics, vehiclas, Appointments & Purchase interest etc 
+After Login Admin can inquire all the activities .Admin can watch users, mechanics, vehiclas, Appointments & Purchase interest etc. Real-time updates based on inputted service data.
 <img width="1280" alt="Screenshot 2024-07-28 at 6 43 19 AM" src="https://github.com/user-attachments/assets/2319d9dc-2844-4705-be7b-15db623cee52">
-
-
-
-#### Management Reports:
-
-○ Summarize free and paid services.
-
-- Data Visualization:
-
-○ Real-time updates based on inputted service data.
-
-## Steps to Complete:
-
-#### 1. Management Reports:
-○ Design report templates for free and paid services.
-○ Implement data aggregation and summary views.
-#### 2. Data Visualization:
-○ Develop real-time data dashboards using charts and graphs.
-○ Implement data updating mechanisms to keep information current.
 
 [Go Top](https://github.com/Shazi-dani/Garage-Management-System/edit/main/README.md)
 
