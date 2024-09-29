@@ -1,0 +1,1 @@
+export DATABASE_URL=postgres://uitjhnfpofm:esLi0AnCP0aR@ep-gentle-mountain-a23bxz6h.eu-central-1.aws.neon.tech/swab_land_crown_145240
