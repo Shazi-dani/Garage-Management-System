@@ -43,7 +43,7 @@ body {
 }
 
 .header {
-    background: url('/static/dashboard/images/cover.jpeg') no-repeat center center;
+    background: url("/static/dashboard/images/cover.e741c776920e.jpeg") no-repeat center center;
     background-size: cover;
     padding: 200px 0;
     color: white;
