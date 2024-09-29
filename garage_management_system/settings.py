@@ -51,7 +51,8 @@ CORS_ALLOWED_ORIGINS = [
     'https://*.herokuapp.com',
     'https://8000-shazidani-garagemanagem-zixyev14yor.ws-us115.gitpod.io',
     'http://127.0.0.1',
-    'https://8000-shazidani-garagemanagem-jp5pjx8uxc1.ws.codeinstitute-ide.net'
+    'https://8000-shazidani-garagemanagem-jp5pjx8uxc1.ws.codeinstitute-ide.net', 
+    '*'
     # Add any other origins you want to allow
 ]
 CSRF_TRUSTED_ORIGINS = [
@@ -59,6 +60,7 @@ CSRF_TRUSTED_ORIGINS = [
     'https://8000-shazidani-garagemanagem-zixyev14yor.ws-us115.gitpod.io',
     'http://127.0.0.1',
     'https://8000-shazidani-garagemanagem-jp5pjx8uxc1.ws.codeinstitute-ide.net',
+    '*'
     # Add any other origins you want to allow
 ]
 # Application definition
