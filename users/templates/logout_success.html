@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'users/css/message.css' %}">
+
+{% if messages %}
+    <div id="popupMessage" class="popup">
+        {% for message in messages %}
+            <div class="{{ message.tags }}">
+                {{ message }}
+            </div>
+        {% endfor %}
+        <button onclick="closePopup()" class="btn">Close</button>
+    </div>
+{% endif %}
+
+<script>
+    function closePopup() {
+        document.getElementById('popupMessage').style.display = 'none';
+        window.location.href = "{% url 'dashboard:home' %}"; // Redirect to the home page
+    }
+</script>
+{% endblock %}

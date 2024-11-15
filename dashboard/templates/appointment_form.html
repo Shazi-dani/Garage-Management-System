@@ -17,7 +17,8 @@
     <title>Create Appointment</title>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #000000; opacity: 0.7;">
+<nav class="navbar navbar-expand-lg navbar-dark d-flex justify-content-center" style="background-color: #000000; opacity: 0.7;">
+    <div class='containerx'> 
     <a class="navbar-brand" href="#home">
         <img src="{% static 'dashboard/images/DT_logo.png' %}" alt="DT Autos" style="width: 100%; height: auto; max-width: 75px;">
     </a>
@@ -40,6 +41,7 @@
             {% endif %}
         </ul>
     </div>
+</div>
 </nav>
 
 {% if user.is_authenticated %}
@@ -53,7 +55,6 @@
     });
 </script>
 {% endif %}
-
 <div class="container mt-4">
     <h2>{% if object %}Edit Appointment{% else %}Create Appointment{% endif %}</h2>
     <form method="post" novalidate>
@@ -194,7 +195,7 @@
 <!-- Copyright -->
 <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
     © 2024 Copyright:
-    <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+    <a class="text-white" href="#">DT Autos Garage</a>
 </div>
 <!-- Copyright -->
 </footer>
