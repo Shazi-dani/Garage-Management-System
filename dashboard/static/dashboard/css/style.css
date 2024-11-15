@@ -43,7 +43,7 @@ body {
 }
 
 .header {
-    background: url('/static/dashboard/images/cover.jpeg') no-repeat center center;
+    background: url('/static/dashboard/images/cover.webp') no-repeat center center;
     background-size: cover;
     padding: 200px 0;
     color: white;
@@ -506,6 +506,9 @@ h2, h3, h4 {
     font-weight: 500;
     font-size: 14px;
     color: #e1e1e1;
+}
+.iconx{
+    mix-blend-mode: color;
 }
 
 /* .vehiclex-price {
