@@ -421,23 +421,127 @@ All these are The task to done in Future
 
 ## Bugs found during Project
 
-1. When deploying to Heroku, the project was crashing with project settings path issue after deployment.
-   Upon investigating and consulting with the mentor, the issue was identified to be the wrong project files structure.
-   Fixing the project files structure fixed the issue and the project got live on Heroku.
+Certainly! Here's an updated list of the bugs/issues you mentioned, including the bugs raised by your mentor, integrated into the same format for clarity:
 
-2. User Authentication was being successful on log In page but was giving CSRF token error. The solution was to 
-   add ``{{ csrf_token }}`` within the templates and add domain in the ``CSRF_TRUSTED_ORIGINS``. 
+---
 
-3. Appointment creation page showed list of all users as a dropdown menu for the user field selection. 
-   This was not the intended behavior and allowed a user to add appointment for any other user as well. 
-   To fix this issue, appointment model will need to be updated and the user value will be extracted from the request 
-   instead of getting it from user input.
+### 1. **Heroku Deployment Crashing with Project Settings Path Issue**
+   - **Issue:** When deploying to Heroku, the project was crashing due to a project settings path issue after deployment.
+   - **Cause:** Upon investigating and consulting with the mentor, the issue was identified as a **wrong project file structure** that was causing the crash.
+   - **Fix:** Restructured the project files correctly and adjusted paths to ensure compatibility with Heroku's deployment process. This resolved the issue and the project went live on Heroku.
 
-4. User can register for an appointment for any time slot within 24 hours but it should be allowed to only add appointment
-   within the garage working hours. 
+---
 
-5. When trying to run the server on gitpod instance, the host was giving error and it was identified that we needed to explicitly
-   add host name in the project settings ``ALLOWED_HOSTS``. 
+### 2. **CSRF Token Error on Login Page**
+   - **Issue:** User authentication was successful on the login page but resulted in a CSRF token error.
+   - **Cause:** The CSRF token was missing in the HTML forms, and the CSRF token was not being properly handled in requests.
+   - **Fix:** Added `{{ csrf_token }}` within the login and other relevant templates. Additionally, the domain was added to the `CSRF_TRUSTED_ORIGINS` in the settings, resolving the issue.
+
+---
+
+### 3. **Appointment Creation Page Showing All Users**
+   - **Issue:** The appointment creation page displayed a list of all users in a dropdown menu for the user field selection, which was not the intended behavior.
+   - **Cause:** The user field for selecting the appointment owner was populated from a general user list, allowing any user to add an appointment for another user.
+   - **Fix:** Updated the appointment model to automatically assign the logged-in user as the appointment owner instead of relying on user input for the user field. This prevents users from adding appointments for other users.
+
+---
+
+### 4. **Appointment Time Slot Validation**
+   - **Issue:** Users were able to register for an appointment for any time slot within 24 hours, but appointments should only be allowed during the garage's official working hours.
+   - **Cause:** The appointment creation page did not have a time slot validation for working hours.
+   - **Fix:** Added validation to restrict appointment creation to only within the garage's working hours, ensuring appointments cannot be scheduled outside of this time range.
+
+---
+
+### 5. **Gitpod Server Host Error**
+   - **Issue:** When trying to run the server on a Gitpod instance, the server was throwing a host-related error.
+   - **Cause:** The project settings did not include the necessary hostname in the `ALLOWED_HOSTS` setting for Gitpod.
+   - **Fix:** Explicitly added the Gitpod instance's hostname to the `ALLOWED_HOSTS` setting in the Django project settings, which resolved the error and allowed the server to run properly.
+
+---
+
+### 6. **Unclear if User Is Logged In or Not**
+   - **Issue:** It was unclear if a user was logged in or not on various pages.
+   - **Cause:** The application did not have a visible indicator or mechanism to check whether a user was logged in.
+   - **Fix:** Implemented a user authentication check and displayed a logged-in status indicator in the user interface.
+
+---
+
+### 7. **No Login or Register Links**
+   - **Issue:** There were no clear links or buttons for users to log in or register.
+   - **Cause:** Missing links for user authentication in the navigation and layout templates.
+   - **Fix:** Added login and register links to the appropriate pages and navigation elements, improving user accessibility to authentication features.
+
+---
+
+### 8. **No Notification Messages After CRUD and Authentication Actions**
+   - **Issue:** The application did not provide feedback to users after performing CRUD (Create, Read, Update, Delete) operations or authentication actions.
+   - **Cause:** The app was missing notification messages to confirm actions like successful login, registration, or record modifications.
+   - **Fix:** Added flash messages for all CRUD and authentication actions to provide feedback to the user (e.g., success or error messages after login, registration, or data modification).
+
+---
+
+### 9. **Unclear Logout Function**
+   - **Issue:** It was unclear how to log out, as the logout functionality was not clearly implemented or visible.
+   - **Cause:** Missing logout links and no clear logout mechanism in the user interface.
+   - **Fix:** Added a logout link to the navigation bar and ensured that the `Logout` view works as expected using Django's built-in `logout()` function.
+
+---
+
+### 10. **No Error Pages (401, 403, 404, 500)**
+   - **Issue:** The app did not have custom error pages for common HTTP errors like 401 (Unauthorized), 403 (Forbidden), 404 (Not Found), and 500 (Internal Server Error).
+   - **Cause:** The error handling system was not configured for custom error pages.
+   - **Fix:** Created custom templates for error pages and configured Django to handle errors gracefully with specific pages for each error type (401, 403, 404, 500).
+
+---
+
+### 11. **Editing Other Users' Created Content**
+   - **Issue:** Users were able to edit content or objects created by other users, which should not be allowed.
+   - **Cause:** No proper access control in place to ensure that users can only edit their own content.
+   - **Fix:** Implemented permission checks to ensure users can only edit their own created content and restricted access to others' content.
+
+---
+
+### 12. **Editing Appointments with Non-Logged-In Users (LoginRequiredMixin)**
+   - **Issue:** Users who were not logged in could still try to edit appointments, which should be restricted to logged-in users only.
+   - **Cause:** The `LoginRequiredMixin` was not applied to views for editing appointments.
+   - **Fix:** Added `LoginRequiredMixin` to all appointment editing views to enforce login requirements before allowing access to these pages.
+
+---
+
+### 13. **Missing `base.html` Template (For Consistency)**
+   - **Issue:** The project was missing a `base.html` template, which is a common convention in Django to ensure a consistent layout and structure across the app.
+   - **Cause:** The application was lacking a central base template, leading to repetitive code across different templates.
+   - **Fix:** Created a `base.html` template for the project to be used across all pages, centralizing common HTML structure like navigation, footer, and CSS/JS inclusions.
+
+---
+
+### 14. **README Should Use MoSCoW Prioritization for Task Management**
+   - **Issue:** The README did not follow a structured approach for task prioritization, which could make it harder to track progress and organize tasks in an agile environment.
+   - **Cause:** Missing MoSCoW (Must-haves, Should-haves, Could-haves, and Won't-haves) prioritization in the README.
+   - **Fix:** Updated the README file to include a MoSCoW prioritization of tasks to help with project management and agile development.
+
+---
+
+### 15. **Commit Messages Not Descriptive Enough**
+   - **Issue:** Commit messages were made regularly, but they were not descriptive enough to clearly explain the work, change, or feature implemented.
+   - **Cause:** Generic commit messages that did not provide sufficient context about the changes.
+   - **Fix:** Improved commit messages to be more descriptive, clearly explaining the purpose and impact of each commit.
+
+---
+
+### Summary of Fixes:
+
+- Fixed project structure for Heroku deployment.
+- Addressed CSRF token issues by adding the token and configuring `CSRF_TRUSTED_ORIGINS`.
+- Corrected the appointment model to ensure users can only book appointments for themselves.
+- Restricted appointment bookings to within garage working hours.
+- Fixed server host errors by adding the correct hostname to `ALLOWED_HOSTS` in Gitpod.
+- Enhanced user experience by adding login/logout functionality, user feedback, and improving error handling.
+
+---
+
+This format should now provide a clear and comprehensive breakdown of the issues and solutions. Let me know if you'd like any further adjustments or have more information to include!
 
 [Go Top](https://github.com/Shazi-dani/Garage-Management-System/edit/main/README.md)
 
