@@ -175,8 +175,6 @@ The home page of the Garage Management System is designed to provide an informat
 [You can see here: Home Page ](https://garage-management-system-78c320f4e5b8.herokuapp.com/)
 
 
-<img width="1248" alt="Screenshot 2024-07-27 at 10 33 42 PM" src="https://github.com/user-attachments/assets/02b39c66-6786-4f2e-8159-7e8fe409fd0f">
-
 ## Nevigation Bar 
 The navigation bar makes it easy to navigate the features of site.Nevigation bar shows the Logo & Having access to 
 * Services
@@ -187,19 +185,16 @@ The navigation bar makes it easy to navigate the features of site.Nevigation bar
 
 By Clicking on **Services** websites proceeds us to services of Concern Garage. When we Click on **Cars for Sale** we nevegate to the List of Cars showcase for Sale.On clicking **Book Now** we nevegate Login / Register Screen, After Login Successfuly we nevigate to appointment Page. & on Clicking the **Contact Us** we can type any kind of Queries. So it's very easy to nevigate the other features through this nevigation.
 
-<img width="1279" alt="Screenshot 2024-07-27 at 10 18 30 PM" src="https://github.com/user-attachments/assets/ba4c7683-8b70-4805-b969-6701c433d5d8">
 
 ## Services 
 Detailed view of services Provided by The Garage including Certified Mechanics, Comrihensive Car inspection, Precision oil & brake checks, Emergency Recovery, Breakdown Assistance , Professional Tyre Services, Seamless Battery replacement. This also contain a **Button** at the bottom for **Schedule Service** . By clicking this button we can directly nevigate to the Login Page & than Book Appointment.
 
 [You can see here: Services ](https://garage-management-system-78c320f4e5b8.herokuapp.com/#services)
 
-<img width="882" alt="Screenshot 2024-07-27 at 11 05 49 PM" src="https://github.com/user-attachments/assets/ba98f2cb-d0bf-4425-9889-e544f95907e1">
 
 ## About Us
 
 Home page include information about the DT Autos. 
-<img width="1279" alt="Screenshot 2024-07-27 at 10 17 39 PM" src="https://github.com/user-attachments/assets/66edd7ee-925d-49d0-b2aa-aaedf5a67b75">
 
 ## 2. User Module with Authentication & Authorization
 
@@ -225,7 +220,6 @@ Registered user can easily access through his UserName & Password.
 ## User Dashboard View
 
 After Login User proceed to his Dashboard View. Through this Registered user can easily Create, Edit & Delete his Bookings.This page have Three Buttons **Register a new appointment** , **Edit** & **Delete**.  
-<img width="1280" alt="Screenshot 2024-07-27 at 9 35 00 PM" src="https://github.com/user-attachments/assets/16d635ee-78ec-4441-b2fb-764ac246b673">
 
 ## Book appointment
 
@@ -287,7 +281,6 @@ There two dashboard views one for the user and other for the admin
 #### User Dashboard View
 
 After Login User proceed to his Dashboard View where he can easily Create, Watch, Edit & Delete his Bookings.This page have Three Buttons **Register a new appointment** , **Edit** & **Delete**.  
-<img width="1280" alt="Screenshot 2024-07-27 at 9 35 00 PM" src="https://github.com/user-attachments/assets/16d635ee-78ec-4441-b2fb-764ac246b673">
 
 #### Admin Dashboard View
 After Login Admin can inquire all the activities .Admin can watch users, mechanics, vehiclas, Appointments & Purchase interest etc. Real-time updates based on inputted service data.
@@ -388,8 +381,8 @@ Displays a list of recent actions performed by the logged-in admin user. This in
 <img width="1248" alt="Screenshot 2024-07-28 at 12 17 29 PM" src="https://github.com/user-attachments/assets/c604cfb7-84bf-417d-b7de-38cb73e76fa5">
 
 ## Contact Us
-User can conatct admin bu clicking  **Contact Us** in nevigation  bar.
-<img width="1280" alt="Screenshot 2024-07-27 at 1 10 12 PM" src="https://github.com/user-attachments/assets/17cb1cc9-7dfa-431a-9c31-2b62d0110299">
+User can contact admin bu clicking  **Contact Us** in nevigation  bar.
+
 
 ## Logo Functionality 
 User on any page can go back to the Home page by clicking on logo .
