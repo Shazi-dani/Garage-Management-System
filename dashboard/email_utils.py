@@ -18,7 +18,7 @@ def send_appointment_creation_email(user):
 
     Uses:
         - 'emails/appointment_create_email.html': Template used for generating the HTML content of the email.
-    """
+    """/home/dev/Downloads/django-up/Garage-Management-System/dashboard/templates/403.html /home/dev/Downloads/django-up/Garage-Management-System/dashboard/templates/404.html /home/dev/Downloads/django-up/Garage-Management-System/dashboard/templates/500.html
     subject = "Appointment Booked !!!!"
     html_message = render_to_string(
         "emails/appointment_create_email.html", {"user": user}
