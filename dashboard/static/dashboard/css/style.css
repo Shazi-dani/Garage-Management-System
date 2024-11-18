@@ -6,8 +6,17 @@ body {
     background-color: #424242;
     color: white;
     font-size: 1.2rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+.containerx{
+    margin: 0 auto;
+    width: 1400px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0 !important;
+}
 .navbar {
     background-color: rgba(0, 0, 0, 0.7);
     transition: background-color 0.5s ease;
@@ -32,16 +41,19 @@ body {
 }
 
 .header {
-    background: url('/static/dashboard/images/cover.jpeg') no-repeat center center;
+    background: url('/static/dashboard/images/cover.webp') no-repeat center center;
     background-size: cover;
-    padding: 300px 0;
+    padding: 200px 0;
     color: white;
     text-align: center;
 }
 
+
 .header h1 {
+    margin-top: 70px;
     font-size: 3rem;
     margin-bottom: 20px;
+    font-weight: 700;
 }
 
 .header p {
@@ -135,16 +147,6 @@ input, select, textarea {
 
 
 /*styling for base page*/
-#appointmentsList {
-display: flex;
-}
-
-#appointmentsContainer {
-    overflow-x: auto;
-    display: flex;
-    white-space: nowrap;
-    padding: 20px 0;
-}
 
 .card {
     flex: 0 0 auto;
@@ -165,8 +167,6 @@ display: flex;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    overflow-y: auto; /* Allows vertical scrolling within the card body if needed */
-    height: 550px;
 }
 
 .card-actions {
@@ -207,6 +207,9 @@ display: flex;
         font-size: 90%; /* Slightly reduce font sizes for medium screens */
     }
 
+    .header h1{
+        font-size: 2.3rem;
+    }
     .header {
         padding: 150px 0; /* Reduce padding for smaller headers */
     }
@@ -218,11 +221,24 @@ display: flex;
     .card-body {
         height: 400px; /* Adjust card body height */
     }
+    .card-body img{
+        width: 67px;
+        height: 67px;
+    }
 }
 
 @media (max-width: 768px) {
     body {
         font-size: 1rem; /* Reduce base font size */
+    }
+    .header h1{
+        font-size: 2rem;
+    }
+    h2 span{
+        font-size: 28px;
+    }
+    h3{
+        font-size: 1.4rem;
     }
     
     .header {
@@ -240,6 +256,10 @@ display: flex;
     .card-body {
         height: 300px; /* Further reduce card body height */
     }
+    .card-body img{
+        width: 57px;
+        height: 57px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -248,7 +268,14 @@ display: flex;
     }
 
     .header h1 {
+        margin-top: 90px;
         font-size: 2rem; /* Significantly reduce title font size */
+    }
+    h2 span{
+        font-size: 25px;
+    }
+    h3{
+        font-size: 1.3rem;
     }
 
     .header p {
@@ -272,4 +299,258 @@ display: flex;
     .form-group label {
         margin-top: 10px; /* Reduce margin for form labels */
     }
+    .card-body img{
+        width: 47px;
+        height: 47px;
+    }
+}
+
+
+#about-us {
+    background-color: #424242;
+    color: white;
+}
+
+.about-content {
+    background-color: #525252;
+    padding: 50px 0;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.divider {
+    width: 60px;
+    height: 3px;
+    background-color: rgb(238, 98, 63);
+    margin: 0 auto;
+}
+
+.feature-item {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 30px;
+    transition: transform 0.3s ease;
+}
+
+.feature-item:hover {
+    transform: translateY(-5px);
+}
+
+.text-primary {
+    color: rgb(238, 98, 63) !important;
+}
+
+.btn-primary {
+    background-color: rgb(238, 98, 63);
+    border: none;
+    padding: 12px 30px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: rgb(218, 78, 43);
+}
+
+h2, h3, h4 {
+    font-weight: bold;
+}
+.display-4{
+    font-weight: 700 !important;
+}
+.lead {
+    font-size: 1.25rem;
+}
+
+
+.appointmentsx-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .appointmentx-card {
+    background-color: #756C65;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+  }
+
+  .appointmentx-card:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  }
+
+  .cardx-header {
+    background-color: #141414;
+    color: white;
+    padding: 15px;
+    font-size: 21px;
+    font-weight: bold;
+    text-align: center;
+    
+  }
+
+  .cardx-body {
+    padding: 15px;
+  }
+
+  .infox-block {
+    margin-bottom: 15px;
+  }
+
+  .infox-block label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #151515;
+  }
+
+  .infox-block span {
+    display: block;
+    color: #e1e1e1;
+    margin-bottom: 10px;
+  }
+
+  .cardx-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #eee;
+  }
+
+  .btnx {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  .btnx-info {
+    background-color: #4a90e2;
+    color: white;
+  }
+
+  .btnx-danger {
+    background-color: #e74c3c;
+    color: white;
+  }
+
+  .btnx.disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+
+  .vehiclesx-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    background-color: #424242;
+}
+.vehiclex-card {
+    width: 100%;
+    max-width: 800px;
+    background-color: #756C65;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    overflow: hidden;
+    display: flex;
+}
+.vehiclex-image {
+    /* margin-top: 30px; */
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    /* mix-blend-mode: multiply; */
+}
+.vehiclex-details {
+    flex: 1;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+}
+.vehiclex-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #141414;
+}
+.vehiclex-location {
+    font-size: 15px;
+    color: #e1e1e1;
+    margin-bottom: 10px;
+}
+.vehiclex-specs {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+.specx {
+    font-size: 15px;
+    font-weight: 700;
+    /* text-decoration: underline; */
+    color: #151515;
+}
+
+.specx span{
+    font-weight: 500;
+    font-size: 14px;
+    color: #e1e1e1;
+}
+.iconx{
+    mix-blend-mode: color;
+}
+
+/* .vehiclex-price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin-top: auto;
+} */
+.actionx-button {
+    background-color: #e1e1e1;
+    color: #141414;
+    border: none;
+    padding: 5px 11px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    align-self: flex-start;
+    margin-top: 10px;
+}
+@media (max-width: 600px) {
+    .vehiclex-card {
+        flex-direction: column;
+    }
+    .vehiclex-image {
+        width: 100%;
+        height: 200px;
+    }
+}
+
+
+.toast-message {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #28a745;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+.messages {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.messages li {
+    margin-bottom: 10px;
 }
