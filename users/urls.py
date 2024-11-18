@@ -1,7 +1,7 @@
 from django.urls import path
 
 from .views import UserRegistrationView, UserLoginView, UserLogoutView
-from .views import signup_success, login_success
+from .views import signup_success, login_success, logout_success
 
 app_name = 'users'
 
@@ -22,4 +22,5 @@ urlpatterns = [
     path('login/', UserLoginView.as_view(), name='login'),
     path('login/success/', login_success, name='login_success'),
     path('logout/', UserLogoutView.as_view(), name='logout'),
+    path('logout/success', logout_success, name='logout_success'),
 ]

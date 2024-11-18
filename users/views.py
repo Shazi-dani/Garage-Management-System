@@ -21,6 +21,8 @@ def signup_success(request):
 def login_success(request):
     return render(request, 'login_success.html')
 
+def logout_success(request):
+    return render(request, 'logout_success.html')
 class UserRegistrationView(CreateView):
     template_name = 'register.html'
     form_class = UserRegistrationForm
@@ -101,5 +103,5 @@ class UserLogoutView(APIView):
             HttpResponse: Redirects to the dashboard after logout.
         """
         logout(request)
-        messages.info(request, 'You have been logged out. Redirecitng to Home Page.')
-        return redirect('dashboard:home')
+        messages.info(request, ' Logged out Successfully')
+        return redirect('users:logout_success')
