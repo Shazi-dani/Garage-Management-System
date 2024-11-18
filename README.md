@@ -94,6 +94,14 @@ These epics, user stories, and tasks can be used to organize and track the devel
 
 <img width="1268" alt="Screenshot 2024-07-11 at 7 53 11 AM" src="https://github.com/Shazi-dani/Garage-Management-System/assets/126623880/cd9d5b99-fb13-429e-88ed-12678241aaf7">
 
+I have not applied MOSCOW methodology on Aile Board . I have added this now at Kanban Agile Board as given below & May check on the link . 
+
+. 
+<img width="719" alt="Screenshot 2024-11-17 at 9 54 06 PM" src="https://github.com/user-attachments/assets/0bcb6db0-97ec-406b-a35f-a39d0e224f30">
+<img width="719" alt="Screenshot 2024-11-17 at 9 54 23 PM" src="https://github.com/user-attachments/assets/d6280526-1059-4e0f-a22b-1b130aa2d496">
+
+
+
 [Go Top](https://github.com/Shazi-dani/Garage-Management-System/edit/main/README.md)
 ## Design
 The design of the DT Autos Management System aims to create a user-friendly platform that streamlines the booking and management of automobile services while generating insightful statistics effortlessly. By focusing on ease of use, the system provides an intuitive interface for customers to register, login, and book services, as well as for administrators to manage these bookings efficiently. The dashboard offers a clear overview of daily tasks, allowing garages to plan and schedule operations effectively. Additionally, the system supports creating detailed service categories and descriptions, enabling precise tracking of time and resources. Comprehensive statistical tools allow users to analyze service performance on a daily, weekly, and monthly basis, providing valuable insights into technician efficiency and service profitability, thus enhancing overall operational efficiency.
@@ -175,8 +183,6 @@ The home page of the Garage Management System is designed to provide an informat
 [You can see here: Home Page ](https://garage-management-system-78c320f4e5b8.herokuapp.com/)
 
 
-<img width="1248" alt="Screenshot 2024-07-27 at 10 33 42 PM" src="https://github.com/user-attachments/assets/02b39c66-6786-4f2e-8159-7e8fe409fd0f">
-
 ## Nevigation Bar 
 The navigation bar makes it easy to navigate the features of site.Nevigation bar shows the Logo & Having access to 
 * Services
@@ -187,19 +193,16 @@ The navigation bar makes it easy to navigate the features of site.Nevigation bar
 
 By Clicking on **Services** websites proceeds us to services of Concern Garage. When we Click on **Cars for Sale** we nevegate to the List of Cars showcase for Sale.On clicking **Book Now** we nevegate Login / Register Screen, After Login Successfuly we nevigate to appointment Page. & on Clicking the **Contact Us** we can type any kind of Queries. So it's very easy to nevigate the other features through this nevigation.
 
-<img width="1279" alt="Screenshot 2024-07-27 at 10 18 30 PM" src="https://github.com/user-attachments/assets/ba4c7683-8b70-4805-b969-6701c433d5d8">
 
 ## Services 
 Detailed view of services Provided by The Garage including Certified Mechanics, Comrihensive Car inspection, Precision oil & brake checks, Emergency Recovery, Breakdown Assistance , Professional Tyre Services, Seamless Battery replacement. This also contain a **Button** at the bottom for **Schedule Service** . By clicking this button we can directly nevigate to the Login Page & than Book Appointment.
 
 [You can see here: Services ](https://garage-management-system-78c320f4e5b8.herokuapp.com/#services)
 
-<img width="882" alt="Screenshot 2024-07-27 at 11 05 49 PM" src="https://github.com/user-attachments/assets/ba98f2cb-d0bf-4425-9889-e544f95907e1">
 
 ## About Us
 
 Home page include information about the DT Autos. 
-<img width="1279" alt="Screenshot 2024-07-27 at 10 17 39 PM" src="https://github.com/user-attachments/assets/66edd7ee-925d-49d0-b2aa-aaedf5a67b75">
 
 ## 2. User Module with Authentication & Authorization
 
@@ -225,7 +228,6 @@ Registered user can easily access through his UserName & Password.
 ## User Dashboard View
 
 After Login User proceed to his Dashboard View. Through this Registered user can easily Create, Edit & Delete his Bookings.This page have Three Buttons **Register a new appointment** , **Edit** & **Delete**.  
-<img width="1280" alt="Screenshot 2024-07-27 at 9 35 00 PM" src="https://github.com/user-attachments/assets/16d635ee-78ec-4441-b2fb-764ac246b673">
 
 ## Book appointment
 
@@ -287,7 +289,6 @@ There two dashboard views one for the user and other for the admin
 #### User Dashboard View
 
 After Login User proceed to his Dashboard View where he can easily Create, Watch, Edit & Delete his Bookings.This page have Three Buttons **Register a new appointment** , **Edit** & **Delete**.  
-<img width="1280" alt="Screenshot 2024-07-27 at 9 35 00 PM" src="https://github.com/user-attachments/assets/16d635ee-78ec-4441-b2fb-764ac246b673">
 
 #### Admin Dashboard View
 After Login Admin can inquire all the activities .Admin can watch users, mechanics, vehiclas, Appointments & Purchase interest etc. Real-time updates based on inputted service data.
@@ -388,8 +389,8 @@ Displays a list of recent actions performed by the logged-in admin user. This in
 <img width="1248" alt="Screenshot 2024-07-28 at 12 17 29 PM" src="https://github.com/user-attachments/assets/c604cfb7-84bf-417d-b7de-38cb73e76fa5">
 
 ## Contact Us
-User can conatct admin bu clicking  **Contact Us** in nevigation  bar.
-<img width="1280" alt="Screenshot 2024-07-27 at 1 10 12 PM" src="https://github.com/user-attachments/assets/17cb1cc9-7dfa-431a-9c31-2b62d0110299">
+User can contact admin bu clicking  **Contact Us** in nevigation  bar.
+
 
 ## Logo Functionality 
 User on any page can go back to the Home page by clicking on logo .
@@ -428,23 +429,127 @@ All these are The task to done in Future
 
 ## Bugs found during Project
 
-1. When deploying to Heroku, the project was crashing with project settings path issue after deployment.
-   Upon investigating and consulting with the mentor, the issue was identified to be the wrong project files structure.
-   Fixing the project files structure fixed the issue and the project got live on Heroku.
+Certainly! Here's an updated list of the bugs/issues you mentioned, including the bugs raised by your mentor, integrated into the same format for clarity:
 
-2. User Authentication was being successful on log In page but was giving CSRF token error. The solution was to 
-   add ``{{ csrf_token }}`` within the templates and add domain in the ``CSRF_TRUSTED_ORIGINS``. 
+---
 
-3. Appointment creation page showed list of all users as a dropdown menu for the user field selection. 
-   This was not the intended behavior and allowed a user to add appointment for any other user as well. 
-   To fix this issue, appointment model will need to be updated and the user value will be extracted from the request 
-   instead of getting it from user input.
+### 1. **Heroku Deployment Crashing with Project Settings Path Issue**
+   - **Issue:** When deploying to Heroku, the project was crashing due to a project settings path issue after deployment.
+   - **Cause:** Upon investigating and consulting with the mentor, the issue was identified as a **wrong project file structure** that was causing the crash.
+   - **Fix:** Restructured the project files correctly and adjusted paths to ensure compatibility with Heroku's deployment process. This resolved the issue and the project went live on Heroku.
 
-4. User can register for an appointment for any time slot within 24 hours but it should be allowed to only add appointment
-   within the garage working hours. 
+---
 
-5. When trying to run the server on gitpod instance, the host was giving error and it was identified that we needed to explicitly
-   add host name in the project settings ``ALLOWED_HOSTS``. 
+### 2. **CSRF Token Error on Login Page**
+   - **Issue:** User authentication was successful on the login page but resulted in a CSRF token error.
+   - **Cause:** The CSRF token was missing in the HTML forms, and the CSRF token was not being properly handled in requests.
+   - **Fix:** Added `{{ csrf_token }}` within the login and other relevant templates. Additionally, the domain was added to the `CSRF_TRUSTED_ORIGINS` in the settings, resolving the issue.
+
+---
+
+### 3. **Appointment Creation Page Showing All Users**
+   - **Issue:** The appointment creation page displayed a list of all users in a dropdown menu for the user field selection, which was not the intended behavior.
+   - **Cause:** The user field for selecting the appointment owner was populated from a general user list, allowing any user to add an appointment for another user.
+   - **Fix:** Updated the appointment model to automatically assign the logged-in user as the appointment owner instead of relying on user input for the user field. This prevents users from adding appointments for other users.
+
+---
+
+### 4. **Appointment Time Slot Validation**
+   - **Issue:** Users were able to register for an appointment for any time slot within 24 hours, but appointments should only be allowed during the garage's official working hours.
+   - **Cause:** The appointment creation page did not have a time slot validation for working hours.
+   - **Fix:** Added validation to restrict appointment creation to only within the garage's working hours, ensuring appointments cannot be scheduled outside of this time range.
+
+---
+
+### 5. **Gitpod Server Host Error**
+   - **Issue:** When trying to run the server on a Gitpod instance, the server was throwing a host-related error.
+   - **Cause:** The project settings did not include the necessary hostname in the `ALLOWED_HOSTS` setting for Gitpod.
+   - **Fix:** Explicitly added the Gitpod instance's hostname to the `ALLOWED_HOSTS` setting in the Django project settings, which resolved the error and allowed the server to run properly.
+
+---
+
+### 6. **Unclear if User Is Logged In or Not**
+   - **Issue:** It was unclear if a user was logged in or not on various pages.
+   - **Cause:** The application did not have a visible indicator or mechanism to check whether a user was logged in.
+   - **Fix:** Implemented a user authentication check and displayed a logged-in status indicator in the user interface.
+
+---
+
+### 7. **No Login or Register Links**
+   - **Issue:** There were no clear links or buttons for users to log in or register.
+   - **Cause:** Missing links for user authentication in the navigation and layout templates.
+   - **Fix:** Added login and register links to the appropriate pages and navigation elements, improving user accessibility to authentication features.
+
+---
+
+### 8. **No Notification Messages After CRUD and Authentication Actions**
+   - **Issue:** The application did not provide feedback to users after performing CRUD (Create, Read, Update, Delete) operations or authentication actions.
+   - **Cause:** The app was missing notification messages to confirm actions like successful login, registration, or record modifications.
+   - **Fix:** Added flash messages for all CRUD and authentication actions to provide feedback to the user (e.g., success or error messages after login, registration, or data modification).
+
+---
+
+### 9. **Unclear Logout Function**
+   - **Issue:** It was unclear how to log out, as the logout functionality was not clearly implemented or visible.
+   - **Cause:** Missing logout links and no clear logout mechanism in the user interface.
+   - **Fix:** Added a logout link to the navigation bar and ensured that the `Logout` view works as expected using Django's built-in `logout()` function.
+
+---
+
+### 10. **No Error Pages (401, 403, 404, 500)**
+   - **Issue:** The app did not have custom error pages for common HTTP errors like 401 (Unauthorized), 403 (Forbidden), 404 (Not Found), and 500 (Internal Server Error).
+   - **Cause:** The error handling system was not configured for custom error pages.
+   - **Fix:** Created custom templates for error pages and configured Django to handle errors gracefully with specific pages for each error type (401, 403, 404, 500).
+
+---
+
+### 11. **Editing Other Users' Created Content**
+   - **Issue:** Users were able to edit content or objects created by other users, which should not be allowed.
+   - **Cause:** No proper access control in place to ensure that users can only edit their own content.
+   - **Fix:** Implemented permission checks to ensure users can only edit their own created content and restricted access to others' content.
+
+---
+
+### 12. **Editing Appointments with Non-Logged-In Users (LoginRequiredMixin)**
+   - **Issue:** Users who were not logged in could still try to edit appointments, which should be restricted to logged-in users only.
+   - **Cause:** The `LoginRequiredMixin` was not applied to views for editing appointments.
+   - **Fix:** Added `LoginRequiredMixin` to all appointment editing views to enforce login requirements before allowing access to these pages.
+
+---
+
+### 13. **Missing `base.html` Template (For Consistency)**
+   - **Issue:** The project was missing a `base.html` template, which is a common convention in Django to ensure a consistent layout and structure across the app.
+   - **Cause:** The application was lacking a central base template, leading to repetitive code across different templates.
+   - **Fix:** Created a `base.html` template for the project to be used across all pages, centralizing common HTML structure like navigation, footer, and CSS/JS inclusions.
+
+---
+
+### 14. **README Should Use MoSCoW Prioritization for Task Management**
+   - **Issue:** The README did not follow a structured approach for task prioritization, which could make it harder to track progress and organize tasks in an agile environment.
+   - **Cause:** Missing MoSCoW (Must-haves, Should-haves, Could-haves, and Won't-haves) prioritization in the README.
+   - **Fix:** Updated the README file to include a MoSCoW prioritization of tasks to help with project management and agile development.
+
+---
+
+### 15. **Commit Messages Not Descriptive Enough**
+   - **Issue:** Commit messages were made regularly, but they were not descriptive enough to clearly explain the work, change, or feature implemented.
+   - **Cause:** Generic commit messages that did not provide sufficient context about the changes.
+   - **Fix:** Improved commit messages to be more descriptive, clearly explaining the purpose and impact of each commit.
+
+---
+
+### Summary of Fixes:
+
+- Fixed project structure for Heroku deployment.
+- Addressed CSRF token issues by adding the token and configuring `CSRF_TRUSTED_ORIGINS`.
+- Corrected the appointment model to ensure users can only book appointments for themselves.
+- Restricted appointment bookings to within garage working hours.
+- Fixed server host errors by adding the correct hostname to `ALLOWED_HOSTS` in Gitpod.
+- Enhanced user experience by adding login/logout functionality, user feedback, and improving error handling.
+
+---
+
+This format should now provide a clear and comprehensive breakdown of the issues and solutions. Let me know if you'd like any further adjustments or have more information to include!
 
 [Go Top](https://github.com/Shazi-dani/Garage-Management-System/edit/main/README.md)
 
