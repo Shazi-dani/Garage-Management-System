@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page Not Found</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; background-color: #424242; }
+        h1 { color: #ffffff; }
+        p{
+            color: #d3d3d3 
+        }
+        .btn-home {
+            background-color: rgb(238, 98, 63);
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>403 - Forbidden</h1>
+    <p>Sorry, you are not allowed to access this page.</p>
+    <a href="{% url 'dashboard:home' %}" class="btn-home">Go to Home</a>
+
+
+
+</body>
+</html>
