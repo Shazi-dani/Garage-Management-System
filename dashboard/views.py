@@ -1,9 +1,15 @@
 import os
-
+from django.core.exceptions import PermissionDenied
 from django.conf import settings
+from django.shortcuts import HttpResponseRedirect
 from django.shortcuts import redirect, render, get_object_or_404
 from django.urls import reverse_lazy
+from django.urls import reverse
 from django.contrib import messages
+from django.core.mail import EmailMessage
+from django.template.loader import render_to_string
+from django.utils.html import strip_tags
+from django.views.generic.edit import UpdateView
 from django.contrib.auth import get_user_model
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic import (
@@ -32,6 +38,17 @@ from .email_utils import (
     send_appointment_update_email,
     send_appointment_delete_email,
 )
+from django.http import HttpResponseNotFound, HttpResponseForbidden, HttpResponseServerError
+
+def custom_404(request, exception):
+    return render(request, '404.html', status=404)
+
+def custom_403(request, exception):
+    return render(request, '403.html', status=403)
+
+def custom_500(request):
+    return render(request, '500.html', status=500)
+
 
 # Create your views here.
 User = get_user_model()
@@ -66,17 +83,23 @@ class DashboardView(LoginRequiredMixin, TemplateView):
         else:
             appointments = []
 
+            # Check for success message in query parameters
+        success_message = self.request.GET.get("success", None)
+        if success_message:
+            context['success_message'] = success_message
+
         context.update(
             {
                 "user_type": user_type,
                 "username": user.username,
                 "appointments": appointments,
+                "messages": messages.get_messages(self.request),
             }
         )
         return context
 
 
-class AppointmentCreateView(CreateView):
+class AppointmentCreateView(LoginRequiredMixin, CreateView):
     """
     View to create a new appointment with an automated email notification upon creation.
     """
@@ -114,8 +137,9 @@ class AppointmentCreateView(CreateView):
         )
         email.content_subtype = "html"  # Main content is now text/html
         email.send(fail_silently=True)
+        messages.success(self.request, "Your appointment has been successfully created")
+        return HttpResponseRedirect(self.get_success_url())
 
-        return response
 
     def get_success_url(self):
         """
@@ -126,7 +150,7 @@ class AppointmentCreateView(CreateView):
         )  # Redirect to the dashboard after creating
 
 
-class AppointmentUpdateView(UpdateView):
+class AppointmentUpdateView(LoginRequiredMixin, UpdateView):
     """
     View to update an existing appointment with an automated email notification upon update.
     """
@@ -161,8 +185,9 @@ class AppointmentUpdateView(UpdateView):
         )
         email.content_subtype = "html"
         email.send(fail_silently=True)
+        messages.success(self.request, "Your appointment has been successfully updated.")
+        return HttpResponseRedirect(self.get_success_url())
 
-        return response
 
     def get_success_url(self):
         """
@@ -173,22 +198,20 @@ class AppointmentUpdateView(UpdateView):
         )  # Redirect to the dashboard after updating
 
 
-class AppointmentDeleteView(DeleteView):
+class AppointmentDeleteView(LoginRequiredMixin, DeleteView):
     """
     View to delete an existing appointment with an automated email notification upon deletion.
     """
-
     model = Appointment
     template_name = "appointment_confirm_delete.html"
-    success_url = reverse_lazy(
-        "dashboard:dashboard"
-    )  # Redirect to the dashboard after deletion
 
-    def delete(self, request, *args, **kwargs):
+    def form_valid(self, form):
         """
-        Deletes the appointment and sends an email notification to the user.
+        Processes the deletion, sends an email on successful deletion, and redirects to the dashboard.
         """
         self.object = self.get_object()
+        
+        # Prepare the email message
         context = {
             "user": self.object.user,
             "vehicle": self.object.vehicle.license_plate_no,
@@ -208,8 +231,16 @@ class AppointmentDeleteView(DeleteView):
         email.send(fail_silently=True)
 
         # Proceed with deleting the object
-        response = super().delete(request, *args, **kwargs)
-        return response
+        response = super().form_valid(form)
+
+        messages.success(self.request, "Your appointment has been successfully deleted.")
+        return HttpResponseRedirect(self.get_success_url())
+
+    def get_success_url(self):
+        """
+        Returns the URL to redirect to after successfully deleting an appointment.
+        """
+        return reverse_lazy("dashboard:dashboard")  # Redirec"
 
 
 # Handle User Inquiry View submission
@@ -288,3 +319,7 @@ def submit_interest(request, vehicle_id):
     return redirect(
         "dashboard:home"
     )  # Redirect to a failure page or the same page with an error message
+
+def test_view(request):
+    messages.success(request, "This is a test message.")
+    return render(request, 'test_template.html')
