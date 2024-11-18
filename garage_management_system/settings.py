@@ -10,10 +10,18 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 import os
+import django_heroku
 import dj_database_url
 
 from pathlib import Path
 from datetime import timedelta
+
+from dotenv import load_dotenv
+from pathlib import Path
+
+# Load the .env file
+env_path = Path('.') / '.env'
+load_dotenv(dotenv_path=env_path)
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -24,7 +32,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY')
+SECRET_KEY = os.getenv('DJANGO_SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
@@ -43,7 +51,7 @@ CORS_ALLOWED_ORIGINS = [
     'https://*.herokuapp.com',
     'https://8000-shazidani-garagemanagem-zixyev14yor.ws-us115.gitpod.io',
     'http://127.0.0.1',
-    'https://8000-shazidani-garagemanagem-jp5pjx8uxc1.ws.codeinstitute-ide.net',
+    'https://8000-shazidani-garagemanagem-jp5pjx8uxc1.ws.codeinstitute-ide.net', 
     # Add any other origins you want to allow
 ]
 CSRF_TRUSTED_ORIGINS = [
@@ -78,6 +86,8 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
+    'dashboard.middleware.CustomAccessControlMiddleware',
+    'django.contrib.messages.middleware.MessageMiddleware',
 ]
 
 ROOT_URLCONF = 'garage_management_system.urls'
@@ -103,8 +113,8 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
-EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')  # Use an app-specific password if two-factor authentication is enabled
+EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')  # Use an app-specific password if two-factor authentication is enabled
 DEFAULT_FROM_EMAIL = 'admin_dt_autos@gmail.com'
 
 WSGI_APPLICATION = 'garage_management_system.wsgi.application'
@@ -125,7 +135,7 @@ DATABASES = {
 }
 
 # Override with DATABASE_URL if it exists
-database_url = os.environ.get('DATABASE_URL')
+database_url = os.getenv('DATABASE_URL')
 if database_url:
     DATABASES['default'] = dj_database_url.parse(database_url)
 
@@ -166,6 +176,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+django_heroku.settings(locals())
 
 # Updating Media settings to allow image uploads for Vehicles
 MEDIA_URL = '/media/'

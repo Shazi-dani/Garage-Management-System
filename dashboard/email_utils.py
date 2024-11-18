@@ -24,11 +24,11 @@ def send_appointment_creation_email(user):
         "emails/appointment_create_email.html", {"user": user}
     )
     plain_message = strip_tags(html_message)
-    from_email = os.environ.get("DEFAULT_FROM_EMAIL")
+    from_email = os.getenv("DEFAULT_FROM_EMAIL")
     to = user.email
 
     # Validating email credentials before sending the mail
-    if os.environ.get("EMAIL_HOST_USER") and os.environ.get("EMAIL_HOST_PASSWORD"):
+    if os.getenv("EMAIL_HOST_USER") and os.getenv("EMAIL_HOST_PASSWORD"):
         send_mail(subject, plain_message, from_email, [to], html_message=html_message)
     else:
         logger.debug("No Email credentials Found. Skipped email generation task.")
@@ -49,11 +49,11 @@ def send_appointment_update_email(user):
         "emails/appointment_update_email.html", {"user": user}
     )
     plain_message = strip_tags(html_message)
-    from_email = os.environ.get("DEFAULT_FROM_EMAIL")
+    from_email = os.getenv("DEFAULT_FROM_EMAIL")
     to = user.email
 
     # Validating email credentials before sending the mail
-    if os.environ.get("EMAIL_HOST_USER") and os.environ.get("EMAIL_HOST_PASSWORD"):
+    if os.getenv("EMAIL_HOST_USER") and os.getenv("EMAIL_HOST_PASSWORD"):
         send_mail(subject, plain_message, from_email, [to], html_message=html_message)
     else:
         logger.debug("No Email credentials Found. Skipped email generation task.")
@@ -75,11 +75,11 @@ def send_appointment_delete_email(user):
         "email/appointment_delete_email.html", {"user": user}
     )
     plain_message = strip_tags(html_message)
-    from_email = os.environ.get("DEFAULT_FROM_EMAIL")
+    from_email = os.getenv("DEFAULT_FROM_EMAIL")
     to = user.email
 
     # Validating email credentials before sending the mail
-    if os.environ.get("EMAIL_HOST_USER") and os.environ.get("EMAIL_HOST_PASSWORD"):
+    if os.getenv("EMAIL_HOST_USER") and os.getenv("EMAIL_HOST_PASSWORD"):
         send_mail(subject, plain_message, from_email, [to], html_message=html_message)
     else:
         logger.debug("No Email credentials Found. Skipped email generation task.")

@@ -132,7 +132,7 @@ class AppointmentCreateView(LoginRequiredMixin, CreateView):
         email = EmailMessage(
             "DT Autos - Appointment Confirmation",
             html_content,
-            os.environ.get("DEFAULT_FROM_EMAIL"),
+            os.getenv("DEFAULT_FROM_EMAIL"),
             [self.object.user.email],
         )
         email.content_subtype = "html"  # Main content is now text/html
@@ -180,7 +180,7 @@ class AppointmentUpdateView(LoginRequiredMixin, UpdateView):
         email = EmailMessage(
             "DT Autos - Appointment Update Confirmation",
             html_content,
-            os.environ.get("DEFAULT_FROM_EMAIL"),
+            os.getenv("DEFAULT_FROM_EMAIL"),
             [self.object.user.email],
         )
         email.content_subtype = "html"
@@ -224,7 +224,7 @@ class AppointmentDeleteView(LoginRequiredMixin, DeleteView):
         email = EmailMessage(
             "DT Autos - Appointment Cancellation Confirmation",
             html_content,
-            os.environ.get("DEFAULT_FROM_EMAIL"),
+            os.getenv("DEFAULT_FROM_EMAIL"),
             [self.object.user.email],
         )
         email.content_subtype = "html"
