@@ -104,6 +104,7 @@ I have not applied MOSCOW methodology on Aile Board . I have added this now at K
 
 [Go Top](https://github.com/Shazi-dani/Garage-Management-System/edit/main/README.md)
 ## Design
+![Responsiveness Design](https://github.com/user-attachments/assets/aac7a8eb-8297-4c65-ac06-7c492a02e448)
 The design of the DT Autos Management System aims to create a user-friendly platform that streamlines the booking and management of automobile services while generating insightful statistics effortlessly. By focusing on ease of use, the system provides an intuitive interface for customers to register, login, and book services, as well as for administrators to manage these bookings efficiently. The dashboard offers a clear overview of daily tasks, allowing garages to plan and schedule operations effectively. Additionally, the system supports creating detailed service categories and descriptions, enabling precise tracking of time and resources. Comprehensive statistical tools allow users to analyze service performance on a daily, weekly, and monthly basis, providing valuable insights into technician efficiency and service profitability, thus enhancing overall operational efficiency.
 
 ## Colour Scheme
@@ -613,6 +614,11 @@ Tests in Lighthouse were Funtionaloty of every feature is tested.
 
 #### JS Hint Validation of Toast messages logic
 ![JS validation of Toast messages](https://github.com/user-attachments/assets/2b7c0b7e-27df-4b43-a9b8-2aa22dd0d26d)
+
+---
+
+## HTML Validation
+![HTML Validation](https://github.com/user-attachments/assets/11156d2e-8c6b-4ff3-b6be-c0816e3b39ce)
 
 ---
 

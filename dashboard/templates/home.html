@@ -290,8 +290,9 @@
         $(document).ready(function() {
             $('#contactForm').submit(function(event) {
                 event.preventDefault();
-                alert('Your form has been submitted')
-                window.location.href = '/';
+                alert('Thank you for contacting us. We will contact you back!')
+                $('#contactModal').modal('hide');
+                $('#contactForm')[0].reset();
     
             });
         });
