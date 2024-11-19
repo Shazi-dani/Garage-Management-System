@@ -592,6 +592,30 @@ Tests in Lighthouse were Funtionaloty of every feature is tested.
 
 [Go Top](https://github.com/Shazi-dani/Garage-Management-System/edit/main/README.md)
 
+---
+## CSS Validation
+
+#### CSS validation of dashboard
+![cssvalidation-dashboard](https://github.com/user-attachments/assets/bf687139-b694-4db5-abf5-79550dbaf933)
+
+#### CSS validation of Users App
+![cssvalidation-users](https://github.com/user-attachments/assets/a6df8462-0fd5-4120-a3bf-f5cde231aeca)
+
+---
+
+---
+## JS Validation
+
+#### JS Hint Validation of Logout Function
+![JS hint validation for logout function](https://github.com/user-attachments/assets/bd02b725-fc65-43ab-9398-eeeb901ca400)
+
+#### JS Hint Validation of ClosePopup Function
+![JS hint validation of closepopup function](https://github.com/user-attachments/assets/a912dce2-0609-4d8a-9d49-0427f47925d8)
+
+#### JS Hint Validation of Toast messages logic
+![JS validation of Toast messages](https://github.com/user-attachments/assets/2b7c0b7e-27df-4b43-a9b8-2aa22dd0d26d)
+
+
 ## Technologies Used
 
 - [**Django/Jinja**](https://docs.djangoproject.com/en/5.0/) - main Framework of the project and 
