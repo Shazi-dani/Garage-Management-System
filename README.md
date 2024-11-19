@@ -282,7 +282,12 @@ Email integration add for the user satisfactioon.User receive confirmation Email
 
 ## Cars for Sale
 User can view all the vehicles for sale and request purshase here. Every vehicle deatiled box consist of his name , model, colour, Image view & Price. User can easily make purchase here.
-<img width="1280" alt="Screenshot 2024-07-28 at 7 22 34 AM" src="https://github.com/user-attachments/assets/c6a3f522-6449-47bf-b7f7-9fd7f868a639">
+
+<img width="1259" alt="Screenshot 2024-11-19 at 4 57 19 PM" src="https://github.com/user-attachments/assets/d16ef62e-c14b-4ce8-bf4c-2b7e7dabdd0c">
+
+## Request Vehicles 
+I have add ne feature for requesting the vehicle. 
+![WhatsApp Image 2024-11-19 at 4 35 40 PM](https://github.com/user-attachments/assets/eb565e8c-4828-4431-bcc2-759de31dc72a)
 
 
 ## 3. Dashboard
