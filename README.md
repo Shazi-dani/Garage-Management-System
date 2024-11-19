@@ -559,7 +559,7 @@ Tests in Lighthouse were Funtionaloty of every feature is tested.
 
 #### Home page testing
 
-![Home Page testing](https://github.com/user-attachments/assets/151e2b2a-f9a5-48e8-9d65-7b90f11bc866)
+![Homepage Testing](https://github.com/user-attachments/assets/3d7360dd-baab-4881-8a4d-6a18e87b6b57)
 
 #### Register Testing
 
@@ -603,7 +603,6 @@ Tests in Lighthouse were Funtionaloty of every feature is tested.
 
 ---
 
----
 ## JS Validation
 
 #### JS Hint Validation of Logout Function
@@ -615,6 +614,7 @@ Tests in Lighthouse were Funtionaloty of every feature is tested.
 #### JS Hint Validation of Toast messages logic
 ![JS validation of Toast messages](https://github.com/user-attachments/assets/2b7c0b7e-27df-4b43-a9b8-2aa22dd0d26d)
 
+---
 
 ## Technologies Used
 
